@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+  get '/git' => 'git#index'
+
+  get '/git_installation' => 'git#installation'
+
+  get '/git_setup' => 'git#setup'
+
+  get '/rails' => 'rails#index'
+
+  get '/rails_installation' => 'rails#installation'
+
+  get '/rails_setup' => 'rails#setup'
+
+  get '/ruby' => 'pages#ruby'
+
+  get '/c' => 'pages#c'
+
+  get '/linux' => 'pages#linux'
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
