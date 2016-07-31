@@ -5,13 +5,50 @@
 
 <h1>Git Setup</h1>
 
-<h2>After the installation, a few things need to be done in order for git 
+<h2>After the installation, a few things need to be done in order for git
   to be must be setup.</h2>
 
-<h2>Configuration</h2>
+<h2>Configuration:</h2>
 <div class="code">
   <span class="prompt">$ </span>git config --global color.ui true<br>
   <span class="prompt">$ </span>git config --global user.name "your_name"<br>
   <span class="prompt">$ </span>git config --global user.email
   "email@example.com"
+</div>
+
+<h2>Generate ssh key:</h2>
+<div class="code">
+  <span class="prompt">$ </span>ssh-keygen -t rsa -b 4096 -C "email@example.com"
+</div>
+
+<h2>Copy ssh key and paste in on github.com/settings/ssh</h2>
+<div class="code">
+  <span class="prompt">$ </span>cat ~/.ssh/id_rsa.pub
+</div>
+
+<h2>Check that it worked:</h2>
+<div class="code">
+  <span class="prompt">$ </span>ssh -T git@github.com<br>
+  **Response**<br>
+   Hi excid3! You've successfully authenticated, but GitHub does not provide
+   shell access.
+
+</div>
+
+<h2>Configure git to push branches:</h2>
+<div class="code">
+  <span class="prompt">$ </span>git config --global push.default matching
+</div>
+
+<h2>To initalize git, after changing to the directory:</h2>
+<div class="code">
+  <span class="prompt">$ </span>git init
+</div>
+
+<h2>Clear git cache:</h2>
+<div class="code">
+  <span class="prompt">$ </span>git rm -r --cached .<br>
+  <span class="prompt">$ </span>git add .<br>
+  <span class="prompt">$ </span>git commit -am 'git cache cleared'<br>
+  <span class="prompt">$ </span>git push<br>
 </div>
