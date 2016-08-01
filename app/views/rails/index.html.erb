@@ -1,7 +1,10 @@
-
 <div class="container">
-  <%= link_to 'Rails Installation', rails_installation_path %>
-  <%= link_to 'Rails Setup', rails_setup_path %>
+  <div class="links">
+    <%= link_to 'Rails Installation', rails_installation_path %>
+  </div>
+  <div class="links">
+    <%= link_to 'Rails Setup', rails_setup_path %>    
+  </div>
 </div>
 
 <% provide(:title, 'Rails') %>
@@ -17,6 +20,7 @@
    frameworks.
 </h2>
 
+
 <h2>
   The Rails philosophy includes two major guiding principles:
 </h2>
@@ -27,7 +31,10 @@
        again, our code is more maintainable, more extensible, and less buggy.
     </li>
     <li>
-      Convention Over Configuration: Rails has opinions about the best way to do many things in a web application, and defaults to this set of conventions, rather than require that you specify every minutiae through endless configuration files.
+      Convention Over Configuration: Rails has opinions about the best way to do
+      many things in a web application, and defaults to this set of
+      conventions, rather than require that you specify every minutiae through
+      endless configuration files.
     </li>
   </ul>
 </h2>
