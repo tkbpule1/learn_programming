@@ -1,0 +1,195 @@
+<div class="container">
+  <div class="links">
+    <%= link_to 'Rails Home', rails_path %>
+  </div>
+  <div class="links">
+    <%= link_to 'Rails Installation', rails_installation_path %>
+  </div>
+  <div class="links">
+    <%= link_to 'Rails Setup', rails_setup_path %>
+  </div>
+</div>
+
+<h1>Create a Rails App</h1>
+<h2>To create a new app, in the terminal:</h2>
+
+<div class="code">
+  <p>
+    <span class="prompt">$ </span>rails new sample_app<br>
+    <span class="prompt">$ </span>cd sample_app
+  </p>
+</div>
+
+<h2>Gemfile:</h2>
+
+<div class="code">
+  source 'https://rubygems.org'<br>
+
+  <span class="gem">gem </span><span class="quote">'bootstrap-sass'</span>,
+  <span class="quote"> '3.2.0.0'</span><br>
+
+  <span class="gem">gem </span><span class="quote">'faker'</span>,
+  <span class="quote">'1.4.2'</span><br>
+
+  <span class="gem">gem </span><span class="quote">'carrierwave'</span>,
+  <span class="quote">'0.10.0'</span><br>
+
+  <span class="gem">gem </span><span class="quote">'mini_magick'</span>,
+  <span class="quote">'3.8.0'</span><br>
+
+  <span class="gem">gem </span><span class="quote">'fog'</span>,
+  <span class="quote">'1.36.0'</span><br>
+
+  <span class="gem">gem </span><span class="quote">'will_paginate'</span>,
+  <span class="quote">'3.0.7'</span><br>
+
+  <span class="gem">gem </span><span class="quote">'bootstrap-will_paginate'</span>,
+  <span class="quote">'0.0.10'</span><br>
+
+  <span class="gem">gem </span><span class="quote">'rails'</span>,
+  <span class="quote">'4.2.6'</span><br>
+
+  <span class="gem">gem </span><span class="quote">'sass-rails'</span>,
+  <span class="quote">'~> 5.0'</span><br>
+
+
+  <span class="gem">gem </span><span class="quote">'uglifier'</span>,
+  <span class="quote">'>= 1.3.0'</span><br>
+
+
+  <span class="gem">gem </span><span class="quote">'coffee-rails'</span>,
+  <span class="quote">'~> 4.1.0'</span><br>
+
+  <span class="gem">gem </span><span class="quote">'jquery-rails'</span><br>
+
+  <span class="gem"> gem </span><span class="quote">'turbolinks'</span><br>
+
+  <span class="gem"> gem </span><span class="quote">'jbuilder'</span>,
+  <span class="quote">'~> 2.0'</span><br>
+
+  <span class="gem"> gem </span><span class="quote">'sdoc'</span>,
+  <span class="quote">'~> 0.4.0'</span>, <span class="group">group: :doc</span><br>
+
+  <span class="gem"> gem </span><span class="quote">'bcrypt'</span>,
+  <span class="quote">'~>3.1.7'</span><br>
+
+  <span class="gem"> gem </span><span class="quote">'listen'</span>,
+  <span class="quote">'3.1.0'</span><br>
+
+<br>
+  group <span class="group">:development</span>,
+    <span class="group">:test</span> <span class="loop">do</span><br>
+
+    <span class="gem">gem</span> <span class="quote">'byebug'</span><br>
+
+    <span class="gem">gem</span> <span class="quote">'sqlite3'</span><br>
+
+    <span class="gem">gem</span> <span class="quote">'web-console'</span>,
+    <span class="quote">'~> 2.0'</span><br>
+
+    <span class="gem">gem</span> <span class="quote">'spring'</span><br>
+
+    <span class="loop">end</span><br>
+<br>
+  group <span class="group">:test </span><span class="loop"> do</span><br>
+    <span class="gem">gem</span> <span class="quote">'minitest-reporters'</span>,
+       <span class="quote">'1.0.5'</span><br>
+    <span class="gem">gem</span> <span class="quote">'mini_backtrace'</span>,
+       <span class="quote">'0.1.3'</span><br>
+    <span class="gem">gem</span> <span class="quote">'guard-minitest'</span>,
+       <span class="quote">'2.3.1'</span><br>
+  <span class="loop">end</span><br>
+<br>
+  group <span class="group">:production </span><span class="loop">do</span><br>
+    <span class="gem">gem</span> <span class="quote">'rails_12factor'</span>,
+       <span class="quote">'0.0.2'</span><br>
+    <span class="gem">gem</span> <span class="quote">'puma'</span>,
+    <span class="quote">'3.1.0'</span><br>
+  <span class="loop">end</span><br>
+</div>
+
+
+<h2>Install Gems:</h2>
+<div class="code">
+  <span class="prompt">$ </span>bundle install --without production
+</div>
+
+<h2>Initialize the GIT repository:</h2>
+<div class="code">
+  <span class="prompt">$</span> git init
+</div>
+
+<h2>Modify .gitignore:</h2>
+<div class="code">
+  *.rbc<br>
+  capybara-*.html<br>
+  .rspec<br>
+  /log<br>
+  /tmp<br>
+  /db/*.sqlite3<br>
+  /db/*.sqlite3-journal<br>
+  /public/system<br>
+  /coverage/<br>
+  /spec/tmp<br>
+  **.orig<br>
+  rerun.txt<br>
+  pickle-email-*.html<br>
+  config/initializers/secret_token.rb<br>
+  config/secrets.yml<br>
+  .env<br>
+  /.bundle<br>
+  /vendor/bundle<br>
+  .rvmrc<br>
+  /vendor/assets/bower_components<br>
+  *.bowerrc<br>
+  bower.json<br>
+  .powenv<br>
+  .byebug_history<br>
+</div>
+
+<h2>Add and commit files to GIT</h2>
+<div class="code">
+  <span class="prompt">$</span> git add .<br>
+  <span class="prompt">$</span> git commit -am "Initialize Repository"
+</div>
+
+<h2>Modify README.rdoc:</h2>
+<div class="code">
+  <span class="prompt">$ </span>mv README.rdoc README.md
+</div>
+<br>
+<p>
+  Fill in the README.md:
+</p>
+<div class="code">
+  ## Getting started<br>
+<br>
+To get started with the app, clone the repo and then install the needed gems:<br>
+<br>
+```<br>
+$ bundle install --without production<br>
+```<br>
+<br>
+Next, migrate the database:<br>
+<br>
+```<br>
+$ bundle exec rake db:migrate<br>
+```<br>
+<br>
+Finally, run the test suite to verify that everything is working correctly:<br>
+<br>
+```<br>
+$ bundle exec rake test<br>
+```<br>
+<br>
+If the test suite passes, you'll be ready to run the app in a local server:<br>
+<br>
+```<br>
+$ rails server<br>
+```<br>
+</div>
+
+<h2>Commit the changes</h2>
+<div class="code">
+  <span class="prompt">$ </span>git commit -am "Improve the README"
+</div>

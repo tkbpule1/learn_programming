@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get '/rails_setup' => 'rails#setup'
 
+  get '/rails_create' => 'rails#create'
+
   get '/ruby' => 'pages#ruby'
 
   get '/c' => 'pages#c'

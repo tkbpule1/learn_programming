@@ -7,4 +7,7 @@ class RailsController < ApplicationController
 
   def setup
   end
+
+  def create    
+  end
 end
