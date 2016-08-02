@@ -1,17 +1,23 @@
 Rails.application.routes.draw do
+  get '/bash' => 'bash#index'
+
+  get '/bash/shabang' => 'bash#shabang'
+
+  get '/bash/invoke' => 'bash#invoke'
+
   get '/git' => 'git#index'
 
-  get '/git_installation' => 'git#installation'
+  get '/git/installation' => 'git#installation'
 
-  get '/git_setup' => 'git#setup'
+  get '/git/setup' => 'git#setup'
 
   get '/rails' => 'rails#index'
 
-  get '/rails_installation' => 'rails#installation'
+  get '/rails/installation' => 'rails#installation'
 
-  get '/rails_setup' => 'rails#setup'
+  get '/rails/setup' => 'rails#setup'
 
-  get '/rails_create' => 'rails#create'
+  get '/rails/create' => 'rails#create'
 
   get '/ruby' => 'pages#ruby'
 

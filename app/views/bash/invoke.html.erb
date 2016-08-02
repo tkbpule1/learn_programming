@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="links">
+    <%= link_to 'Bash Home', bash_path %>
+  </div>
+  <div class="links">
+    <%= link_to 'Sha-Bang', bash_shabang_path %>
+  </div>
+</div>
+
+<div class="container">
+
+<h1>Invoking a Bash Scripts</h1>
+
+<p>
+  After writting a script, you can invoke it with:
+<br>
+  <div class="code">
+    <span class="prompt">$ </span>bash scriptname
+    <br>
+  </div>
+</p>
+<p>
+  Alternatively, you can make the script file executable:
+  <div class="code">
+    <span class="prompt">$ </span>chmod 555
+      <br>
+  </div>
+</p>
+<p>
+  Notes about chmod: <br>
+  1 = execute <br>
+  2 = write <br>
+  4 = read <br>
+
+  Thus: <br>
+  3 = write and execute <br>
+  5 = read and execute <br>
+  6 = read and write <br>
+  7 = read write and execute <br>
+</p>
+
+</div>
