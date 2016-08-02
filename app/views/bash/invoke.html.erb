@@ -9,34 +9,42 @@
 
 <div class="container">
 
-<h1>Invoking a Bash Scripts</h1>
+  <h1>Invoking a Bash Scripts</h1>
 
-<p>
-  After writting a script, you can invoke it with:
-<br>
-  <div class="code">
-    <span class="prompt">$ </span>bash scriptname
-    <br>
-  </div>
-</p>
-<p>
-  Alternatively, you can make the script file executable:
-  <div class="code">
-    <span class="prompt">$ </span>chmod 555
+  <p>
+    Make sure you are in the directory where the script is located.
+    After writting a script, you can invoke it with:
+  <br>
+    <div class="code">
+      <span class="prompt">$ </span>bash scriptname
       <br>
-  </div>
-</p>
-<p>
-  Notes about chmod: <br>
-  1 = execute <br>
-  2 = write <br>
-  4 = read <br>
+    </div>
+  </p>
+  <p>
+    Alternatively, you can make the script file executable:
+    <div class="code">
+      <span class="prompt">$ </span>chmod 774 scriptname
+        <br>
+    </div>
+  </p>
+  <p>
+    Notes about chmod: <br>
+    1 = execute <br>
+    2 = write <br>
+    4 = read <br>
 
-  Thus: <br>
-  3 = write and execute <br>
-  5 = read and execute <br>
-  6 = read and write <br>
-  7 = read write and execute <br>
-</p>
+    Thus: <br>
+    3 = write and execute <br>
+    5 = read and execute <br>
+    6 = read and write <br>
+    7 = read write and execute <br>
+<br>
+
+    Can also just add permissions:
+  </p>
+  <div class="code">
+    <span class="prompt">$ </span>chmod +x scriptname
+  </div>
+
 
 </div>
