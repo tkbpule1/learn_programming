@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get '/bash' => 'bash#index'
 
+  get '/bash/basics' => 'bash#basics'
+
   get '/bash/shabang' => 'bash#shabang'
 
   get '/bash/invoke' => 'bash#invoke'

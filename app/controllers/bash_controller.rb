@@ -2,9 +2,12 @@ class BashController < ApplicationController
   def index
   end
 
+  def basics
+  end
+
   def shabang
   end
 
-  def invoke    
+  def invoke
   end
 end

@@ -1,0 +1,149 @@
+<div class="container">
+  <h3>
+    Move to the beginning of the line: CTRL a
+  </h3>
+  <h3>
+    Move to the end of the line: CTRL e
+  </h3>
+  <h3>
+    Show previous command: CTRL p
+  </h3>
+  <h3>
+    Show next command: CTRL n
+  </h3>
+  <h3>
+    Search history: CTRL r + beginning of command (string)
+  </h3>
+  <h3>
+    Press CTRL r to see previous commands that contain the string
+  </h3>
+<br>
+<br>
+<br>
+  <h3>
+    Create a Symbolic Link(ln -s) to a file/directory
+  </h3>
+  <div class="code">
+    <span class='prompt'>[~]$ </span>ln -s filename linkname
+  </div>
+  <p>
+    Example:
+  </p>
+  <div class="code">
+    <span class='prompt'>[~]$ </span>ln -s ~/scripts/problems/log loglink
+  </div>
+<br>
+<br>
+  <h3>
+    To see the last few lines of a file with retime update:(tail -f)
+  </h3>
+  <div class="code">
+    <span class='prompt'>[~]$ </span>tail -f /var/log/dmesg
+  </div>
+<br>
+<br>
+  <h3>
+    To shutdown/restart the system
+  </h3>
+<br>
+  <div class="code">
+    Shutdown:
+<br>
+    <span class='prompt'>[~]$ </span>poweroff
+<br>
+    <span class="prompt">[~]$ </span>init 0
+<br>
+    Poweroff in 60 minutes:
+<br>
+    <span class="prompt">[~]$ </span>shutdown -h +60
+<br>
+    Restart:
+<br>
+    <span class="prompt">[~]$ </span>init 6
+<br>
+    <span class="prompt">[~]$ </span>shutdown -r +60
+  </div>
+<br>
+<br>
+  <h3>
+    See who is logged in:
+  </h3>
+<br>
+  <div class="code">
+    <span class='prompt'>[~]$ </span>w
+  </div>
+<br>
+<br>
+  <h3>
+    See what processes are running:
+  </h3>
+<br>
+  <div class="code">
+    <span class='prompt'>[~]$ </span>htop
+  </div>
+<br>
+<br>
+  <h3>
+    See network connections:
+  </h3>
+<br>
+  <div class="code">
+    <span class='prompt'>[~]$ </span>sudo netstat -tupln
+  </div>
+<br>
+<br>
+  <h3>
+    Redirections:
+  </h3>
+  <p>
+    First need to know this:
+<br>
+    STDIN --> 0;
+<br>
+    STDOUT --> 1;
+<br>
+    STDERR -->2;
+  </p>
+  <h2>
+    Output
+<br>
+<br>
+    Create/Overwrite a file:
+  </h2>
+  <div class="code">
+    <span class='prompt'>[~]$ </span>echo "this should be in a file" > somefile.txt
+  </div>
+
+  <h2>
+    Create/Append to a file:
+  </h2>
+  <div class="code">
+    <span class='prompt'>[~]$ </span>echo "this should be in a file" >> somefile.txt
+  </div>
+  <h2>
+    Create/Append to a file:
+  </h2>
+  <div class="code">
+    <span class='prompt'>[~]$ </span>echo "this should be in a file" 1>> somefile.txt
+  </div>
+  <h2>
+    Redirect error to file:
+  </h2>
+  <div class="code">
+    <span class='prompt'>[~]$ </span>ls -asjklf 2>> err.txt
+  </div>
+  <h2>
+    Input
+  </h2>
+  <div class="code">
+    <span class='prompt'>[~]$ </span>mail -s "subject" ubuntu < message.txt
+  </div>
+<br>
+<br>
+  <h3>
+    Pipes
+  </h3>
+  <div class="code">
+    <span class="prompt">[~]$ </span>ps aux | uniq | sort | grep "some search"
+  </div>
+</div>
