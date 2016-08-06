@@ -1,3 +1,20 @@
+<%= provide(:title, "Basics") %>
+
+<div class="container">
+  <div class="links">
+    <%= link_to 'Bash Home', bash_path %>
+  </div>
+  <div class="links">
+    <%= link_to 'Sha-Bang', bash_shabang_path %>
+  </div>
+  <div class="links">
+    <%= link_to 'Invoke', bash_invoke_path %>
+  </div>
+  <div class="links">
+    <%= link_to 'Administration', bash_admin_path %>
+  </div>
+</div>
+
 <div class="container">
   <h3>
     Move to the beginning of the line: CTRL a
@@ -146,4 +163,86 @@
   <div class="code">
     <span class="prompt">[~]$ </span>ps aux | uniq | sort | grep "some search"
   </div>
+<br>
+<br>
+  <h3>
+    Cut
+  </h3>
+  <div class="code">
+    <span class="prompt">[~]$ </span>cat text.txt | cut -d : -f2
+  </div>
+  <p>
+    This cuts the text at a delimiter (-d) equal to :, creating two fields (1 and 2), then outputs field 2 (-f2)<br>
+    See ~/text.txt
+  </p>
+<br>
+  <h3>
+    Sort
+  </h3>
+  <div class="code">
+    <span class="prompt">[~]$ </span>cat text.txt | sort -bf
+  </div>
+  <p>
+    This sorts the text alphabetically by first letter ignoring leading white space (-b) and case (-f)<br>
+    See ~/text.txt
+  </p>
+<br>
+  <h3>
+    Uniq
+  </h3>
+  <div class="code">
+    <span class="prompt">[~]$ </span>cat text.txt | uniq
+  </div>
+  <p>
+    This only prints unique lines of the file.<br>
+    See ~/text.txt
+  </p>
+<br>
+  <h3>
+    Grep
+  </h3>
+  <div class="code">
+    <span class="prompt">[~]$ </span>cat text.txt | grep love
+  </div>
+  <p>
+    This searches for love and only prints the lines with love in them.<br>
+    See ~/text.txt <br>
+    Can also use alternative synatx: <br>
+  </p>
+  <div class="code">
+    <span class="prompt">[~]$ </span>grep love text.txt
+  </div>
+  <div class="code">
+    <span class="prompt">[~]$ </span>grep love ./*
+  </div>
+  <p>
+    Prints the file names and lines of all files that contain love in this directory.
+  </p>
+<br>
+  <h3>Search for programs</h3>
+  <div class="code">
+    <span class="prompt">[~]$ </span>apt-cache search editor
+  </div>
+  <p>
+    This would print a list of programs with editor in the name or description.
+  </p>
+<br>
+  <h3>UMASK</h3>
+  <div class="code">
+    <span class="prompt">[~]$ </span>vim /etc/login.defs
+  </div>
+  <p>
+    Search for UMASK 022.<br>
+    This is the default permissions settings.<br>
+    0: grants all permissions <br>
+    1: cannot execute <br>
+    2: cannot write <br>
+    3: cannot write or execute <br>
+    4: cannot read <br>
+    5: cannot read or execute <br>
+    6: cannot read or write <br>
+    7: cannot read, write, or execute
+  </p>
+
+
 </div>

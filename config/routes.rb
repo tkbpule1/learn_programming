@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get '/bash/invoke' => 'bash#invoke'
 
+  get '/bash/admin' => 'bash#admin'
+
   get '/git' => 'git#index'
 
   get '/git/installation' => 'git#installation'

@@ -10,4 +10,7 @@ class BashController < ApplicationController
 
   def invoke
   end
+
+  def admin
+  end
 end
