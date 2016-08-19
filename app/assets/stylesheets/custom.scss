@@ -5,6 +5,11 @@
 
 $gray-medium-light: #eaeaea;
 
+ul {
+  list-style-type: none;
+}
+
+
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -30,7 +35,7 @@ body {
   padding-bottom: 10px;
   margin-top: 60px;
   margin-bottom: 60px;
-  min-width: 980px;  
+  min-width: 980px;
 }
 
 section {

@@ -1,43 +1,44 @@
-<div class="container">
-  <div class="links">
-    <%= link_to 'Sha-Bang', bash_shabang_path %>
-  </div>
-  <div class="links">
-    <%= link_to 'Invoke Scripts', bash_invoke_path %>
-  </div>
-  <div class="links">
-    <%= link_to 'Basics', bash_basics_path %>
-  </div>
-  <div class="links">
-    <%= link_to 'Administration', bash_admin_path %>
-  </div>
+<%= provide(:title, "Bash") %>
+
+<div class="links">
+  <%= link_to 'Sha-Bang', bash_shabang_path %>
 </div>
+<div class="links">
+  <%= link_to 'Invoke Scripts', bash_invoke_path %>
+</div>
+<div class="links">
+  <%= link_to 'Basics', bash_basics_path %>
+</div>
+<div class="links">
+  <%= link_to 'Administration', bash_admin_path %>
+</div>
+
 
 <h1>Bash Scripting</h1>
-<div class="container">
 
-  <p>
-    This is a collection of information from many sources, which I will list
-    at the bottom of this page. I did not write it.
-  </p>
+
+<p>
+  This is a collection of information from many sources, which I will list
+  at the bottom of this page. I did not write it.
+</p>
 <br>
 <br>
 <br>
 
-  <p>
-    The shell is a command interpreter. More than just the insulating layer
-    between the operating system kernel and the user, it's also a fairly
-    powerful programming language. A shell program, called a script, is an
-    easy-to-use tool for building applications by "gluing together" system
-    calls, tools, utilities, and compiled binaries. Virtually the entire
-    repertoire of UNIX commands, utilities, and tools is available for
-    invocation by a shell script. If that were not enough, internal shell
-    commands, such as testing and loop constructs, lend additional power and
-    flexibility to scripts. Shell scripts are especially well suited for
-    administrative system tasks and other routine repetitive tasks not requiring
-    the bells and whistles of a full-blown tightly structured programming
-    language.
-  </p>
+<p>
+  The shell is a command interpreter. More than just the insulating layer
+  between the operating system kernel and the user, it's also a fairly
+  powerful programming language. A shell program, called a script, is an
+  easy-to-use tool for building applications by "gluing together" system
+  calls, tools, utilities, and compiled binaries. Virtually the entire
+  repertoire of UNIX commands, utilities, and tools is available for
+  invocation by a shell script. If that were not enough, internal shell
+  commands, such as testing and loop constructs, lend additional power and
+  flexibility to scripts. Shell scripts are especially well suited for
+  administrative system tasks and other routine repetitive tasks not requiring
+  the bells and whistles of a full-blown tightly structured programming
+  language.
+</p>
 
 </div>
 <br>
@@ -46,11 +47,10 @@
 <br>
 <br>
 <div class="container">
-  <h2>References:</h2>
-  <p>
-    <a href="http://tldp.org/LDP/abs/html/index.html">Advanced Bash-Scripting
-        Guide</a>
-    An in-depth exploration of the art of shell scripting
-    Mendel Cooper
-  </p>
-</div>
+<h2>References:</h2>
+<p>
+  <a href="http://tldp.org/LDP/abs/html/index.html">Advanced Bash-Scripting
+      Guide</a>
+  An in-depth exploration of the art of shell scripting
+  Mendel Cooper
+</p>

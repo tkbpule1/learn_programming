@@ -1,73 +1,72 @@
 <%= provide(:title, "Invoke Scripts") %>
 
-<div class="container">
-  <div class="links">
-    <%= link_to 'Bash Home', bash_path %>
-  </div>
-  <div class="links">
-    <%= link_to 'Sha-Bang', bash_shabang_path %>
-  </div>
-  <div class="links">
-    <%= link_to 'Basics', bash_basics_path %>
-  </div>
-  <div class="links">
-    <%= link_to 'Administration', bash_admin_path %>
-  </div>
+
+<div class="links">
+  <%= link_to 'Bash Home', bash_path %>
 </div>
-<div class="container">
+<div class="links">
+  <%= link_to 'Sha-Bang', bash_shabang_path %>
+</div>
+<div class="links">
+  <%= link_to 'Basics', bash_basics_path %>
+</div>
+<div class="links">
+  <%= link_to 'Administration', bash_admin_path %>
+</div>
 
-  <h1>Invoking a Bash Scripts</h1>
 
-  <p>
-    Make sure you are in the directory where the script is located.
-    After writting a script, you can invoke it with:
-  <br>
-    <div class="code">
-      <span class="prompt">$ </span>bash scriptname
+
+<h1>Invoking a Bash Scripts</h1>
+
+<p>
+  Make sure you are in the directory where the script is located.
+  After writting a script, you can invoke it with:
+<br>
+  <div class="code">
+    <span class="prompt">$ </span>bash scriptname
+    <br>
+  </div>
+</p>
+<p>
+  Alternatively, you can make the script file executable:
+  <div class="code">
+    <span class="prompt">$ </span>chmod 774 scriptname
       <br>
-    </div>
-  </p>
-  <p>
-    Alternatively, you can make the script file executable:
-    <div class="code">
-      <span class="prompt">$ </span>chmod 774 scriptname
-        <br>
-    </div>
-  </p>
-  <p>
-    Notes about chmod: <br>
-    1 = execute <br>
-    2 = write <br>
-    4 = read <br>
+  </div>
+</p>
+<p>
+  Notes about chmod: <br>
+  1 = execute <br>
+  2 = write <br>
+  4 = read <br>
 
-    Thus: <br>
-    3 = write and execute <br>
-    5 = read and execute <br>
-    6 = read and write <br>
-    7 = read write and execute <br>
+  Thus: <br>
+  3 = write and execute <br>
+  5 = read and execute <br>
+  6 = read and write <br>
+  7 = read write and execute <br>
 <br>
 
-    Can also just add permissions:
-  </p>
-  <div class="code">
-    <span class="prompt">$ </span>chmod +x scriptname
-  </div>
-<br>
-  <p>
-    Now running the script is as easy as:
-  </p>
-  <div class="code">
-    <span class="prompt">$ </span>. scriptname
-  </div>
-<br>
-  <p>
-    As a final step, after testing and debugging, you would likely want to move
-    it to /usr/local/bin (as root, of course), to make the script available to
-    yourself and all other users as a systemwide executable. The script could
-    then be invoked by simply typing scriptname [ENTER] from the command-line.
-  </p>
-  <div class="code">
-    <span class="prompt">$ </span>scriptname
-  </div>
-<br>
+  Can also just add permissions:
+</p>
+<div class="code">
+  <span class="prompt">$ </span>chmod +x scriptname
 </div>
+<br>
+<p>
+  Now running the script is as easy as:
+</p>
+<div class="code">
+  <span class="prompt">$ </span>. scriptname
+</div>
+<br>
+<p>
+  As a final step, after testing and debugging, you would likely want to move
+  it to /usr/local/bin (as root, of course), to make the script available to
+  yourself and all other users as a systemwide executable. The script could
+  then be invoked by simply typing scriptname [ENTER] from the command-line.
+</p>
+<div class="code">
+  <span class="prompt">$ </span>scriptname
+</div>
+<br>

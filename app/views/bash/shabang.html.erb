@@ -1,57 +1,56 @@
 <% provide(:title, 'Shabang') %>
 
-<div class="container">
-  <div class="links">
-    <%= link_to 'Bash Home', bash_path %>
-  </div>
-  <div class="links">
-    <%= link_to 'Invoke Scripts', bash_invoke_path %>
-  </div>
-  <div class="links">
-    <%= link_to 'Basics', bash_basics_path %>
-  </div>
-  <div class="links">
-    <%= link_to 'Administration', bash_admin_path %>
-  </div>
+
+<div class="links">
+  <%= link_to 'Bash Home', bash_path %>
+</div>
+<div class="links">
+  <%= link_to 'Invoke Scripts', bash_invoke_path %>
+</div>
+<div class="links">
+  <%= link_to 'Basics', bash_basics_path %>
+</div>
+<div class="links">
+  <%= link_to 'Administration', bash_admin_path %>
 </div>
 
 
-<div class="container">
-  <h1>Starting with a Sha-Bang</h1>
 
-  <p>
-    The sha-bang (#!) at the head of a script tells your system that this file is
-    a set of commands to be fed to the command interpreter indicated. The #! is
-    actually a two-byte [2] magic number, a special marker that designates a file
-    type, or in this case an executable shell script (type man magic for more
-    details on this fascinating topic). Immediately following the sha-bang is a
-    path name. This is the path to the program that interprets the commands in the
-    script, whether it be a shell, a programming language, or a utility. This
-    command interpreter then executes the commands in the script, starting at the
-    top (the line following the sha-bang line), and ignoring comments.
-  </p>
+
+<h1>Starting with a Sha-Bang</h1>
+
+<p>
+  The sha-bang (#!) at the head of a script tells your system that this file is
+  a set of commands to be fed to the command interpreter indicated. The #! is
+  actually a two-byte [2] magic number, a special marker that designates a file
+  type, or in this case an executable shell script (type man magic for more
+  details on this fascinating topic). Immediately following the sha-bang is a
+  path name. This is the path to the program that interprets the commands in the
+  script, whether it be a shell, a programming language, or a utility. This
+  command interpreter then executes the commands in the script, starting at the
+  top (the line following the sha-bang line), and ignoring comments.
+</p>
 <br>
 <br>
 <br>
-  <div class="code">
-      #!/bin/sh <br>
-      #!/bin/bash <br>
-      #!/usr/bin/perl <br>
-      #!/usr/bin/tcl <br>
-      #!/bin/sed -f <br>
-      #!/bin/awk -f <br>
-  </div>
-
-  <p>
-    Each of the above script header lines calls a different command interpreter.
-    Using #!/bin/sh makes the script portable to non-Linux machines, though you
-    sacrifice Bash-specific features.
-  </p>
-
-  <p>
-    Many times, you will write a script that carries out one particular task.
-    It might occur to you to generalize a script to do other, similar tasks.
-    Replacing the literal ("hard-wired") constants by variables is a step in
-    that direction, as is replacing repetitive code blocks by functions.
-  </p>
+<div class="code">
+    #!/bin/sh <br>
+    #!/bin/bash <br>
+    #!/usr/bin/perl <br>
+    #!/usr/bin/tcl <br>
+    #!/bin/sed -f <br>
+    #!/bin/awk -f <br>
 </div>
+
+<p>
+  Each of the above script header lines calls a different command interpreter.
+  Using #!/bin/sh makes the script portable to non-Linux machines, though you
+  sacrifice Bash-specific features.
+</p>
+
+<p>
+  Many times, you will write a script that carries out one particular task.
+  It might occur to you to generalize a script to do other, similar tasks.
+  Replacing the literal ("hard-wired") constants by variables is a step in
+  that direction, as is replacing repetitive code blocks by functions.
+</p>

@@ -1,0 +1,141 @@
+<%= provide(:title, 'C++ | Control Structures') %>
+<div class="links">
+  <%= link_to 'C++ Home', c_path %>
+</div>
+<div class="links">
+  <%= link_to 'My First Program', c_first_program_path %>
+</div>
+<h1> C++ Control Structures II Chapter 5 </h1>
+<div class="code">
+  // Flag-controlled while loop.<br>
+  // Number guessing game.<br>
+<br>
+  #include &#060iostream><br>
+  #include &#060cstdlib><br>
+  #include &#060ctime><br>
+
+  int main()<br>
+  {<br>
+  <ul>
+    <li>int num;</li>
+    <li>int guess;</li>
+    <li>bool done;</li>
+    <br>
+    <li>num = (rand() + time(0)) % 100;</li>
+    <li>done = false;</li>
+    <li>while(!done)</li>
+    <li>{</li>
+      <ul>
+        <li>std::cout << "Enter an integer >= 0 < 100: ";</li>
+        <li>std::cin >> guess;</li>
+        <li>if (guess == num)</li>
+        <li>{</li>
+          <ul>
+            <li>
+              std::cout << "You guessed the correct number!" << std::endl;
+            </li>
+            <li>done = true;</li>
+          </ul>
+        <li>}</li>
+        <li>else</li>
+        <li>{</li>
+          <ul>
+            <li>if (guess < num)</li>
+            <ul>
+              <li>std::cout << "Your guess is too low" << endl;</li>
+            </ul>
+            <li>else</li>
+            <ul>
+              <li>std::cout << "Your guess is too high" << endl;</li>
+            </ul>
+          </ul>
+
+        <li>}</li>
+      </ul>
+    <li>}</li>
+  </ul>
+}
+</div>
+<p>
+  Fibonacci Number
+</p>
+<div class="code">
+  // nth Fibonacci Number
+  <ul>
+    <li>#include &#060iostream></li>
+    <li>using namespace std;</li>
+    <li>int main()</li>
+    <li>{</li>
+      <ul>
+        <li>int previous1;</li>
+        <li>int previous2;</li>
+        <li>int current;</li>
+        <li>int counter;</li>
+        <li>int nthFibonacci;</li>
+        <br>
+        <li>cout << "Enter the first two fibonacci numbers: ";</li>
+        <li>cin >> previous1 >> previous2;</li>
+        <li>cout << "Enter the position of the sequence: "</li>
+        <li>if (nthFibonnaci == 1)</li>
+        <ul>
+          <li>current = previous1;</li>
+        </ul>
+        <li>else if (nthFibonacci == 2)</li>
+        <ul>
+          <li>current = previous2;</li>
+        </ul>
+        <li>else</li>
+        <li>{</li>
+          <ul>
+            <li>counter = 3</li>
+            <li>while (counter <= nthFibonacci)</li>
+            <li>{</li>
+            <ul>
+              <li>current = previous2 + previous1;</li>
+              <li>previous1 = previous2;</li>
+              <li>previous2 = current;</li>
+              <li>counter++;</li>
+            </ul>
+            <li>}</li>
+          </ul>
+        <li>}</li>
+      </ul>
+      cout << "The Fibonacci number at position ";<br>
+      cout << nthFibonacci << " is: " << current << endl;
+    <li>}</li>
+  </ul>
+</div>
+
+
+<!-- // Divisors and number of divisors of a number <br>
+#include <iostream>
+<br>
+using namespace std;
+<br>
+int main()<br>
+{<br>
+int num;<br>
+int count = 0;<br>
+<br>
+cout << "Enter a number: ";<br>
+cin >> num;<br>
+<br>
+cout << "The divisors of " << num << " are: ";<br>
+for (int i = 1; i <= num; i++)<br>
+{<br>
+if (num % i == 0)<br>
+{<br>
+cout << i << ", ";<br>
+count++;<br>
+}<br>
+}<br>
+cout << endl;<br>
+cout << "The number of divisors is: " << count << "." << endl;<br>
+if (count % 2 == 0)<br>
+cout << "Closed" << endl;<br>
+else<br>
+cout << "Open" << endl;<br>
+<br>
+<br>
+return 0;<br>
+}<br> -->

@@ -27,6 +27,10 @@ Rails.application.routes.draw do
 
   get '/c' => 'c#index'
 
+  get '/c/first_program' => 'c#first_program'
+
+  get '/c/control_structures' => 'c#control_structures'
+
   get '/linux' => 'linux#index'
 
   get 'welcome/index'

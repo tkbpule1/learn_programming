@@ -1,5 +1,10 @@
 class CController < ApplicationController
   def index
   end
-end
 
+  def first_program
+  end
+
+  def control_structures
+  end
+end

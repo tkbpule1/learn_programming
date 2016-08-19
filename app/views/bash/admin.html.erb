@@ -1,58 +1,52 @@
 <%= provide(:title, "Administration") %>
 
-<div class="container">
-  <div class="links">
-    <%= link_to 'Bash Home', bash_path %>
-  </div>
-  <div class="links">
-    <%= link_to 'Sha-Bang', bash_shabang_path %>
-  </div>
-  <div class="links">
-    <%= link_to 'Invoke', bash_invoke_path %>
-  </div>
-  <div class="links">
-    <%= link_to 'Basics', bash_basics_path %>
-  </div>
+
+<div class="links">
+  <%= link_to 'Bash Home', bash_path %>
 </div>
-<div class="container">
-  <h3>
-    CHMOD
-  </h3>
-  <p>
-    7: rwx <br>
-    6: rw- <br>
-    5: r-x <br>
-    4: r-- <br>
-    3: -wx <br>
-    2: -w- <br>
-    1: --x <br>
-    0: ---
-  </p>
-
-  <h3>
-    User Account Management
-  </h3>
-  <div class="code">
-    <span class="prompt">[~]$ </span>tail /etc/login.defs <br> <br>
-    OUTPUT: <br>
-    ubuntu:x:1000:1000:ubuntu,,,:/home/ubuntu:/bin/bash
-  </div>
-  <p>
-    username: ubuntu <br>
-    x: password - hased in /etc/shadow <br>
-    1000: user name <br>
-    1000: user group <br>
-    firstname,lastname,contactinfo,etc.: <br>
-    home_dir: /home/ubuntu <br>
-    default_shell: /bin/bash <br>
-    <br>
-    NOTE: <br>
-    shell: /bin/false means user does not have access to the shell <br>
-    shell: /bin/nologin means user cannot log in
-  </p>
-
-
-
-
-
+<div class="links">
+  <%= link_to 'Sha-Bang', bash_shabang_path %>
 </div>
+<div class="links">
+  <%= link_to 'Invoke', bash_invoke_path %>
+</div>
+<div class="links">
+  <%= link_to 'Basics', bash_basics_path %>
+</div>
+
+
+<h3>
+  CHMOD
+</h3>
+<p>
+  7: rwx <br>
+  6: rw- <br>
+  5: r-x <br>
+  4: r-- <br>
+  3: -wx <br>
+  2: -w- <br>
+  1: --x <br>
+  0: ---
+</p>
+
+<h3>
+  User Account Management
+</h3>
+<div class="code">
+  <span class="prompt">[~]$ </span>tail /etc/login.defs <br> <br>
+  OUTPUT: <br>
+  ubuntu:x:1000:1000:ubuntu,,,:/home/ubuntu:/bin/bash
+</div>
+<p>
+  username: ubuntu <br>
+  x: password - hased in /etc/shadow <br>
+  1000: user name <br>
+  1000: user group <br>
+  firstname,lastname,contactinfo,etc.: <br>
+  home_dir: /home/ubuntu <br>
+  default_shell: /bin/bash <br>
+  <br>
+  NOTE: <br>
+  shell: /bin/false means user does not have access to the shell <br>
+  shell: /bin/nologin means user cannot log in
+</p>
