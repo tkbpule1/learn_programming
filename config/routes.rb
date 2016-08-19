@@ -23,11 +23,11 @@ Rails.application.routes.draw do
 
   get '/rails/create' => 'rails#create'
 
-  get '/ruby' => 'pages#ruby'
+  get '/ruby' => 'ruby#index'
 
-  get '/c' => 'pages#c'
+  get '/c' => 'c#index'
 
-  get '/linux' => 'pages#linux'
+  get '/linux' => 'linux#index'
 
   get 'welcome/index'
 
