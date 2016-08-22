@@ -12,11 +12,33 @@
   Create a file named first_program.cpp
 </p>
 <div class="code">
-  #include <iostream><br>
-  int main()<br>
+ <span class="preproc">#include </span><span class="str">&#060iostream></span>
+  <br>
+  <span class="preproc">int </span><span class="func">main</span>()
+  <br>
   {<br>
-    std::cout << "This is how to output some text to the standard output (the console)";<br>
+    std::cout << <span class="str">"This is how to output some text to the standard output (the console)"</span>;<br>
     std::endl;<br>
+    <span class="preproc">return</span> <span class="num">0</span>;<br>
   }<br>
-
 </div>
+
+<p>
+  The first line, <code><span class="preproc">#include </span><span class="str">&#060iostream></span></code>, is a directive read and interpreted by the preprocessor.  In this case, we are telling the preprocessor that we want to include the header file <em>iostream</em>.  This file allows us to take input from the keyboard and send output the the screen.
+</p>
+<p>
+  Only a small number of operations are explicitly defined in C++.  Many of the functions and symbols needed to run a program are provided as a collection of libraries.  Every library has a name and is referred to by a header file. For example, the descriptions of the functions needed to perform input/output (I/O) are contained in the header file <strong><em>iostream</em></strong>.  Similarly, the descriptions of useful mathematical functions, such as power, absolute, and sine, are contained in the header file <strong><em>cmath</em></strong>.  If you want to use I/O or math functions, you need to tell the computer where to find the necessary code.  Preprocessor directives and header files accomplish this task.
+</p>
+
+<p>
+  The next line, <code><span class="preproc">int </span><span class="func">main</span>()</code>, defines the function main.  This is a special function in C++;&nbsp it is the function called when the source code is executed.
+</p>
+
+<p>
+  The braces, <code>{ }</code>, define a block. In this case, they define the main function.
+  The main function begins at the left brace, {, and ends at the right brace, }.
+</p>
+
+<p>
+  The return statement, <code><span class="preproc">return </span><span class="num">0</span></code>,
+</p>

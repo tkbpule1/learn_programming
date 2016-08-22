@@ -1,0 +1,12 @@
+
+                     Friendly Hardware Store
+
+Item ID Item Name      pOrdered pInStore pSold manufPrice sellingPrice
+1111    Rope                150      150     0      45.00      125.00
+2222    Camalot             150      150     0      50.00      100.00
+3333    AR-15                50       35    15     450.00      850.00
+4444    Lighter             200      200     0       1.00        2.00
+
+Total Inventory: $63900
+Total number of items in the store: 535
+

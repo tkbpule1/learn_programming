@@ -102,15 +102,18 @@ p {
   }
 }
 
-.code {
+.code{
   color: black !important;
   background: $gray-medium-light;
   border: solid 1px black;
+  border-radius: 5px;
   text-align: left;
   padding: 10px 10px 10px 10px;
   font-weight: bold;
   font-family: monospace;
   font-size: 1.5em;
+  // width: 75%;
+  margin-bottom: 10px;
 }
 
 .prompt {
@@ -147,13 +150,34 @@ p {
 }
 
 .nav {
-   position: static;
-  //  float: right;
-  //  display: inline-block;
+  position: static;
+  float: right;
+  display: inline-block;
 
 }
 
 #header {
   min-width: 980px;
   margin: 10px 10px 10px 10px;
+}
+
+.preproc {
+  color: #b000ff;
+}
+
+.str {
+  color: #00a000;
+}
+
+.func {
+  color: #0000e0;
+}
+
+.num {
+  color: #eb9800;
+}
+
+code {
+  color: black;
+  background-color: $gray-medium-light;
 }

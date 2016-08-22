@@ -1,5 +1,8 @@
 <%= provide(:title, 'C++ ') %>
 <div class="links">
+  <%= link_to 'Preprocessor', c_preprocessor_path %>
+</div>
+<div class="links">
   <%= link_to 'My First Program', c_first_program_path %>
 </div>
 <div class="links">
@@ -20,7 +23,7 @@
 </p>
 <br>
 <p>
-  To compile a program, use the g++ compiler:
+  To compile the source code, use the g++ compiler:
 </p>
 
 <div class="code">
@@ -28,17 +31,13 @@
   g++ test.cpp
 </div>
 
-
-
 <p>
   Note: The output file will be a.out.
 </p>
 
 <p>
   If you wish to to name the output something meaningful, use the g++ compiler with the option -o, the output file name, the file name of the source code:
-
 </p>
-
 
 <div class="code">
   <span class="prompt">$ </span>
@@ -46,7 +45,7 @@
 </div>
 
 <p>
-  Now, we can run the program:
+  Now, we can execute the source code:
 </p>
 
 <div class="code">

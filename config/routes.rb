@@ -29,6 +29,8 @@ Rails.application.routes.draw do
 
   get '/c/first_program' => 'c#first_program'
 
+  get '/c/preprocessor' => 'c#preprocessor'
+
   get '/c/control_structures' => 'c#control_structures'
 
   get '/linux' => 'linux#index'

@@ -7,4 +7,7 @@ class CController < ApplicationController
 
   def control_structures
   end
+
+  def preprocessor
+  end
 end

@@ -1,0 +1,21 @@
+class romanType
+{
+public:
+  void getRoman();
+  // Function to store roman numeral
+
+  void convertRoman();
+  // Function to convert roman numeral
+  // Postcondition: M = 1000; D = 500; C = 100; L = 50; X = 10; V = 5; I = 1;
+
+  void print();
+  // Print decimal value of Roman numeral;
+
+  romanType();
+  // Default constructor;
+  // decimal = 0;
+
+private:
+  char romanNumeral[10];
+  int dec;
+};
