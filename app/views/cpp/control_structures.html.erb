@@ -1,10 +1,18 @@
 <%= provide(:title, 'C++ | Control Structures') %>
+
 <div class="links">
-  <%= link_to 'C++ Home', c_path %>
+  <%= link_to 'C++ Home', cpp_path %>
 </div>
 <div class="links">
-  <%= link_to 'My First Program', c_first_program_path %>
+  <%= link_to 'Basics', cpp_basics_path %>
 </div>
+<div class="links">
+  <%= link_to 'Control Structures', cpp_control_structures_path %>
+</div>
+
+
+
+
 <h1> C++ Control Structures II Chapter 5 </h1>
 <div class="code">
   // Flag-controlled while loop.<br>
@@ -105,37 +113,3 @@
     <li>}</li>
   </ul>
 </div>
-
-
-<!-- // Divisors and number of divisors of a number <br>
-#include <iostream>
-<br>
-using namespace std;
-<br>
-int main()<br>
-{<br>
-int num;<br>
-int count = 0;<br>
-<br>
-cout << "Enter a number: ";<br>
-cin >> num;<br>
-<br>
-cout << "The divisors of " << num << " are: ";<br>
-for (int i = 1; i <= num; i++)<br>
-{<br>
-if (num % i == 0)<br>
-{<br>
-cout << i << ", ";<br>
-count++;<br>
-}<br>
-}<br>
-cout << endl;<br>
-cout << "The number of divisors is: " << count << "." << endl;<br>
-if (count % 2 == 0)<br>
-cout << "Closed" << endl;<br>
-else<br>
-cout << "Open" << endl;<br>
-<br>
-<br>
-return 0;<br>
-}<br> -->

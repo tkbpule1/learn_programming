@@ -25,13 +25,13 @@ Rails.application.routes.draw do
 
   get '/ruby' => 'ruby#index'
 
-  get '/c' => 'c#index'
+  get '/cpp' => 'cpp#index'
 
-  get '/c/first_program' => 'c#first_program'
+  get '/cpp/basics' => 'cpp#basics'
 
-  get '/c/preprocessor' => 'c#preprocessor'
+  get '/cpp/preprocessor' => 'cpp#preprocessor'
 
-  get '/c/control_structures' => 'c#control_structures'
+  get '/cpp/control_structures' => 'cpp#control_structures'
 
   get '/linux' => 'linux#index'
 

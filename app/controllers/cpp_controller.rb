@@ -1,8 +1,8 @@
-class CController < ApplicationController
+class CppController < ApplicationController
   def index
   end
 
-  def first_program
+  def basics
   end
 
   def control_structures
