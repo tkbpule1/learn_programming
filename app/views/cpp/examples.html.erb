@@ -1,0 +1,145 @@
+<%= provide(:title, 'C++ | Examples') %>
+
+<div class="links">
+  <%= link_to 'C++ Home', cpp_path %>
+</div>
+<div class="links">
+  <%= link_to 'Basics', cpp_basics_path %>
+</div>
+<div class="links">
+  <%= link_to 'Input/Output', cpp_iostream_path %>
+</div>
+<div class="links">
+  <%= link_to 'Control Structures', cpp_control_structures_path %>
+</div>
+
+<h1>Basics</h1>
+
+<h2>Convert Length</h2>
+<p>
+  Write a program that takes as input given lengths expressed in feet and
+  inches.  The program should then convert and output the lengths in
+  centimeters.  Assume that the given lengths in feet and inches are integers.
+</p>
+
+<div class="code">
+<pre>
+  <span class="comment">//Header File</span>
+  <span class="preproc">#include</span> <span class="str">&#060iostream></span>
+
+  <span class="comment">//Named Constants</span>
+  <span class="preproc">const double</span> CENTIMETERS_PER_INCH = 2.54;
+  <span class="preproc">const int</span> INCHES_PER_FOOT = 12;
+
+  <span class="comment">//Main Function</span>
+  <span class="preproc">int</span> <span class="func">main</span>()
+  {
+    <span class="comment">//Declare Variables</span>
+    <span class="preproc">int</span> feet, inches;
+    <span class="preproc">int</span> totalInches;
+    <span class="preproc">double</span> centimeters;
+
+    <span class="comment">//Statement to prompt the user for input</span>
+    std::cout << <span class="str">"Enter two integers, one for feet and one for inches: "</span>;
+
+    <span class="comment">//Statement to read the input from the user</span>
+    std::cin >> feet >> inches;
+
+    <span class="comment">//Statement to output the input from the user</span>
+    std::cout << <span class="str">"You entered:"</span> << feet << <span class="str">" Feet and "</span>
+              << inches << <span class="str">" Inches."</span> << endl;
+
+    <span class="comment">//Calculate total number of inches</span>
+    totalInches = INCHES_PER_FOOT * feet + inches;
+
+    <span class="comment">//Output the total number of inches</span>
+    std::cout << <span class="str">"The total number of inches = "</span>
+              << totalInches << std::endl;
+
+    <span class="comment">//Convert inches into centimeters</span>
+    centimeters = CENTIMETERS_PER_INCH * totalInches;
+
+    <span class="comment">//Output the number of centimeters</span>
+    std::cout << <span class="str">"The number of centimeters = "</span>
+              << centimeters << std::endl;
+
+    <span class="preproc">return</span> <span class="num">0</span>;
+  }
+</pre>
+</div>
+
+<h2>Make Change</h2>
+<p>
+  Write a program that takes as input any change expressed in cents.  It should then compute the number of half-dollars, quarters, dimes, nickels, and pennies to be returned, returning as many half-dollars as possible, then as many quarters as possible, and so on.
+</p>
+<div class="code">
+  <pre>
+    <span class="comment">//Header File</span>
+    <span class="preproc">#include</span> <span class="str">&#060iostream></span>
+
+    <span class="comment">//Named Constants</span>
+    <span class="preproc">const int</span> HALF_DOLLAR= 50;
+    <span class="preproc">const int</span> QUARTER = 25;
+    <span class="preproc">const int</span> DIME = 10;
+    <span class="preproc">const int</span> NICKEL = 5;
+
+    <span class="comment">//Main Function</span>
+    <span class="preproc">int</span> <span class="func">main</span>()
+    {
+      <span class="comment">//Declare Variables</span>
+      <span class="preproc">int</span> change;
+      <span class="preproc">int</span> half_dollars;
+      <span class="preproc">int</span> quarters;
+      <span class="preproc">int</span> dimes;
+      <span class="preproc">int</span> nickels;
+      <span class="preproc">int</span> pennies;
+
+      <span class="comment">//Statement to prompt the user to input amount of change in cents</span>
+      std::cout << <span class="str">"Enter change in cents: "</span>;
+
+      <span class="comment">//Statement to store input into variable, change</span>
+      std::cin >> change;
+
+      <span class="comment">//Statement to calculate number of half dollars</span>
+      half_dollars = change / HALF_DOLLAR;
+
+      <span class="comment">//Statement to update change</span>
+      change = change % HALF_DOLLAR;
+
+      <span class="comment">//Statement to calculate number of quarters</span>
+      quarters = change / QUARTER;
+
+      <span class="comment">//Statement to update change</span>
+      change = change % QUARTER;
+
+      <span class="comment">//Statement to calculate number of dimes</span>
+      dimes = change / DIME;
+
+      <span class="comment">//Statement to update change</span>
+      change = change % DIME;
+
+      <span class="comment">//Statement to calculate number of nickels</span>
+      nickels = change / NICKEL;
+
+      <span class="comment">//Statement to update change</span>
+      change = change % NICKEL;
+
+      <span class="comment">//The number of pennies is now equal to the change</span>
+      pennies = change;
+
+      <span class="comment">//Output the results of our calculations</span>
+      std::cout << <span class="str">"The number of half dollars: "</span>
+                << half_dollars << std::endl;
+      std::cout << <span class="str">"The number of quarters: "</span>
+                << quarters << std::endl;
+      std::cout << <span class="str">"The number of dimes: "</span>
+                << dimes << std::endl;
+      std::cout << <span class="str">"The number of nickels: "</span>
+                << nickels << std::endl;
+      std::cout << <span class="str">"The number of pennies: "</span>
+                << pennies << std::endl;
+
+      <span class="preproc">return</span> <span class="num">0</span>;
+    }
+  </pre>
+</div>

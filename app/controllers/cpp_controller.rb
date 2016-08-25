@@ -8,6 +8,12 @@ class CppController < ApplicationController
   def control_structures
   end
 
-  def preprocessor
+  def examples
+  end
+
+  def exercises
+  end
+
+  def iostream    
   end
 end

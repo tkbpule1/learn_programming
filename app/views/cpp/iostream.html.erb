@@ -1,0 +1,100 @@
+<%= provide(:title, 'C++ | Input/Output') %>
+
+<div class="links">
+  <%= link_to 'C++ Home', cpp_path %>
+</div>
+<div class="links">
+  <%= link_to 'Basics', cpp_basics_path %>
+</div>
+<div class="links">
+  <%= link_to 'Examples', cpp_examples_path %>
+</div>
+<div class="links">
+  <%= link_to 'Control Structures', cpp_control_structures_path %>
+</div>
+
+<h1>I/O Streams and Standard I/O Devices</h1>
+
+<p>
+  <strong>Input Stream:</strong> A sequence of characters from an input device to the computer.
+  <br>
+  <strong>Output Stream:</strong> A sequence of characters from the computer to an output device.
+  <br>
+  <br>
+
+  Variables of type istream (input stream) are called <strong>input stream variables</strong>;
+  <br>
+  Variables of type ostream (output stream) are called <strong>output stream variables</strong>;
+  <br>
+  <br>
+
+  <strong>cin</strong> is used along with the <strong>stream extraction operator</strong>, <code>>></code>.
+  <br>
+  <strong>cout</strong> is used along with the <strong>stream insertion operator</strong>, <code><<</code>.
+</p>
+
+<h1>Input Stream Variable, cin</h1>
+<p>
+  There are a few predefined functions that can be used with the input stream variable.  Let's take a look at them.
+</p>
+
+
+<h2><strong>cin</strong> and the <span class="func">get</span> Function</h2>
+<p>
+  This function is mainly used with c-strings but there are different forms.
+</p>
+
+<h3>cin.get(varChar)</h3>
+<p>
+  This stores the next character.  It stores all printable characters, whitespace, new-line, etc. varChar is a char type variable.
+</p>
+<div class="code">
+  cin.<span class="func">get</span>(ch);
+</div>
+
+<h3>Use with C-Strings</h3>
+<p>
+  This stores the next <code><span class="num">n</span> - <span class="num">1</span></code> number of characters; or all characters until the new line character.
+</p>
+<div class="code">
+  cin.<span class="func">get</span>(str, <span class="num">n</span>);
+</div>
+
+
+<h2><strong>cin</strong> and the <span class="func">ignore</span> Function</h2>
+<p>
+  You can use the stream function <span class="func">ignore</span> to discard a portion of the input.
+</p>
+<div class="code">
+  cin.ignore(intExp, chExp);
+</div>
+<p>
+  where <code>intExp</code> is an integer expression yielding an integer value; <code>chExp</code> is a char expression yielding a char value;
+  <br>
+</p>
+
+
+<h2><strong>cin</strong> and the <span class="func">putback</span> Function</h2>
+<p>
+  This function allows you to put a character back into the input stream.
+</p>
+<div class="code">
+  cin.<span class="func">putback</span>(ch);
+</div>
+<p>
+
+  <br>
+</p>
+
+
+<h2><strong>cin</strong> and the <span class="func">peek</span> Function</h2>
+<p>
+  This function allows you to store the next character, but it is not removed input stream.
+</p>
+<div class="code">
+  ch = cin.<span class="func">peek</span>();
+</div>
+<p>
+
+  <br>
+</p>

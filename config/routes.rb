@@ -29,7 +29,11 @@ Rails.application.routes.draw do
 
   get '/cpp/basics' => 'cpp#basics'
 
-  get '/cpp/preprocessor' => 'cpp#preprocessor'
+  get '/cpp/examples' => 'cpp#examples'
+
+  get '/cpp/exercises' => 'cpp#exercises'
+
+  get '/cpp/iostream' => 'cpp#iostream'
 
   get '/cpp/control_structures' => 'cpp#control_structures'
 

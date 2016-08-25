@@ -222,3 +222,13 @@ p {
     font-size: 1em;
   }
 }
+
+.code {
+  pre {
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+    font-family: monospace;
+    letter-spacing: 1.5px;
+  }
+}

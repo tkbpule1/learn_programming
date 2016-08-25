@@ -4,7 +4,10 @@
   <%= link_to 'C++ Home', cpp_path %>
 </div>
 <div class="links">
-  <%= link_to 'Basics', cpp_basics_path %>
+  <%= link_to 'Examples', cpp_examples_path %>
+</div>
+<div class="links">
+  <%= link_to 'Input/Output', cpp_iostream_path %>
 </div>
 <div class="links">
   <%= link_to 'Control Structures', cpp_control_structures_path %>
@@ -19,7 +22,7 @@
   Create a file named first_program.cpp
 </p>
 <div class="code">
- <span class="preproc">#include </span><span class="str">&#060iostream></span>
+  <span class="preproc">#include </span><span class="str">&#060iostream></span>
   <br>
   <span class="preproc">int </span><span class="func">main</span>()
   <br>
@@ -33,16 +36,31 @@
 
 <h1>The Semicolon</h1>
 <p>
-  A semicolon is needed after every C++ statement.  Everything inside the main function are C++ statements and thus need semicolons.  As you write/read more code, the definition of what a C++ statement is will become more clear.
+  A semicolon is needed after every C++ statement.  Everything inside the main
+  function are C++ statements and thus need semicolons.  As you write/read more
+  code, the definition of what a C++ statement is will become more clear.
 </p>
 <br><br>
 
 <h1>The Preprocessor Directives</h1>
 <p>
-  The first line, <code><span class="preproc">#include </span><span class="str">&#060iostream></span></code>, is a directive read and interpreted by the preprocessor.  In this case, we are telling the preprocessor that we want to include the header file <em>iostream</em>.  This file allows us to take input from the keyboard and send output the the screen.
+  The first line, <code><span class="preproc">#include </span><span
+  class="str">&#060iostream></span></code>, is a directive read and interpreted
+  by the preprocessor.  In this case, we are telling the preprocessor that we
+  want to include the header file <em>iostream</em>.  This file allows us to
+  take input from the keyboard and send output the the screen.
 </p>
 <p>
-  Only a small number of operations are explicitly defined in C++.  Many of the functions and symbols needed to run a program are provided as a collection of libraries.  Every library has a name and is referred to by a header file. For example, the descriptions of the functions needed to perform input/output (I/O) are contained in the header file <strong><em>iostream</em></strong>.  Similarly, the descriptions of useful mathematical functions, such as power, absolute, and sine, are contained in the header file <strong><em>cmath</em></strong>.  If you want to use I/O or math functions, you need to tell the computer where to find the necessary code.  Preprocessor directives and header files accomplish this task.
+  Only a small number of operations are explicitly defined in C++.  Many of the
+  functions and symbols needed to run a program are provided as a collection of
+  libraries.  Every library has a name and is referred to by a header file. For
+  example, the descriptions of the functions needed to perform input/output
+  (I/O) are contained in the header file <strong><em>iostream</em></strong>.
+  Similarly, the descriptions of useful mathematical functions, such as power,
+  absolute, and sine, are contained in the header file
+  <strong><em>cmath</em></strong>.  If you want to use I/O or math functions,
+  you need to tell the computer where to find the necessary code.  Preprocessor
+  directives and header files accomplish this task.
 </p>
 <br><br>
 
@@ -522,6 +540,9 @@
     <td>char values</td>
   </tr>
 </table>
+
+<div id="basics_input">
+</div>
 <br><br>
 
 <h1>Input (Read) Statements</h1>
@@ -567,5 +588,3 @@
       Post-decrement
 </div>
 <br><br>
-
-<h1></h1>
