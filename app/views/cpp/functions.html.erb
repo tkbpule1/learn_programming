@@ -1,0 +1,80 @@
+<%= provide(:title, 'C++ | Functions') %>
+
+<div class="links">
+  <%= link_to 'C++ Home', cpp_path %>
+</div>
+<div class="links">
+  <%= link_to 'Examples', cpp_examples_path %>
+</div>
+<div class="links">
+  <%= link_to 'Basics', cpp_basics_path %>
+</div>
+<div class="links">
+  <%= link_to 'Input/Output', cpp_iostream_path %>
+</div>
+<div class="links">
+  <%= link_to 'Control Structures', cpp_control_structures_path %>
+</div>
+
+<h1>User-Defined Functions</h1>
+<p>
+  <strong>Formal Parameter:</strong> A variable declared in the function heading
+  <br>
+  <strong>Actual Paramter:</strong> A variable listed in a call to a function
+  <br>
+  The formal and actual parameters do not have to be named the same, in fact, usually they have different names.
+  <br><br>
+  Function prototypes should be declared above the main function and below the header files.  See the <a href="examples#functions">examples</a> for clarity.
+  <br><br>
+
+</p>
+<h3>Syntax: Value-Returning Function - Prototype</h3>
+<div class="code">
+<pre>
+  <span class="preproc">functionType</span> <span class="func">functionName</span>(<span class="preproc">dataType</span> identifier, <span class="preproc">dataType</span> identifier, ...);</pre>
+</div>
+
+<h3>Syntax: Value-Returning Function - Definition</h3>
+<div class="code">
+<pre>
+  <span class="preproc">functionType</span> <span class="func">functionName</span>(<span class="preproc">dataType</span> identifier, <span class="preproc">dataType</span> identifier, ...)
+  {
+    statements;
+  }</pre>
+</div>
+<h3>Syntax: Function Call</h3>
+<div class="code">
+<pre>
+  <span class="func">functionName</span>(identifier, identifier, ...)
+</pre>
+</div>
+
+<p>
+  There are two categories of functions: Value-Returning and Void Functions.
+  <br>
+  To create a function, you need:
+  <ol>
+    <li>the type of the function</li>
+    <li>the name of the function</li>
+    <li>the number of parameters (if any)</li>
+    <li>the type of each parameter</li>
+    <li>the code required to accomplish to task of the function</li>
+  </ol>
+</p>
+<br>
+
+<h2>Value-returning Functions</h2>
+<p>
+  These functions return a value that can be used in an assignment statement, in an output statement, or as a parameter in another function.<br>
+</p>
+<div class="code">
+<pre>
+  <span class="preproc">int</span> <span class="func">addNumbers</span>(<span class="preproc">int</span> x, <span class="preproc">int</span> y)
+  {
+    <span class="preproc">int</span> sum;
+    sum = x + y;
+
+    <span class="preproc">return</span> sum;
+  }
+</pre>
+</div>

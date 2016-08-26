@@ -12,97 +12,190 @@
 <div class="links">
   <%= link_to 'Input/Output', cpp_iostream_path %>
 </div>
-
-
-
-
-<h1> C++ Control Structures II Chapter 5 </h1>
-<h2>Number guessing game</h2>
-<div class="code">
-  <pre>
-
-    <span class="comment">// Flag-controlled while loop</span>
-
-    <span class="preproc">#include</span> <span class="str">&#060iostream></span>
-    <span class="preproc">#include</span> <span class="str">&#060cstdlib></span>
-    <span class="preproc">#include</span> <span class="str">&#060ctime></span>
-
-    <span class="preproc">int</span> <span class="func">main</span>()
-    {
-      <span class="preproc">int</span> num;
-      <span class="preproc">int</span> guess;
-      <span class="preproc">bool</span> done;
-
-      num = (<span class="func">rand</span>() + <span class="func">time</span>(<span class="num">0</span>)) % <span class="num">100</span>;
-      done = <span class="num">false</span>;
-      <span class="preproc">while</span>(!done)
-      {
-        std::cout << <span class="str">"Enter an integer >= 0 < 100: "</span>;
-        std::cin >> guess;
-        <span class="preproc">if</span> (guess == num)
-        {
-          std::cout << <span class="str">"You guessed the correct number!"</span> << std::endl;
-          done = <span class="num">true</span>;
-        }
-        <span class="preproc">else</span>
-        {
-          <span class="preproc">if</span> (guess < num)
-          {
-            std::cout << <span class="str">"Your guess is too low"</span> << endl;
-          }
-          <span class="preproc">else</span>
-          {
-            std::cout << <span class="str">"Your guess is too high"</span> << endl;
-          }
-        }
-      }
-    }
-  </pre>
+<div class="links">
+  <%= link_to 'Functions', cpp_functions_path %>
 </div>
 
-
-<h2>Fibonacci Number</h2>
+<h1><span class="preproc">if</span> Statement</h1>
 <div class="code">
-  <pre>
-
-  // nth Fibonacci Number
-
-    <span class="preproc">#include</span> <span class="str">&#060iostream></span>
-
-    <span class="preproc">using namespace</span> <span class="num">std</span>;
-
-    <span class="preproc">int</span> main()
-    {
-        <span class="preproc">int</span> previous1;
-        <span class="preproc">int</span> previous2;
-        <span class="preproc">int</span> current;
-        <span class="preproc">int</span> counter;
-        <span class="preproc">int</span> nthFibonacci;
-
-        cout << <span class="str">"Enter the first two fibonacci numbers: "</span>;
-        cin >> previous1 >> previous2;
-        cout << <span class="str">"Enter the position of the sequence: "</span>;
-        <span class="preproc">if</span> (nthFibonnaci == <span class="num">1</span>)
-        {
-          current = previous1;
-        }
-        <span class="preproc">else if</span> (nthFibonacci == <span class="num">2</span>)
-        {
-          current = previous2;
-        }
-        <span class="preproc">else</span>
-        {
-            counter = 3
-            while (counter <= nthFibonacci)
-            {
-              current = previous2 + previous1;
-              previous1 = previous2;
-              previous2 = current;
-              counter++;
-            }
-        }
-      cout << <span class="str">"The Fibonacci number at position "</span>;
-      cout << nthFibonacci << <span class="str">" is: "</span> << current << endl;
-    }
-  </pre>
+<pre>
+  <span class="preproc">if</span> (expression)
+  {
+    statements;
+  }
+</pre>
 </div>
+<div class="code">
+<pre>
+  <span class="preproc">if</span> (expression)
+  {
+    statements;
+  }
+  <span class="preproc">else if</span> (expression)
+  {
+    statements;
+  }
+  <span class="preproc">else</span>
+  {
+    statements;
+  }
+</pre>
+</div>
+<br><br>
+
+<h1>Conditional Operators</h1>
+<p>
+  This is an if-else statement but with the conditional operators,<code> ? : </code>, taking the place of the words <span class="preproc">if</span> and <span class="preproc">else</span>
+</p>
+<div class="code">
+<pre>
+  expression1 ? expression2 : expression3;  
+</pre>
+</div>
+<p>
+  If expression1 is true, evaluate expression2, else evaluate expression3;
+</p>
+<br><br>
+
+<h1>Switch Statements</h1>
+<div class="code">
+<pre>
+  <span class="preproc">switch</span> (expression)
+  {
+    <span class="preproc">case</span> value1:
+      statements1;
+      <span class="preproc">break</span>;
+    <span class="preproc">case</span> value2:
+      statements2;
+      <span class="preproc">break</span>;
+    <span class="preproc">case</span> valueN:
+      statementsN;
+      <span class="preproc">break</span>;
+    <span class="preproc">default</span> :
+      statements;
+  }
+</pre>
+</div>
+<br><br>
+
+<h1><span class="preproc">while</span> Statement</h1>
+<div class="code">
+<pre>
+  <span class="preproc">while</span> (expression)
+  {
+    statements;
+  }
+</pre>
+</div>
+<br>
+
+<h2>Counter-Controlled <span class="preproc">while</span> loop</h2>
+<p>
+  What you need to know: The number of times the statement(s) need to be executed
+</p>
+<div class="code">
+<pre>
+  <span class="preproc">int</span> counter = <span class="num">0</span>;
+  <span class="preproc">while</span> (counter <= 10)
+  {
+    std::cout << counter << std::endl;
+  }
+</pre>
+</div>
+<br>
+
+<h2>Flag-Controlled <span class="preproc">while</span> loop</h2>
+<p>
+  Uses a boolean value to control the loop
+</p>
+<div class="code">
+<pre>
+  found = <span class="preproc">false</span>;
+  <span class="preproc">while</span> (!found) <span class="comment">while found is not true</span>
+  {
+    std::cout << <span class="str">"Enter a number: "</span> << std::endl;
+    cin >> guess;
+    if (guess == num)
+    {
+      found = <span class="preproc">true</span>;
+      std::cout << <span class="str">"You guessed the number!"</span> << std::endl;
+    }
+
+  }
+</pre>
+</div>
+<br>
+
+<h2>Sentinel-Controlled <span class="preproc">while</span> loop</h2>
+<p>
+  What you need to know: The value of the last data point (sentinel)
+</p>
+<div class="code">
+<pre>
+  std::cin >> number;
+  <span class="preproc">while</span> (number != SENTINEL)
+  {
+    sum = sum + number;
+  }
+</pre>
+</div>
+<br>
+
+<h2>End-Of-File-Controlled <span class="preproc">while</span> loop</h2>
+<div class="code">
+<pre>
+  <span class="preproc">while</span> (cin)
+  {
+    std::cin >> number;
+    std::cout << number << std::endl;
+  }
+</pre>
+</div>
+<div class="code">
+<pre>
+  <span class="preproc">while</span> (!inFile.<span class="func">eof</span>())
+  {
+    inFIle >> number;
+    std::cout << number << std::endl;
+  }
+</pre>
+</div>
+<br><br>
+
+<h1><span class="preproc">for</span> loops</h1>
+
+<div class="code">
+<pre>
+  <span class="preproc">for</span>(<span class="preproc">int</span> i = 0; i <= 10; i++)
+  {
+    std::cout << i << std::endl;
+  }
+</pre>
+</div>
+<div class="code">
+<pre>
+  <span class="preproc">for</span>(<span class="preproc">int</span> i = 0; i <= 2; i++)
+  {
+    <span class="preproc">for</span>(<span class="preproc">int</span> j = 0; j <= 10; j++)
+    {
+      std::cout << i * j << std::endl;
+    }
+  }
+</pre>
+</div>
+<br><br>
+
+<h1><span class="preproc">do while</span> loops</h1>
+
+<div class="code">
+<pre>
+  <span class="preproc">do</span>
+  {
+    std::cout << i << std::endl;
+    i = i + 1;
+  }
+  <span class="preproc">while</span>(i < 5);
+</pre>
+
+</div>
+<br><br>

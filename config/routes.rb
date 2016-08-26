@@ -37,6 +37,8 @@ Rails.application.routes.draw do
 
   get '/cpp/control_structures' => 'cpp#control_structures'
 
+  get '/cpp/functions' => 'cpp#functions'
+
   get '/linux' => 'linux#index'
 
   get 'welcome/index'

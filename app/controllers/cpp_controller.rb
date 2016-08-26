@@ -14,6 +14,9 @@ class CppController < ApplicationController
   def exercises
   end
 
-  def iostream    
+  def iostream
+  end
+
+  def functions
   end
 end

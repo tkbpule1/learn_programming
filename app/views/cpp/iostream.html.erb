@@ -4,13 +4,16 @@
   <%= link_to 'C++ Home', cpp_path %>
 </div>
 <div class="links">
-  <%= link_to 'Basics', cpp_basics_path %>
-</div>
-<div class="links">
   <%= link_to 'Examples', cpp_examples_path %>
 </div>
 <div class="links">
+  <%= link_to 'Basics', cpp_basics_path %>
+</div>
+<div class="links">
   <%= link_to 'Control Structures', cpp_control_structures_path %>
+</div>
+<div class="links">
+  <%= link_to 'Functions', cpp_functions_path %>
 </div>
 
 <h1>I/O Streams and Standard I/O Devices</h1>
@@ -48,41 +51,47 @@
   This stores the next character.  It stores all printable characters, whitespace, new-line, etc. varChar is a char type variable.
 </p>
 <div class="code">
-  cin.<span class="func">get</span>(ch);
+<pre>
+  std::cin.<span class="func">get</span>(ch);
+</pre>
 </div>
-<br>
-<br>
+<br><br>
 
 <h3>Use with C-Strings</h3>
 <p>
   This stores the next <code><span class="num">n</span> - <span class="num">1</span></code> number of characters; or all characters until the new line character.
 </p>
 <div class="code">
-  cin.<span class="func">get</span>(str, <span class="num">n</span>);
+<pre>
+  std::cin.<span class="func">get</span>(str, <span class="num">n</span>);
+</pre>
 </div>
-<br>
-<br>
+<br><br>
 
 <h2><strong>cin</strong> and the <span class="func">ignore</span> Function</h2>
 <p>
   You can use the stream function <span class="func">ignore</span> to discard a portion of the input.
 </p>
 <div class="code">
-  cin.ignore(intExp, chExp);
+<pre>
+  std::cin.<span class="func">ignore</span>(intExp, chExp);
+</pre>
 </div>
+
 <p>
   where <code>intExp</code> is an integer expression yielding an integer value; <code>chExp</code> is a char expression yielding a char value;
   <br>
 </p>
-<br>
-<br>
+<br><br>
 
 <h2><strong>cin</strong> and the <span class="func">putback</span> Function</h2>
 <p>
   This function allows you to put a character back into the input stream.
 </p>
 <div class="code">
-  cin.<span class="func">putback</span>(ch);
+<pre>
+  std::cin.<span class="func">putback</span>(ch);
+</pre>
 </div>
 <br><br>
 
@@ -91,7 +100,9 @@
   This function allows you to store the next character, but it is not removed input stream.
 </p>
 <div class="code">
-  ch = cin.<span class="func">peek</span>();
+<pre>
+  ch = std::cin.<span class="func">peek</span>();
+</pre>
 </div>
 <br><br>
 
@@ -100,7 +111,9 @@
   This function allows you to restore the input stream to a working state after it enters a fail state.
 </p>
 <div class="code">
-  cin.<span class="func">clear</span>();
+<pre>
+  std::cin.<span class="func">clear</span>();
+</pre>
 </div>
 <br><br><br>
 
@@ -114,7 +127,9 @@
   This manipulator allows you to control the output of floating-point numbers.
 </p>
 <div class="code">
+<pre>
   std::cout << <span class="func">setprecision</span>(<span class="num">2</span>);
+</pre>
 </div>
 <br><br>
 
@@ -123,13 +138,18 @@
   This manipulator displays all floating-point numbers in the fixed decimal format
 </p>
 <div class="code">
+<pre>
   std::cout << fixed;
+</pre>
 </div>
+
 <p>
   To disable this manipulator:
 </p>
 <div class="code">
+<pre>
   std::cout.<span class="func">unsetf</span>(ios::fixed);
+</pre>
 </div>
 <br><br>
 
@@ -138,13 +158,17 @@
   This manipulator displays all floating-point numbers in the fixed decimal format
 </p>
 <div class="code">
+<pre>
   std::cout << scientific;
+</pre>
 </div>
 <p>
   To disable this manipulator:
 </p>
 <div class="code">
-  std::cout.<span class="func">unsetf</span>(ios::fixed);
+<pre>
+  std::cout.<span class="func">unsetf</span>(ios::scientific);
+</pre>
 </div>
 <br><br>
 
@@ -153,13 +177,17 @@
   This manipulator displays all floating-point numbers in the fixed decimal format
 </p>
 <div class="code">
+<pre>
   std::cout << showpoint;
+</pre>
 </div>
 <p>
   To disable this manipulator:
 </p>
 <div class="code">
+<pre>
   std::cout.<span class="func">unsetf</span>(ios::showpoint);
+</pre>
 </div>
 <br><br>
 
@@ -168,7 +196,9 @@
   This manipulator is used to format the output; the argument is the number of columns the value will consume.  <span class="func">setw</span> only controls the output of the next expression.  The output is right-justified.
 </p>
 <div class="code">
+<pre>
   std::cout << <span class="func">setw</span>(<span class="num">2</span>) << a << std::endl;
+</pre>
 </div>
 <br><br>
 
@@ -177,7 +207,9 @@
   This manipulator is used to fill the unused columns with a character other than a space.
 </p>
 <div class="code">
+<pre>
   std::cout << <span class="func">setfill</span>(<span class="str">'*'</span>) << a << std::endl;
+</pre>
 </div>
 <br><br>
 
@@ -185,18 +217,25 @@
 <p>
   These manipulator are used to change whether the output is left/right-justified.
 </p>
+
 <h3>
   Left-justified
 </h3>
 <div class="code">
+<pre>
   std::cout << <span class="func">left</span>;
+</pre>
 </div>
+
 <h3>
   You can disable the left justification like this:
 </h3>
 <div class="code">
+<pre>
   std::cout.<span class="func">unsetf</span>(ios::left);
+</pre>
 </div>
+
 <h3>
   Right-justified
 </h3>
@@ -226,10 +265,14 @@
   <code>ofstream var;</code>
 </p>
 <div class="code">
+<pre>
   ifstream inFile;
+</pre>
 </div>
 <div class="code">
+<pre>
   ofstream outFile;
+</pre>
 </div>
 <br>
 
@@ -242,7 +285,9 @@
   Assuming the file is on the desktop and named data.txt:
 </p>
 <div class="code">
+<pre>
   inFile.<span class="func">open</span>(<span class"func">"/home/ubuntu/Desktop/data.txt"</span>)
+</pre>
 </div>
 <p>
   From this, you can see that you need to use the complete path to the file.
@@ -251,20 +296,28 @@
   The ofstream variable works in a similar way, but if the file does not exist, it will be created.
 </p>
 <div class="code">
+<pre>
   outFile.<span class="func">open</span>(<span class"func">"/home/ubuntu/Desktop/dataOut.txt"</span>)
+</pre>
 </div>
 <br>
 
 <h3>Step 4: Use the file stream variables, just like you would with cin and cout</h3>
 <div class="code">
+<pre>
   <span class="func">getline</span>(inFile, str);
+</pre>
 </div>
 <br>
 
 <h3>Step 5: Close the file(s)</h3>
 <div class="code">
+<pre>
   inFile.close();
+</pre>
 </div>
 <div class="code">
+<pre>
   outFile.close();
+</pre>
 </div>
