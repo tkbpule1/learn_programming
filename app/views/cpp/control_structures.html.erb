@@ -10,109 +10,99 @@
   <%= link_to 'Basics', cpp_basics_path %>
 </div>
 <div class="links">
-  <%= link_to 'Control Structures', cpp_control_structures_path %>
+  <%= link_to 'Input/Output', cpp_iostream_path %>
 </div>
 
 
 
 
 <h1> C++ Control Structures II Chapter 5 </h1>
+<h2>Number guessing game</h2>
 <div class="code">
-  // Flag-controlled while loop.<br>
-  // Number guessing game.<br>
-<br>
-  #include &#060iostream><br>
-  #include &#060cstdlib><br>
-  #include &#060ctime><br>
+  <pre>
 
-  int main()<br>
-  {<br>
-  <ul>
-    <li>int num;</li>
-    <li>int guess;</li>
-    <li>bool done;</li>
-    <br>
-    <li>num = (rand() + time(0)) % 100;</li>
-    <li>done = false;</li>
-    <li>while(!done)</li>
-    <li>{</li>
-      <ul>
-        <li>std::cout << "Enter an integer >= 0 < 100: ";</li>
-        <li>std::cin >> guess;</li>
-        <li>if (guess == num)</li>
-        <li>{</li>
-          <ul>
-            <li>
-              std::cout << "You guessed the correct number!" << std::endl;
-            </li>
-            <li>done = true;</li>
-          </ul>
-        <li>}</li>
-        <li>else</li>
-        <li>{</li>
-          <ul>
-            <li>if (guess < num)</li>
-            <ul>
-              <li>std::cout << "Your guess is too low" << endl;</li>
-            </ul>
-            <li>else</li>
-            <ul>
-              <li>std::cout << "Your guess is too high" << endl;</li>
-            </ul>
-          </ul>
+    <span class="comment">// Flag-controlled while loop</span>
 
-        <li>}</li>
-      </ul>
-    <li>}</li>
-  </ul>
-}
+    <span class="preproc">#include</span> <span class="str">&#060iostream></span>
+    <span class="preproc">#include</span> <span class="str">&#060cstdlib></span>
+    <span class="preproc">#include</span> <span class="str">&#060ctime></span>
+
+    <span class="preproc">int</span> <span class="func">main</span>()
+    {
+      <span class="preproc">int</span> num;
+      <span class="preproc">int</span> guess;
+      <span class="preproc">bool</span> done;
+
+      num = (<span class="func">rand</span>() + <span class="func">time</span>(<span class="num">0</span>)) % <span class="num">100</span>;
+      done = <span class="num">false</span>;
+      <span class="preproc">while</span>(!done)
+      {
+        std::cout << <span class="str">"Enter an integer >= 0 < 100: "</span>;
+        std::cin >> guess;
+        <span class="preproc">if</span> (guess == num)
+        {
+          std::cout << <span class="str">"You guessed the correct number!"</span> << std::endl;
+          done = <span class="num">true</span>;
+        }
+        <span class="preproc">else</span>
+        {
+          <span class="preproc">if</span> (guess < num)
+          {
+            std::cout << <span class="str">"Your guess is too low"</span> << endl;
+          }
+          <span class="preproc">else</span>
+          {
+            std::cout << <span class="str">"Your guess is too high"</span> << endl;
+          }
+        }
+      }
+    }
+  </pre>
 </div>
-<p>
-  Fibonacci Number
-</p>
+
+
+<h2>Fibonacci Number</h2>
 <div class="code">
+  <pre>
+
   // nth Fibonacci Number
-  <ul>
-    <li>#include &#060iostream></li>
-    <li>using namespace std;</li>
-    <li>int main()</li>
-    <li>{</li>
-      <ul>
-        <li>int previous1;</li>
-        <li>int previous2;</li>
-        <li>int current;</li>
-        <li>int counter;</li>
-        <li>int nthFibonacci;</li>
-        <br>
-        <li>cout << "Enter the first two fibonacci numbers: ";</li>
-        <li>cin >> previous1 >> previous2;</li>
-        <li>cout << "Enter the position of the sequence: "</li>
-        <li>if (nthFibonnaci == 1)</li>
-        <ul>
-          <li>current = previous1;</li>
-        </ul>
-        <li>else if (nthFibonacci == 2)</li>
-        <ul>
-          <li>current = previous2;</li>
-        </ul>
-        <li>else</li>
-        <li>{</li>
-          <ul>
-            <li>counter = 3</li>
-            <li>while (counter <= nthFibonacci)</li>
-            <li>{</li>
-            <ul>
-              <li>current = previous2 + previous1;</li>
-              <li>previous1 = previous2;</li>
-              <li>previous2 = current;</li>
-              <li>counter++;</li>
-            </ul>
-            <li>}</li>
-          </ul>
-        <li>}</li>
-      </ul>
-      cout << "The Fibonacci number at position ";<br>
-      cout << nthFibonacci << " is: " << current << endl;
-    <li>}</li>
-  </ul>
+
+    <span class="preproc">#include</span> <span class="str">&#060iostream></span>
+
+    <span class="preproc">using namespace</span> <span class="num">std</span>;
+
+    <span class="preproc">int</span> main()
+    {
+        <span class="preproc">int</span> previous1;
+        <span class="preproc">int</span> previous2;
+        <span class="preproc">int</span> current;
+        <span class="preproc">int</span> counter;
+        <span class="preproc">int</span> nthFibonacci;
+
+        cout << <span class="str">"Enter the first two fibonacci numbers: "</span>;
+        cin >> previous1 >> previous2;
+        cout << <span class="str">"Enter the position of the sequence: "</span>;
+        <span class="preproc">if</span> (nthFibonnaci == <span class="num">1</span>)
+        {
+          current = previous1;
+        }
+        <span class="preproc">else if</span> (nthFibonacci == <span class="num">2</span>)
+        {
+          current = previous2;
+        }
+        <span class="preproc">else</span>
+        {
+            counter = 3
+            while (counter <= nthFibonacci)
+            {
+              current = previous2 + previous1;
+              previous1 = previous2;
+              previous2 = current;
+              counter++;
+            }
+        }
+      cout << <span class="str">"The Fibonacci number at position "</span>;
+      cout << nthFibonacci << <span class="str">" is: "</span> << current << endl;
+    }
+  </pre>
 </div>

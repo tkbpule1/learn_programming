@@ -47,7 +47,7 @@
 
     <span class="comment">//Statement to output the input from the user</span>
     std::cout << <span class="str">"You entered:"</span> << feet << <span class="str">" Feet and "</span>
-              << inches << <span class="str">" Inches."</span> << endl;
+              << inches << <span class="str">" Inches."</span> << std::endl;
 
     <span class="comment">//Calculate total number of inches</span>
     totalInches = INCHES_PER_FOOT * feet + inches;
@@ -138,6 +138,162 @@
                 << nickels << std::endl;
       std::cout << <span class="str">"The number of pennies: "</span>
                 << pennies << std::endl;
+
+      <span class="preproc">return</span> <span class="num">0</span>;
+    }
+  </pre>
+</div>
+
+<h1>File Input/Output</h1>
+<p>
+  Write a program that reads a student name followed by five test scores.  The program should output the student name, the five test scores, and the average score.  Output the average score with two decimal places.<br>
+  The data is stored in a file called test.txt and the output should be stored in a file called testavg.txt.
+</p>
+<h3>
+  test.txt
+</h3>
+<p>
+  Andrew Miller 87.50 89 65.75 37 98.50
+</p>
+<div class="code">
+  <pre>
+    <span class="comment">//Header File</span>
+    <span class="preproc">#include</span> <span class="str">&#060iostream></span>
+    <span class="preproc">#include</span> <span class="str">&#060fstream></span>
+    <span class="preproc">#include</span> <span class="str">&#060iomanip></span>
+    <span class="preproc">#include</span> <span class="str">&#060string></span>
+
+    <span class="comment">//Main Function</span>
+    <span class="preproc">int</span> <span class="func">main</span>()
+    {
+      <span class="comment">//Declare Variables</span>
+      ifstream inFile;
+      ofstream outFile;
+      <span class="preproc">double</span> test1, test2, test3, test4, test5;
+      <span class="preproc">double</span> average;
+      string firstName;
+      string lastName;
+
+      inFile.open(<span class="str">"/home/ubuntu/Desktop/test.txt"</span>);
+      outFile.open(<span class="str">"/home/ubuntu/Desktop/testavg.txt"</span>);
+
+      outFile << fixed << showpoint;
+      outFile << setprecision</span>(2</span>);
+
+      std::cout << <span class="str">"Processing Data"</span> << std::endl;
+
+      inFile >> firstName >> lastName;
+      outFile << <span class="str">"Student name: "</span> << firstName << " "</span> << lastName << std::endl;
+
+      inFile >> test1 >> test2 >> test3 >> test4 >> test5;
+      outFile << "Test scores: "
+              << <span class="func">setw</span>(<span class="num">6</span>) << test1
+              << <span class="func">setw</span>(<span class="num">6</span>) << test2
+              << <span class="func">setw</span>(<span class="num">6</span>) << test3
+              << <span class="func">setw</span>(<span class="num">6</span>) << test4
+              << <span class="func">setw</span>(<span class="num">6</span>) << test5
+              << std::endl;
+
+      average = (test1 + test2 + test3 + test4 + test5) / 5.0;
+
+      outFile << <span class="str">"Average test score: "</span> << <span class="func">setw</span>(<span class="num">6</span>) << average << std::endl;
+
+      inFile.close();
+      outFile.close();
+
+      <span class="preproc">return</span> <span class="num">0</span>;
+    }
+  </pre>
+</div>
+
+<h1> C++ Control Structures </h1>
+<h2>Number guessing game</h2>
+<div class="code">
+  <pre>
+
+    <span class="comment">// Flag-controlled while loop</span>
+
+    <span class="preproc">#include</span> <span class="str">&#060iostream></span>
+    <span class="preproc">#include</span> <span class="str">&#060cstdlib></span>
+    <span class="preproc">#include</span> <span class="str">&#060ctime></span>
+
+    <span class="preproc">int</span> <span class="func">main</span>()
+    {
+      <span class="preproc">int</span> num;
+      <span class="preproc">int</span> guess;
+      <span class="preproc">bool</span> done;
+
+      num = (<span class="func">rand</span>() + <span class="func">time</span>(<span class="num">0</span>)) % <span class="num">100</span>;
+      done = <span class="num">false</span>;
+      <span class="preproc">while</span>(!done)
+      {
+        std::cout << <span class="str">"Enter an integer >= 0 < 100: "</span>;
+        std::cin >> guess;
+        <span class="preproc">if</span> (guess == num)
+        {
+          std::cout << <span class="str">"You guessed the correct number!"</span> << std::endl;
+          done = <span class="num">true</span>;
+        }
+        <span class="preproc">else</span>
+        {
+          <span class="preproc">if</span> (guess < num)
+          {
+            std::cout << <span class="str">"Your guess is too low"</span> << std::endl;
+          }
+          <span class="preproc">else</span>
+          {
+            std::cout << <span class="str">"Your guess is too high"</span> << std::endl;
+          }
+        }
+      }
+      <span class="preproc">return</span> <span class="num">0</span>;
+    }
+  </pre>
+</div>
+
+
+<h2>Fibonacci Number</h2>
+<div class="code">
+  <pre>
+
+  // nth Fibonacci Number
+
+    <span class="preproc">#include</span> <span class="str">&#060iostream></span>
+
+    <span class="preproc">using namespace</span> <span class="num">std</span>;
+
+    <span class="preproc">int</span> main()
+    {
+      <span class="preproc">int</span> previous1;
+      <span class="preproc">int</span> previous2;
+      <span class="preproc">int</span> current;
+      <span class="preproc">int</span> counter;
+      <span class="preproc">int</span> nthFibonacci;
+
+      std::cout << <span class="str">"Enter the first two fibonacci numbers: "</span>;
+      cin >> previous1 >> previous2;
+      std::cout << <span class="str">"Enter the position of the sequence: "</span>;
+      <span class="preproc">if</span> (nthFibonnaci == <span class="num">1</span>)
+      {
+        current = previous1;
+      }
+      <span class="preproc">else if</span> (nthFibonacci == <span class="num">2</span>)
+      {
+        current = previous2;
+      }
+      <span class="preproc">else</span>
+      {
+        counter = <span class="num">3</span>;
+        <span class="preproc">while</span> (counter <= nthFibonacci)
+        {
+          current = previous2 + previous1;
+          previous1 = previous2;
+          previous2 = current;
+          counter++;
+        }
+      }
+      std::cout << <span class="str">"The Fibonacci number at position "</span>;
+      std::cout << nthFibonacci << <span class="str">" is: "</span> << current << std::endl;
 
       <span class="preproc">return</span> <span class="num">0</span>;
     }
