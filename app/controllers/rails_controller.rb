@@ -8,6 +8,9 @@ class RailsController < ApplicationController
   def setup
   end
 
-  def create    
+  def create
+  end
+
+  def notes
   end
 end

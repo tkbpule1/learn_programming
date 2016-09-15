@@ -19,4 +19,7 @@ class CppController < ApplicationController
 
   def functions
   end
+
+  def inheritance    
+  end
 end

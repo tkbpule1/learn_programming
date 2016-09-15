@@ -1,6 +1,13 @@
+<% provide(:title, 'Rails') %>
 
 <div class="links">
+  <%= link_to 'Rails Home', rails_path %>
+</div>
+<div class="links">
   <%= link_to 'Rails Installation', rails_installation_path %>
+</div>
+<div class="links">
+  <%= link_to 'Overview', rails_overview_path %>
 </div>
 <div class="links">
   <%= link_to 'Rails Setup', rails_setup_path %>
@@ -10,7 +17,6 @@
 </div>
 
 
-<% provide(:title, 'Rails') %>
 
 <h1>Rails</h1>
 
@@ -24,11 +30,9 @@
 </h2>
 
 
+<h2>The Rails philosophy includes two major guiding principles:</h2>
 <h2>
-  The Rails philosophy includes two major guiding principles:
-</h2>
-<h2>
-  <ul>
+  <ol>
     <li>
       Don't Repeat Yourself: By not writing the same information over and over
        again, our code is more maintainable, more extensible, and less buggy.
@@ -39,5 +43,16 @@
       conventions, rather than require that you specify every minutiae through
       endless configuration files.
     </li>
-  </ul>
+  </ol>
 </h2>
+
+<h2>Resources:</h2>
+<p>
+  Most of what is here is not mine.  It is a collection of information that I found to be useful to understand programming with Rails.  I give credit for the information on this website, specific to Rails, to these references:
+</p>
+<ol>
+  <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
+  <li><a href="http://www.tutorialspoint.com/ruby-on-rails">Tutorial Points</a></li>
+  <li><a href="https://www.youtube.com/watch?v=SBfoRSjBtcc&list=PL-XXv-cvA_iCfQHHS7rxlfHFsU4aQW1IF">UC Berkeley CS-169 Saas</a></li>
+  <li><a href="https://www.railstutorial.org/book/">Ruby on Rails Tutorial by Michael Hartl</a></li>
+</ol>

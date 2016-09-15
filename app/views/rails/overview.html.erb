@@ -1,0 +1,252 @@
+<%= provide(:title, "Rails | Overview") %>
+
+<div class="links">
+  <%= link_to 'Rails Home', rails_path %>
+</div>
+<div class="links">
+  <%= link_to 'Rails Installation', rails_installation_path %>
+</div>
+<div class="links">
+  <%= link_to 'Overview', rails_overview_path %>
+</div>
+<div class="links">
+  <%= link_to 'Rails Setup', rails_setup_path %>
+</div>
+<div class="links">
+  <%= link_to 'Create Rails App', rails_create_path %>
+</div>
+
+<h1>Overview</h1>
+
+<div class="list">
+  <h2><span class="folder">app</span></h2>
+  <p>
+    This folder holds the main structure of the app; the models, views and controllers.
+  </p>
+  <ul>
+    <li><span class="folder">assets</span></li>
+    <p>
+      The asset pipeline provides a framework to concatenate and minify or compress JavaScript and CSS assets. It also adds the ability to write these assets in other languages and pre-processors such as CoffeeScript, Sass and ERB. It allows assets in your application to be automatically combined with assets from other gems.
+    </p>
+    <ul>
+      <li><span class="folder">images</span></li>
+      <li><span class="folder">javascripts</span></li>
+      <li><span class="folder">stylesheets</span></li>
+    </ul>
+    <li><span class="folder">controllers</span></li>
+    <p>
+      The Rails controller is the logical center of your application. It coordinates the interaction between the user, the views, and the model.
+    </p>
+    <ul>
+      <li><span class="file">application_controller.rb</span></li>
+    </ul>
+    <li><span class="folder">helpers</span></li>
+    <p>
+      The helpers subdirectory holds any helper classes used to assist the model, view, and controller classes. This helps to keep the model, view, and controller code small, focused, and uncluttered.
+    </p>
+    <ul>
+      <li><span class="file">application_helper.rb</span></li>
+    </ul>
+    <li><span class="folder">mailers</span></li>
+    <li><span class="folder">models</span></li>
+    <p>
+      The models subdirectory holds the classes that model and wrap the data stored in our application's database
+    </p>
+    <li><span class="folder">views</span></li>
+    <p>
+      The views subdirectory holds the display templates to fill in with data from our application, convert to HTML, and return to the user's browser.
+    </p>
+    <ul>
+      <li><span class="folder">layouts</span></li>
+      <p>
+         Holds the template files for layouts to be used with views.
+      </p>
+      <ul>
+        <li><span class="file">application.html.erb</span></li>
+      </ul>
+    </ul>
+  </ul>
+
+  <h2><span class="folder">bin</span></h2>
+  <p>
+    Binary executable files written in Ruby.
+  </p>
+  <ul>
+    <li><span class="file">bundle</span></li>
+    <li><span class="file">rails</span></li>
+    A program for generating code, opening console sessions, or starting a local server.
+    <li><span class="file">rake</span></li>
+    <li><span class="file">setup</span></li>
+    <li><span class="file">spring</span></li>
+  </ul>
+
+  <h2><span class="folder">config</span></h2>
+  <p>
+    Configuration files for the app.
+  </p>
+  <ul>
+    <li><span class="folder">environments</span></li>
+    <p>
+      Configuration for the different environments. These config files take precedence over config/application.rb.
+    </p>
+    <ul>
+      <li><span class="file">development.rb</span></li>
+      <li><span class="file">production.rb</span></li>
+      <li><span class="file">test.rb</span></li>
+    </ul>
+    <li><span class="folder">initializers</span></li>
+    <p>
+      After loading the framework and any gems in your application, Rails turns to loading initializers. You can use initializers to hold configuration settings that should be made after all of the frameworks and gems are loaded, such as options to configure settings for these parts.
+    </p>
+    <ul>
+      <li><span class="file">assets.rb</span></li>
+      <li><span class="file">backtrace_silencers.rb</span></li>
+      <li><span class="file">cookies_serializer.rb</span></li>
+      <li><span class="file">filter_parameters_logging.rb</span></li>
+      <li><span class="file">inflections.rb</span></li>
+      <li><span class="file">mime_types.rb</span></li>
+      <li><span class="file">session_store.rb</span></li>
+      <li><span class="file">wrap_parameters.rb</span></li>
+    </ul>
+    <li><span class="folder">locales</span></li>
+    <p>
+      Files here are used for internationalization.  If you want to use locales other than English, add the necessary files here.
+    </p>
+    <ul>
+      <li><span class="file">en.yml</span></span></span></li>
+    </ul>
+    <li><span class="file">application.rb</span></li>
+    <li><span class="file">boot.rb</span></li>
+    <li><span class="file">database.yml</span></li>
+    <p>
+      Database config file.
+    </p>
+    <li><span class="file">environment.rb</span></li>
+    <li><span class="file">puma.rb</span></li>
+    <p>
+      Config file for deploying the app in the development environment; default on localhost:3000.
+    </p>
+    <li><span class="file">routes.rb</span></li>
+    <p>
+      Define routes for the application here.
+    </p>
+    <li><span class="file">secrets.yml</span></li>
+    <p>
+      Put secret keys here.
+    </p>
+  </ul>
+
+  <h2><span class="folder">db</span></h2>
+  <p>
+    You can manage the relational database with scripts you create and place in this directory.
+  </p>
+  <ul>
+    <li><span class="folder">migrate</span></li>
+    <p>
+      This subdirectory holds all the migrations that are created.
+    </p>
+    <li><span class="file">development.sqlite3</span></li>
+    <li><span class="file">seeds.rb</span></li>
+    <p>
+      This file should contain all the record creation needed to seed the database with its default values.
+    </p>
+  </ul>
+
+  <h2><span class="folder">lib</span></h2>
+  <p>
+    Library modules would go here
+  </p>
+  <ul>
+    <li><span class="folder">assets</span></li>
+    <li><span class="folder">tasks</span></li>
+  </ul>
+
+  <h2><span class="folder">log</span></h2>
+  <p>
+    Error logs will be placed here.
+  </p>
+  <ul>
+    <li><span class="file">.keep</span></li>
+    <li><span class="file">development.log</span></li>
+  </ul>
+
+  <h2><span class="folder">public</span></h2>
+  <p>
+    Data accessible to the public (e.g., via web browsers), such as error pages.
+  </p>
+  <ul>
+    <li><span class="file">404.html</span></li>
+    <li><span class="file">422.html</span></li>
+    <li><span class="file">500.html</span></li>
+    <li><span class="file">favicon.ico</span></li>
+    <li><span class="file">robots.txt</span></li>
+  </ul>
+
+  <h2><span class="folder">test</span></h2>
+  <p>
+    This directory is for tests.
+  </p>
+  <ul>
+    <li><span class="folder">controllers</span></li>
+    <li><span class="folder">fixtures</span></li>
+    <li><span class="folder">helpers</span></li>
+    <li><span class="folder">integration</span></li>
+    <li><span class="folder">mailers</span></li>
+    <li><span class="folder">models</span></li>
+    <li><span class="file">test_helper.rb</li>
+  </ul>
+
+  <h2><span class="folder">tmp</span></h2>
+  <p>
+    Temporary files
+  </p>
+  <ul>
+    <li><span class="folder">cache</span></li>
+    <li><span class="folder">pids</span></li>
+    <ul>
+      <li><span class="file">server.pid</span></li>
+      <p>
+        Process ID of puma running your app.
+      </p>
+    </ul>
+    <li><span class="folder">sessions</span></li>
+    <li><span class="folder">sockets</span></li>
+  </ul>
+
+  <h2><span class="folder">vendor</span></h2>
+  <p>
+    Libraries from third-parties go here.
+  </p>
+  <ul>
+    <li><span class="folder">assets</span></li>
+    <ul>
+      <li><span class="folder">javascripts</span></li>
+      <li><span class="folder">stylesheets</span></li>
+    </ul>
+    <li><span class="folder">bundle</span></li>
+  </ul>
+
+  <h2><span class="file">.gitignore</span></h2>
+  <p>
+    File that git uses to ignore certain files that need to be kept private for security purposes.
+  </p>
+  <h2><span class="file">config.ru</span></h2>
+  <p>
+    This file is used by Rack-based servers to start the application.
+  </p>
+  <h2><span class="file">Gemfile</span></h2>
+  <p>
+    List of all 'Gems' that the app uses.
+  </p>
+  <h2><span class="file">Gemfile.lock</span></h2>
+  <p>
+    A list of gems used to ensure that all copies of the app use the same gem versions.
+  </p>
+  <h2><span class="file">Procfile</span></h2>
+  <p>
+    File to configure puma.
+  </p>
+  <h2><span class="file">Rakefile</span></h2>
+  <h2><span class="file">README.md</span></h2>
+
+</div>

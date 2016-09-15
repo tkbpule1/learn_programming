@@ -1,0 +1,22 @@
+<h1>Database - bundle exec rake</h1>
+<p>
+<pre>
+  db:create - creates the database for the current environment
+  db:create:all - creates the database for all environments
+  db:drop - drops the database for the current environment
+  db:drop:all - drops the database for all environments
+  db:migrate - runs migrations for the current environment that have not yet run
+  db:migrate:up - runs one specific migration
+  db:migrate:down - rolls back one specific migration
+  db:migrate:status - shows current migration status
+  db:rollback - rolls back the last migration
+  db:forward - advances the current schema version to the next one
+  db:seed - runs the db/seeds.rb file
+  db:schema:load - loads the schema into the current environment's database
+  db:schema:dump - dumps the current environment's schema (and seems the create the db as well)
+  db:setup - runs db:schema:load, db:seed - wipes out database in all environments, including production
+  db:reset - runs db:drop, db:setup
+  db:migrate:redo - runs db:migrate:down, db:migrate:up; or db:rollback, db:migrate:migrate; depending on the specified migration
+  db:migrate:reset - runs db:drop, db:create, db:migrate
+</pre>
+</p>

@@ -4,6 +4,13 @@
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
+$func: #0000e0;
+$preproc: #b000ff;
+$str: #00a000;
+$num: #eb9800;
+$comment: #8c8c8c;
+$printf: #00aaff;
+
 
 ul {
   list-style-type: none;
@@ -101,6 +108,7 @@ p {
   }
 }
 
+
 .code{
   color: black !important;
   background: $gray-medium-light;
@@ -115,25 +123,6 @@ p {
 
 }
 
-.prompt {
-  color: blue !important;
-}
-
-.comment {
-  color: gray;
-}
-
-.gem {
-  color: blue;
-}
-
-.quote {
-  color: green;
-}
-
-.group {
-  color: #00cccc;
-}
 
 .links {
   font-size: 1.2em !important;
@@ -167,21 +156,6 @@ p {
   margin: 10px 10px 10px 10px;
 }
 
-.preproc {
-  color: #b000ff;
-}
-
-.str {
-  color: #00a000;
-}
-
-.func {
-  color: #0000e0;
-}
-
-.num {
-  color: #eb9800;
-}
 
 code {
   color: black;
@@ -210,13 +184,6 @@ td {
   border-bottom: 2px solid black;
 }
 
-.comment {
-  color: #8c8c8c;
-}
-
-.printf {
-  color: #00aaff;
-}
 
 p {
   code {
@@ -238,4 +205,65 @@ ol {
   li {
     font-size: 18px;
   }
+}
+
+.list {
+  ul {
+    li {
+      font-size: 22px;
+    }
+  }
+
+}
+
+.prompt {
+  color: $func;
+}
+
+.gem {
+  color: $func;
+}
+
+.group {
+  color: teal;
+}
+
+.preproc {
+  color: $preproc;
+}
+
+.str {
+  color: $str;
+}
+
+.func {
+  color: $func;
+}
+
+.num {
+  color: $num;
+}
+
+.comment {
+  color: $comment;
+}
+
+.printf {
+  color: $printf;
+}
+
+.var {
+  color: red;
+}
+
+.phpfunc {
+  color: teal;
+}
+
+.folder {
+  color: $func;
+}
+
+.file {
+  color: $preproc;
 }

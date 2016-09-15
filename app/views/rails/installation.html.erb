@@ -1,6 +1,13 @@
+<% provide(:title, 'Rails | Installation') %>
 
 <div class="links">
   <%= link_to 'Rails Home', rails_path %>
+</div>
+<div class="links">
+  <%= link_to 'Rails Installation', rails_installation_path %>
+</div>
+<div class="links">
+  <%= link_to 'Overview', rails_overview_path %>
 </div>
 <div class="links">
   <%= link_to 'Rails Setup', rails_setup_path %>
@@ -10,7 +17,6 @@
 </div>
 
 
-<% provide(:title, 'Rails Installation') %>
 
 <h1>Rails Installation</h1>
 
@@ -19,96 +25,88 @@
 
 <h2>Check if ruby is installed:</h2>
 <div class="code">
-  <p>
-    <span class="prompt">$ </span>ruby -v
-  </p>
+  <span class="prompt">$ </span>ruby -v
 </div>
 
 
 <h2>Install ruby:</h2>
 <div class="code">
-  <p>
-    <span class='prompt'>$ </span>sudo apt install ruby
-  </p>
+  <span class='prompt'>$ </span>sudo apt install ruby
 </div>
 
 <h2>Make sure it worked:</h2>
 <div class="code">
-  <p>
-    <span class="prompt">$ </span>ruby -v
-  </p>
+  <span class="prompt">$ </span>ruby -v
 </div>
 
 
 <h2>Check if bundler is installed:</h2>
 <div class="code">
-  <p>
-    <span class="prompt">$ </span>bundler -v
-  </p>
+  <span class="prompt">$ </span>bundler -v
 </div>
 
 <h2>Install bundler:</h2>
 <div class="code">
-  <p>
-    <span class="prompt">$ </span>sudo apt install ruby-bundler
-  </p>
+  <span class="prompt">$ </span>sudo apt install ruby-bundler
 </div>
 
 <h2>Make sure it worked:</h2>
 <div class="code">
-  <p>
-    <span class="prompt">$ </span>bundler -v
-  </p>
+  <span class="prompt">$ </span>bundler -v
 </div>
 
 <h2>Check if Rails is intalled:</h2>
 <div class="code">
-  <p>
-    <span class="prompt">$ </span>rails -v
-  </p>
+  <span class="prompt">$ </span>rails -v
 </div>
 
 <h2>Install rails:</h2>
 <div class="code">
-  <p>
-    <span class="prompt">$ </span>sudo apt install ruby-railties
-  </p>
+  <span class="prompt">$ </span>sudo apt install ruby-railties
 </div>
 
 <h2>Make sure it worked:</h2>
 <div class="code">
-  <p>
-    <span class="prompt">$ </span>rails -v
-  </p>
+  <span class="prompt">$ </span>rails -v
 </div>
 
 <h2>Install dependencies: </h2>
 <div class="code">
-  <p>
-    <span class="prompt">$ </span>sudo apt install libxml2-dev<br>
-    <span class="prompt">$ </span>sudo apt install libsqlite3-dev<br>
-    <span class="prompt">$ </span>sudo apt install zlib1g-dev<br>
-  </p>
+  <span class="prompt">$ </span>sudo apt install libxml2-dev<br>
+  <span class="prompt">$ </span>sudo apt install libsqlite3-dev<br>
+  <span class="prompt">$ </span>sudo apt install zlib1g-dev<br>
+</div>
+
+<h2>Install postgresql:</h2>
+<div class="code">
+  <span class="prompt">$ </span>sudo apt install postgresql<br>
+  <span class="prompt">$ </span>sudo apt install postgresql-client<br>
+  <span class="prompt">$ </span>sudo apt install postgresql-contrib<br>
+  <span class="prompt">$ </span>sudo apt install libpq-dev<br>
 </div>
 
 <h2>Install heroku toolbelt:</h2>
 <div class="code">
-  <p>
-    <span class="prompt">$ </span>wget -O-
-    https://toolbelt.heroku.com/install-ubuntu.sh | sh<br>
-    <span class="prompt">$ </span>heroku login<br>
-    <h3>
-      Enter your Heroku credentials.<br>
-      Email: email@example.com<br>
-      Password (typing will be hidden):<br>
-      Authentication successful.<br>
-    </h3>
-  </p>
+  <span class="prompt">$ </span>wget -O-
+  https://toolbelt.heroku.com/install-ubuntu.sh | sh<br>
+  <span class="prompt">$ </span>heroku login<br>
+  <h4>
+    Enter your Heroku credentials.<br>
+    Email: email@example.com<br>
+    Password (typing will be hidden):<br>
+    Authentication successful.<br>
+  </h4>
 </div>
 
-<h2>Create a heroku app for deployment:</h2>
+<h4>Create a heroku app for deployment:</h4>
 <div class="code">
   <span class="prompt">$ </span>heroku create <br>
-  <h3>You can place a name after create: </h3>
+  <h4>You can place a name after create: </h4>
   <span class="prompt">$ </span>heroku create new-app<br>
+</div>
+
+<h2>Add a remote repository(BitBucket/Github)</h2>
+<div class="code">
+  <span class="prompt">$ </span>git remote add origin git@github.com/username/sample_app.git<br>
+  <span class="prompt">$ </span>git push origin master
 </div>

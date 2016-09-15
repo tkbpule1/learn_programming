@@ -1,114 +1,253 @@
-  <div class="links">
-    <%= link_to 'Rails Home', rails_path %>
-  </div>
-  <div class="links">
-    <%= link_to 'Rails Installation', rails_installation_path %>
-  </div>
-  <div class="links">
-    <%= link_to 'Rails Setup', rails_setup_path %>
-  </div>
+<%= provide(:title, "Rails | Create App") %>
+
+<div class="links">
+  <%= link_to 'Rails Home', rails_path %>
+</div>
+<div class="links">
+  <%= link_to 'Rails Installation', rails_installation_path %>
+</div>
+<div class="links">
+  <%= link_to 'Overview', rails_overview_path %>
+</div>
+<div class="links">
+  <%= link_to 'Rails Setup', rails_setup_path %>
+</div>
+<div class="links">
+  <%= link_to 'Create Rails App', rails_create_path %>
+</div>
 
 
 <h1>Create a Rails App</h1>
 <h2>To create a new app, in the terminal:</h2>
 
 <div class="code">
-    <span class="prompt">$ </span>rails new sample_app<br>
-    <span class="prompt">$ </span>cd sample_app
+<pre>
+  <span class="prompt">$</span> rails new sample_app
+  <!-- <span class="prompt">$</span> cd sample_app -->
+</pre>
 </div>
+<p>
+<pre>
+  [rails]$ rails new taski
+      create
+      create  README.rdoc
+      create  Rakefile
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+      create  app
+      create  app/assets/javascripts/application.js
+      create  app/assets/stylesheets/application.css
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/views/layouts/application.html.erb
+      create  app/assets/images/.keep
+      create  app/mailers/.keep
+      create  app/models/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  bin/setup
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/secrets.yml
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/assets.rb
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/session_store.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  test/fixtures
+      create  test/fixtures/.keep
+      create  test/controllers
+      create  test/controllers/.keep
+      create  test/mailers
+      create  test/mailers/.keep
+      create  test/models
+      create  test/models/.keep
+      create  test/helpers
+      create  test/helpers/.keep
+      create  test/integration
+      create  test/integration/.keep
+      create  test/test_helper.rb
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor/assets/javascripts
+      create  vendor/assets/javascripts/.keep
+      create  vendor/assets/stylesheets
+      create  vendor/assets/stylesheets/.keep
+         run  bundle install --local
+Resolving dependencies...
+Using rake 11.2.2
+Using i18n 0.7.0
+Using json 1.8.3
+Using minitest 5.9.0
+Using thread_safe 0.3.5
+Using builder 3.2.2
+Using erubis 2.7.0
+Using mini_portile2 2.1.0
+Using pkg-config 1.1.7
+Using rack 1.6.4
+Using mime-types-data 3.2016.0521
+Using arel 6.0.3
+Using debug_inspector 0.0.2
+Using bundler 1.11.2
+Using byebug 9.0.5
+Using coffee-script-source 1.10.0
+Using execjs 2.7.0
+Using thor 0.19.1
+Using concurrent-ruby 1.0.2
+Using multi_json 1.12.1
+Using sass 3.4.22
+Using tilt 2.0.5
+Using spring 1.7.2
+Using sqlite3 1.3.11
+Using turbolinks-source 5.0.0
+Using rdoc 4.2.2
+Using tzinfo 1.2.2
+Using nokogiri 1.6.8
+Using rack-test 0.6.3
+Using mime-types 3.1
+Using binding_of_caller 0.7.2
+Using coffee-script 2.4.1
+Using uglifier 3.0.1
+Using sprockets 3.7.0
+Using turbolinks 5.0.0
+Using sdoc 0.4.1
+Using activesupport 4.2.6
+Using loofah 2.0.3
+Using mail 2.6.4
+Using rails-deprecated_sanitizer 1.0.3
+Using globalid 0.3.7
+Using activemodel 4.2.6
+Using jbuilder 2.6.0
+Using rails-html-sanitizer 1.0.3
+Using rails-dom-testing 1.0.7
+Using activejob 4.2.6
+Using activerecord 4.2.6
+Using actionview 4.2.6
+Using actionpack 4.2.6
+Using actionmailer 4.2.6
+Using railties 4.2.6
+Using sprockets-rails 3.1.1
+Using coffee-rails 4.1.1
+Using jquery-rails 4.1.1
+Using rails 4.2.6
+Using sass-rails 5.0.6
+Using web-console 2.3.0
+Bundle complete! 12 Gemfile dependencies, 57 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+         run  bundle exec spring binstub --all
+* bin/rake: spring inserted
+* bin/rails: spring inserted
+</pre>
+</p>
+
+<h2>There are also several options:</h2>
+<div class="code">
+  <span class="prompt">$</span> rails new APP_PATH [options]
+</div>
+
+<h2>Create a Rails App from a Template</h2>
+<div class="code">
+<pre>
+  <span class="prompt">$</span> rails new sample_app -m ~/workspace/template.rb
+</pre>
+</div>
+
+<h2>Create a Rails App and choose a specific database</h2>
+<p>
+  (options: mysql/oracle/postgresql/sqlite3/frontbase/ibm_db/sqlserver/jdbcmysql/jdbcsqlite3/jdbcpostgresql/jdbc)
+</p>
+<div class="code">
+<pre>
+  <span class="prompt">$</span> rails new sample_app -d options
+</pre>
+</div>
+
 
 <h2>Gemfile:</h2>
 
 <div class="code">
+<pre>
   source 'https://rubygems.org'<br>
+  <span class="gem">gem</span> <span class="str">'bootstrap-sass'</span>, <span class="str"> '3.2.0.0'</span>
+  <span class="gem">gem</span> <span class="str">'faker'</span>, <span class="str">'1.4.2'</span>
+  <span class="gem">gem</span> <span class="str">'carrierwave'</span>, <span class="str">'0.10.0'</span>
+  <span class="gem">gem</span> <span class="str">'mini_magick'</span>, <span class="str">'3.8.0'</span>
+  <span class="gem">gem</span> <span class="str">'fog'</span>, <span class="str">'1.36.0'</span>
+  <span class="gem">gem</span> <span class="str">'will_paginate'</span>, <span class="str">'3.0.7'</span>
+  <span class="gem">gem</span> <span class="str">'bootstrap-will_paginate'</span>, <span class="str">'0.0.10'</span>
+  <span class="gem">gem</span> <span class="str">'rails'</span>, <span class="str">'4.2.6'</span>
+  <span class="gem">gem</span> <span class="str">'sass-rails'</span>, <span class="str">'~> 5.0'</span>
+  <span class="gem">gem</span> <span class="str">'uglifier'</span>, <span class="str">'>= 1.3.0'</span>
+  <span class="gem">gem</span> <span class="str">'coffee-rails'</span>, <span class="str">'~> 4.1.0'</span>
+  <span class="gem">gem</span> <span class="str">'jquery-rails'</span>
+  <span class="gem">gem</span> <span class="str">'turbolinks'</span>
+  <span class="gem">gem</span> <span class="str">'jbuilder'</span>, <span class="str">'~> 2.0'</span>
+  <span class="gem">gem</span> <span class="str">'sdoc'</span>, <span class="str">'~> 0.4.0'</span>, <span class="group">group: :doc</span>
+  <span class="gem">gem</span> <span class="str">'bcrypt'</span>, <span class="str">'~>3.1.7'</span>
+  <span class="gem">gem</span> <span class="str">'listen'</span>, <span class="str">'3.1.0'</span>
 
-  <span class="gem">gem </span><span class="quote">'bootstrap-sass'</span>,
-  <span class="quote"> '3.2.0.0'</span><br>
+  group <span class="group">:development</span>, <span class="group">:test</span> <span class="preproc">do</span>
+    <span class="gem">gem</span> <span class="str">'byebug'</span>
+    <span class="gem">gem</span> <span class="str">'sqlite3'</span>
+    <span class="gem">gem</span> <span class="str">'web-console'</span>,    <span class="str">'~> 2.0'</span>
+    <span class="gem">gem</span> <span class="str">'spring'</span>
+  <span class="preproc">end</span><br>
 
-  <span class="gem">gem </span><span class="quote">'faker'</span>,
-  <span class="quote">'1.4.2'</span><br>
+  group <span class="group">:test </span><span class="preproc"> do</span>
+    <span class="gem">gem</span> <span class="str">'minitest-reporters'</span>, <span class="str">'1.0.5'</span>
+    <span class="gem">gem</span> <span class="str">'mini_backtrace'</span>,               <span class="str">'0.1.3'</span>
+    <span class="gem">gem</span> <span class="str">'guard-minitest'</span>,       <span class="str">'2.3.1'</span>
+  <span class="preproc">end</span><br>
 
-  <span class="gem">gem </span><span class="quote">'carrierwave'</span>,
-  <span class="quote">'0.10.0'</span><br>
-
-  <span class="gem">gem </span><span class="quote">'mini_magick'</span>,
-  <span class="quote">'3.8.0'</span><br>
-
-  <span class="gem">gem </span><span class="quote">'fog'</span>,
-  <span class="quote">'1.36.0'</span><br>
-
-  <span class="gem">gem </span><span class="quote">'will_paginate'</span>,
-  <span class="quote">'3.0.7'</span><br>
-
-  <span class="gem">gem </span><span class="quote">'bootstrap-will_paginate'</span>,
-  <span class="quote">'0.0.10'</span><br>
-
-  <span class="gem">gem </span><span class="quote">'rails'</span>,
-  <span class="quote">'4.2.6'</span><br>
-
-  <span class="gem">gem </span><span class="quote">'sass-rails'</span>,
-  <span class="quote">'~> 5.0'</span><br>
-
-
-  <span class="gem">gem </span><span class="quote">'uglifier'</span>,
-  <span class="quote">'>= 1.3.0'</span><br>
-
-
-  <span class="gem">gem </span><span class="quote">'coffee-rails'</span>,
-  <span class="quote">'~> 4.1.0'</span><br>
-
-  <span class="gem">gem </span><span class="quote">'jquery-rails'</span><br>
-
-  <span class="gem"> gem </span><span class="quote">'turbolinks'</span><br>
-
-  <span class="gem"> gem </span><span class="quote">'jbuilder'</span>,
-  <span class="quote">'~> 2.0'</span><br>
-
-  <span class="gem"> gem </span><span class="quote">'sdoc'</span>,
-  <span class="quote">'~> 0.4.0'</span>, <span class="group">group: :doc</span><br>
-
-  <span class="gem"> gem </span><span class="quote">'bcrypt'</span>,
-  <span class="quote">'~>3.1.7'</span><br>
-
-  <span class="gem"> gem </span><span class="quote">'listen'</span>,
-  <span class="quote">'3.1.0'</span><br>
-
-<br>
-  group <span class="group">:development</span>,
-    <span class="group">:test</span> <span class="loop">do</span><br>
-
-    <span class="gem">gem</span> <span class="quote">'byebug'</span><br>
-
-    <span class="gem">gem</span> <span class="quote">'sqlite3'</span><br>
-
-    <span class="gem">gem</span> <span class="quote">'web-console'</span>,
-    <span class="quote">'~> 2.0'</span><br>
-
-    <span class="gem">gem</span> <span class="quote">'spring'</span><br>
-
-    <span class="loop">end</span><br>
-<br>
-  group <span class="group">:test </span><span class="loop"> do</span><br>
-    <span class="gem">gem</span> <span class="quote">'minitest-reporters'</span>,
-       <span class="quote">'1.0.5'</span><br>
-    <span class="gem">gem</span> <span class="quote">'mini_backtrace'</span>,
-       <span class="quote">'0.1.3'</span><br>
-    <span class="gem">gem</span> <span class="quote">'guard-minitest'</span>,
-       <span class="quote">'2.3.1'</span><br>
-  <span class="loop">end</span><br>
-<br>
-  group <span class="group">:production </span><span class="loop">do</span><br>
-    <span class="gem">gem</span> <span class="quote">'rails_12factor'</span>,
-       <span class="quote">'0.0.2'</span><br>
-    <span class="gem">gem</span> <span class="quote">'puma'</span>,
-    <span class="quote">'3.1.0'</span><br>
-  <span class="loop">end</span><br>
+  group <span class="group">:production </span><span class="preproc">do</span>
+    <span class="gem">gem</span> <span class="str">'rails_12factor'</span>, <span class="str">'0.0.2'</span>
+    <span class="gem">gem</span> <span class="str">'puma'</span>, <span class="str">'3.1.0'</span>
+  <span class="preproc">end</span>
+</pre>
 </div>
 
+<h2>Setup Postgresql:</h2>
+<div class="code">
+  <span class="prompt">$ </span>sudo -u postgres createuser --superuser $USER
+</div>
 
 <h2>Install Gems:</h2>
 <div class="code">
-  <span class="prompt">$ </span>bundle install --without production
+  <span class="prompt">$ </span>bundle install
 </div>
 
 <h2>Initialize the GIT repository:</h2>

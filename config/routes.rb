@@ -17,11 +17,15 @@ Rails.application.routes.draw do
 
   get '/rails' => 'rails#index'
 
+  get '/rails/overview' => 'rails#overview'
+
   get '/rails/installation' => 'rails#installation'
 
   get '/rails/setup' => 'rails#setup'
 
   get '/rails/create' => 'rails#create'
+
+  get '/rails/notes' => 'rails#notes'
 
   get '/ruby' => 'ruby#index'
 
@@ -39,7 +43,21 @@ Rails.application.routes.draw do
 
   get '/cpp/functions' => 'cpp#functions'
 
+  get '/cpp/inheritance' => 'cpp#inheritance'
+
   get '/linux' => 'linux#index'
+
+  get '/linux/basics' => 'linux#basics'
+
+  get '/php' => 'php#index'
+
+  get '/php/basics' => 'php#basics'
+
+  get '/php/objects' => 'php#objects'
+
+  get '/javascript' => 'javascript#index'
+
+  get '/javascript/learn' => 'javascript#learn'
 
   get 'welcome/index'
 
