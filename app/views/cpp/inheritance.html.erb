@@ -1,0 +1,113 @@
+<%= provide(:title, "Inheritance") %>
+
+<div class="links">
+  <%= link_to 'C++ Home', cpp_path %>
+</div>
+<div class="links">
+  <%= link_to 'Basics', cpp_basics_path %>
+</div>
+<div class="links">
+  <%= link_to 'Examples', cpp_examples_path %>
+</div>
+<div class="links">
+  <%= link_to 'Input/Output', cpp_iostream_path %>
+</div>
+<div class="links">
+  <%= link_to 'Control Structures', cpp_control_structures_path %>
+</div>
+<div class="links">
+  <%= link_to 'Functions', cpp_functions_path %>
+</div>
+<div class="links">
+  <%= link_to 'Inheritance', cpp_inheritance_path %>
+</div>
+
+
+<h1>Inheritance</h1>
+<p>
+  Inheritance relates classes with a "is-a" relationship.
+  So let's make a class, Employee, then, another class, Manager, that inherits from the class Employee:
+</p>
+
+<div class="code">
+<pre>
+  <span class="preproc">#include</span> <span class="str">&#060sstream></span>
+  <span class="preproc">using namespace</span> <span class="num">std</span>;
+
+
+  <span class="preproc">class</span> <span class="num">Employee</span> {
+
+    <span class="preproc">private:</span>
+      string name;
+      <span class="preproc">double</span> pay;
+    <span class="preproc">public:</span>
+      <span class="comment">//Default Constructor</span>
+      <span class="func">Employee</span>() {
+        name = <span class="str">""</span>;
+        pay = <span class="num">0</span>;
+      }
+      <span class="comment">//Constructor</span>
+      <span class="func">Employee</span>(string empName, <span class="preproc">double</span> payRate) {
+        name = empName;
+        pay = payRate;
+      }
+
+      string <span class="func">getName</span>() {
+        <span class="preproc">return</span> name;
+      }
+
+      <span class="preproc">void</span> <span class="func">setName</span>(string empName) {
+        name = empName;
+      }
+
+      <span class="preproc">double</span> <span class="func">getPay</span>() {
+        <span class="preproc">return</span> pay;
+      }
+
+      <span class="preproc">void</span> <span class="func">getPay</span>(<span class="preproc">double</span> payRate) {
+        pay = payRate;
+      }
+
+      string <span class="func">toString</span>() {
+        <span class="comment">// Want to do this:  return name + ": " + pay;</span>
+        <span class="comment">// Need #include &#060sstream></span>
+        stringstream stm;
+        stm << name << <span class="str">": "</span> << pay;
+        <span class="preproc">return</span> stm.str();
+      }
+  };
+</pre>
+</div>
+
+<p>
+  So, now that we have the Employee class defined, we can define the Manager class:
+</p>
+
+<div class="code">
+<pre>
+  <span class="preproc">class</span> <span class="num">Manager</span> : <span class="preproc">public</span> <span class="num">Employee</span> {
+  <span class="preproc">private:</span>
+    <span class="preproc">bool</span> salaried;
+  <span class="preproc">public:</span>
+    <span class="func">Manager</span>(string name, <span class="preproc">double</span> payRate, <span class="preproc">bool</span> isSalaried)
+                                              : Employee(name, payRate) {
+      salaried = isSalaried;
+    }
+
+    <span class="preproc">bool</span> <span class="func">getSalaried</span>() {
+      <span class="preproc">return</span> salaried;
+    }
+
+    string <span class="func">toString</span>() {
+      stringstream stm;
+      stm << <span class="func">Employee::toString</span>() << <span class="str">": "</span> << salaried;
+      <span class="preproc">return</span> stm.<span class="func">str</span>();
+    }
+};
+</pre>
+</div>
+
+<p>
+  As you can see, to inherit from a class, you use a colon <code>:</code> followed by a member access specifier(<code>public</code>) then, the base class name. <br>
+  When creating the constructor for the derived class, you define it normally, but make a call to the base class constructor with a colon, <code>:</code>, followed by the name of the base class and the parameters.
+</p>
