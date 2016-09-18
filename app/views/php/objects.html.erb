@@ -1,0 +1,130 @@
+<%= provide(:title, 'PHP | Objects') %>
+
+<div class="links">
+  <%= link_to 'PHP Home', php_path %>
+</div>
+<div class="links">
+  <%= link_to 'Basics', php_basics_path %>
+</div>
+<div class="links">
+  <%= link_to 'Objects', php_objects_path %>
+</div>
+
+<h1>Objects</h1>
+<p>
+  Vocabulary:
+  <li><strong>class: </strong>the blueprint for creating an object</li>
+  <li><strong>object: </strong> instance of a class where the object can be a combination of variables, functions, and data structures</li>
+  <li><strong>instantiate: </strong>the action of creating an object from a class</li>
+  <li><strong>method: </strong>a function that belongs to an object</li>
+  <li><strong>property: </strong>a variable that belongs to an object</li>
+</p>
+<h2>Create a Class</h2>
+<p>
+  courier.php
+</p>
+<div class="code">
+<pre>
+  <span class="var">&#060?php</span>
+  <span class="preproc">class</span> <span class="num">Courier</span>
+  {
+    <span class="preproc">public</span> <span class="var">$name</span>;
+    <span class="preproc">public</span> <span class="var">$home_country</span>;
+
+    <span class="preproc">public function</span> <span class="phpfunc">__construct</span>(<span class="var">$name</span> ,<span class="var">$home_country</span>);
+    <span class="preproc">return</span> <span class="num">true</span>;
+
+    <span class="preproc">public function</span> <span class="func">ship</span>();
+    <span class="phpfunc">printf</span>(<span class="str">"%s</span> <span class="phpfunc">\n\n</span><span class="str">"</span>, <span class="str">"Sucessfully Shipped!"</span>);
+    <span class="preproc">return</span> <span class="num">true</span>;
+  }
+  <span class="var">?></span>
+</pre>
+</div>
+<h2>Instantiate an Object</h2>
+<p>
+  main.php
+</p>
+<div class="code">
+<pre>
+  <span class="var">&#060?php</span>
+  <span class="comment">// require 'courier.php'</span>
+  <span class="preproc">function</span> <span class="phpfunc">__autoload</span>(<span class="var">$classname</span>)
+  {
+    <span class="preproc">include</span> <span class="phpfunc">strtolower</span>(<span class="var">$classname</span>) . <span class="str">'.php'</span>;
+  }
+
+  <span class="var">$mono</span> = <span class="preproc">new</span> <span class="num">Courier</span>(<span class="str">'Monospace Delivery'</span>, <span class="str">'United States'</span>);
+</pre>
+</div>
+<h2>Using an Object</h2>
+<p>
+  main.php
+</p>
+<div class="code">
+<pre>
+  <span class="var">&#060?php</span>
+  <span class="comment">// require 'courier.php'</span>
+  <span class="preproc">function</span> <span class="phpfunc">__autoload</span>(<span class="var">$classname</span>)
+  {
+    <span class="preproc">include</span> <span class="phpfunc">strtolower</span>(<span class="var">$classname</span>) . <span class="str">'.php'</span>;
+  }
+
+  <span class="var">$mono</span> = <span class="preproc">new</span> <span class="num">Courier</span>(<span class="str">'Monospace Delivery'</span>, <span class="str">'United States'</span>);
+
+  <span class="phpfunc">echo</span> <span class="str">"Courier name: "</span> . <span class="var">$mono</span>-><span class="var">name</span> . <span class="str">"</span><span class="phpfunc">\n</span><span class="str">"</span>;
+  <span class="phpfunc">echo</span> <span class="str">"Courier home country: "</span> . <span class="var">$mono</span>-><span class="var">home_country</span> . <span class="str">"</span><span class="phpfunc">\n\n</span><span class="str">"</span>;
+
+  <span class="phpfunc">printf</span>(<span class="str">"Courier Name: %s <span class="phpfunc">\n</span>"</span>, <span class="var">$mono</span>-><span class="var">name</span>);
+  <span class="phpfunc">printf</span>(<span class="str">"Courier country: %s<span class="phpfunc">\n\n</span>"</span>, <span class="var">$mono</span>-><span class="var">home_country</span>);
+
+  <span class="var">$mono</span>->ship();
+
+  <span class="phpfunc">var_dump</span>(<span class="var">$mono</span>);
+  <span class="var">?></span>
+</pre>
+</div>
+<h2>Static Methods</h2>
+<p>
+  As well as instantiating objects, we can define class properties and methods that are static. A static method or property is one that can be used without instantiating the object first. In either case, you mark an element as static by putting the static keyword after the visibility modifier.<br>
+  Static methods or properties are accessed via the scope resolution operator(::).
+</p>
+<div class="code">
+<pre>
+  <span class="var">&#060?php</span>
+  <span class="preproc">class</span> <span class="num">Courier</span>
+  {
+    <span class="preproc">public</span> <span class="var">$name</span>;
+    <span class="preproc">public</span> <span class="var">$home_country</span>;
+
+    <span class="preproc">public function</span> <span class="phpfunc">__construct</span>(<span class="var">$name</span> ,<span class="var">$home_country</span>)
+    {
+      <span class="preproc">return</span> <span class="num">true</span>;
+    }
+
+    <span class="preproc">public function</span> <span class="func">ship</span>()
+    {
+      <span class=phpfunc>printf</span>(<span class="str">"%s</span> <span class=phpfunc>\n\n</span><span class="str">"</span>, <span class="str">"Sucessfully Shipped!"</span>);
+      <span class="preproc">return</span> <span class="num">true</span>;
+    }
+
+    <span class="preproc">public static function</span> <span class="func">getCourierbyCountry</span>(<span class="var">$country</span>)
+    {
+      <span class="comment">// get a list of couriers with their home_country = $country</span>
+      <span class="comment">// create a Courier object for each result</span>
+      <span class="comment">// return an array of the results</span>
+      <span class="preproc">return</span> <span class="var">$courier_list</span>;
+    }
+  }
+  <span class="var">?></span>
+</pre>
+</div>
+<p>
+  To call this method, use the scope resolution operator
+</p>
+<div class="code">
+<pre>
+  <span class="comment">//Find couriers in Spain</span>
+  <span class="var">$spanish_couriers</span> = <span class="num">Courier</span>::getCouriersByCountry(<span class="str">'Spain'</span>);
+</pre>
+</div>

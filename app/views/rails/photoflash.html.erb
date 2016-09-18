@@ -1,0 +1,78 @@
+<h1>Create a photo blog</h1>
+<div class='code'>
+  <span class='prompt'>$ </span>rails new photoflash -d=postgresql
+  <span class='prompt'>$ </span>bundle install
+  <span class='prompt'>$ </span>git init
+  <span class='prompt'>$ </span>git add .
+  <span class='prompt'>$ </span>git commit -am "Initialize Repository"
+  <span class='prompt'>$ </span>git remote add origin git@github.com:user_name/repo_name.git
+  <span class='prompt'>$ </span>bundle install
+  <span class='prompt'>$ </span>rails g model Post title:string image:string description:text
+  <span class='prompt'>$ </span>vim .gitignore 
+  <span class='prompt'>$ </span>vim config/database.yml
+  <span class='prompt'>$ </span>git rm -r --cached .
+  <span class='prompt'>$ </span>git add .
+  <span class='prompt'>$ </span>git commit -am "update .gitignore"
+  <span class='prompt'>$ </span>rake db:migrate
+  <span class='prompt'>$ </span>
+  <span class='prompt'>$ </span>
+  <span class='prompt'>$ </span>
+  <span class='prompt'>$ </span>
+  <span class='prompt'>$ </span>
+  <span class='prompt'>$ </span>
+
+
+
+  
+</div>
+
+<h2>.gitignore file</h2>
+<p>
+<pre>
+*.rbc
+capybara-*.html
+.rspec
+/log
+/tmp
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/public/system
+/coverage/
+/spec/tmp
+**.orig
+rerun.txt
+pickle-email-*.html
+config/initializers/secret_token.rb
+config/secrets.yml
+.env
+/.bundle
+.rvmrc
+/vendor/assets/bower_components
+*.bowerrc
+bower.json
+.powenv
+.byebug_history
+config/database.yml
+</pre>
+</p>
+
+<h2>database.yml</h2>
+<p>
+<pre>
+default: &#038default
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  &#060&#060: *default
+  username: ubuntu
+  password: password
+  database: photoflash_development
+
+test:
+  &#060&#060: *default
+  database: photoflash_test
+</pre>
+</p>

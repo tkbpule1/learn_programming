@@ -1,0 +1,24 @@
+<%= provide(:title, "Linux | Basics") %>
+
+<h1>Basics</h1>
+
+<h2>Install a package</h2>
+<div class="code">
+<pre>
+  <span class="prompt">$</span> sudo apt-get install sqlite3
+</pre>
+</div>
+
+<h2>Search for a package</h2>
+<div class="code">
+<pre>
+  <span class="prompt">$</span> apt-cache search database
+</pre>
+</div>
+
+<h2>See list of installed packages</h2>
+<div class="code">
+<pre>
+  <span class="prompt">$</span> dpkg -l | grep sql
+</pre>
+</div>
