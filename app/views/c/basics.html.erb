@@ -1,0 +1,162 @@
+<%= provide(:title, "C | Basics") %>
+
+<div class="links">
+    <%= link_to 'C Home', c_path %>
+</div>
+<div class="links">
+    <%= link_to 'C Basics', c_basics_path %>
+</div>
+
+<h1>Basics</h1>
+<div class="links">
+<a href="#output">Output</a>
+</div>
+<div class="links">
+  <a href="#input">Input</a>
+</div>
+<div id="output"></div>
+<br>
+<br>
+<h2>Output</h2>
+<h3>printf</h3>
+<table class="type">
+    <tr>
+        <td><b>Type</b></td>
+        <td><b>Constant Examples</b></td>
+        <td><b>printf chars</b></td>
+    </tr>
+    <tr>
+        <td>char</td>
+        <td>'a', '\n'</td>
+        <td>%c</td>
+    </tr>
+    <tr>
+        <td>_BOOL</td>
+        <td>0, 1</td>
+        <td>%i, %u</td>
+    </tr>
+    <tr>
+        <td>short int</td>
+        <td></td>
+        <td>%hi, %hx, %ho</td>
+    </tr>
+    <tr>
+        <td>unsigned short int</td>
+        <td></td>
+        <td>%hu, %hx, %ho</td>
+    </tr>
+    <tr>
+        <td>int</td>
+        <td>12, 0xFFE0, 0117</td>
+        <td>%i, %x, %o</td>
+    </tr>
+    <tr>
+        <td>unsigned int</td>
+        <td>12u</td>
+        <td>%u, %x, %o</td>
+    </tr>
+    <tr>
+        <td>long int</td>
+        <td>12L, 0xffffL</td>
+        <td>%li, %lx, %lo</td>
+    </tr>
+    <tr>
+        <td>unsigned long int</td>
+        <td>12UL, 0xffffUL</td>
+        <td>%li, %lx, %lo</td>
+    </tr>
+    <tr>
+        <td>float</td>
+        <td>12.34f</td>
+        <td>%f, %e, %g, %a</td>
+    </tr>
+    <tr>
+        <td>double</td>
+        <td>12.34</td>
+        <td>%f, %e, %g, %a</td>
+    </tr>
+    <tr>
+        <td>long double</td>
+        <td>12.3412</td>
+        <td>%Lf, %Le, %Lg</td>
+    </tr>
+</table>
+
+<h2>Examples:</h2>
+
+<div class="code">
+<pre>
+  <span class="comment">// print octal value of 127 with leading zero;</span>
+  <span class="printf">printf</span>(<span class="str">"Octal value of 127: <span class="num">%#o<span class="printf">\n</span></span>"</span>, <span class="num">127</span>);
+  <span class="comment">OUTPUT: Octal value of 127: 0177</span>
+
+  <span class="comment">// print decimal value of octal 0177;</span>
+  <span class="printf">printf</span>(<span class="str">"Decimal value of 0177:  <span class="num">%i<span class="printf">\n</span></span>"</span>, <span class="num">0177</span>);
+  <span class="comment">OUTPUT: Decimal value of 0177: 127</span>
+
+  <span class="comment">// print hexadecimal value of 127 with leading 0x;</span>
+  <span class="printf">printf</span>(<span class="str">"Hexadecimal value of 127: <span class="num">%#x<span class="printf">\n</span></span>"</span>, <span class="num">127</span>);
+  <span class="comment">OUTPUT: Hexadecimal value of 127: 0x7f</span>
+
+  <span class="comment">// print decimal value of hexadecimal 0x7f;</span>
+  <span class="printf">printf</span>(<span class="str">"Decimal value of 0x7f: <span class="num">%i<span class="printf">\n</span></span>"</span>, <span class="num">0x7f</span>);
+  <span class="comment">OUTPUT: Decimal value of 0x7f: 127</span>
+
+  <span class="comment">// print scientific notation of 0.00225,
+  // expects an argument of type double;</span>
+  <span class="printf">printf</span>(<span class="str">"Scientific notation of 0.00225: <span class="num">%e<span class="printf">\n</span></span>"</span>, <span class="num">0.00225</span>);
+  <span class="comment">OUTPUT: Scientific notation of 0.00225: 2.25e-3</span>
+
+  <span class="comment">// print float/double to precise decimal;</span>
+  <span class="printf">printf</span>(<span class="str">"print 2.250125 to 2 decimal places: <span class="num">%.*f<span class="printf">\n</span></span>"</span>, <span class="num">2</span>, <span class="num">2.250125</span>);
+  <span class="printf">printf</span>(<span class="str">"print 2.250125 to 2 decimal places: <span class="num">%.2f<span class="printf">\n</span></span>"</span>, <span class="num">2.250125</span>);
+  <span class="comment">OUTPUT: print 2.250125 to 2 decimal places: 2.25</span>
+
+  <span class="comment">// print a space then a char then 9 spaces than a char;</span>
+  <span class="printf">printf</span>(<span class="str">"<span class="num">%*c%*c<span
+  class="printf">\n</span></span>"</span>, <span class="num">2</span>, <span class="str">'n'</span
+  >, <span class="num">10</span>, <span class="str">'x'</span>);
+  <span class="printf">printf</span>(<span class="str">"<span class="num">%2c%10c<span
+  class="printf">\n</span></span>"</span>, <span class="str">'n'</span>, <span class="str">'x'</span>);
+  <span class="comment">OUTPUT:
+   n         x</span>
+
+</pre>
+</div>
+<p>
+  Antoher use of <code>printf</code> is to print an "arguments" with different formatting:
+</p>
+<div class="code">
+<pre>
+  <span class="printf">printf</span>(<span class="str">"<span class="num">%1$.3f : %1$e : %2$i : %3$c<span class="printf">\n</span></span>"</span>, <span class="num">121.232</span>, <span class="num">23</span>, <span class="str">'x'</span>);
+  <span class="comment">OUTPUT: 121.232 : 1.212320e+02 : 23 : x </span>
+</pre>
+</div>
+<p>
+  The function <span class="printf">printf</span> does not have a method to print a character
+  multiple times, except spaces and zeros. Instead, loops must be used to do this.  Here is how to
+  print multiple spaces and zeros:
+</p>
+<div class="code">
+<pre>
+  <span class="comment">// Print 5 spaces and then a char</span>
+  <span class="comment">// Print 5 zeroes</span>
+  <span class="printf">printf</span>(<span class="str">"<span class="num">%*s%c<span class="printf">\n</span></span>"</span>, <span class="num">5</span>, <span class="str">""</span>, <span class="str">'x'</span>);
+  <span class="printf">printf</span>(<span class="str">"<span class="num">%0*i<span class="printf">\n</span></span>"</span>, <span class="num">5</span>, <span class="num">0</span>);
+  <span class="comment">// OUTPUT:
+       x
+  00000 </span>
+</pre>
+</div>
+
+<p>
+  From the examples above, one should be able to interpolate the use of other printf chars in the table at the top of the page.
+</p>
+<div id="input"></div>
+<br>
+<br>
+<h2>Input</h2>
+<h3>scanf</h3>
+<p>
+   
+</p>

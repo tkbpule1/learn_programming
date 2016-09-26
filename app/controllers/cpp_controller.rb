@@ -20,6 +20,9 @@ class CppController < ApplicationController
   def functions
   end
 
-  def inheritance    
+  def inheritance
+  end
+
+  def linked_lists    
   end
 end

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get '/bash/admin' => 'bash#admin'
 
+  get '/bash/conditionals' => 'bash#conditionals'
+
   get '/git' => 'git#index'
 
   get '/git/installation' => 'git#installation'
@@ -29,6 +31,10 @@ Rails.application.routes.draw do
 
   get '/ruby' => 'ruby#index'
 
+  get '/c' => 'c#index'
+
+  get '/c/basics' => 'c#basics'
+
   get '/cpp' => 'cpp#index'
 
   get '/cpp/basics' => 'cpp#basics'
@@ -44,6 +50,8 @@ Rails.application.routes.draw do
   get '/cpp/functions' => 'cpp#functions'
 
   get '/cpp/inheritance' => 'cpp#inheritance'
+
+  get'/cpp/linked_lists' => 'cpp#linked_lists'
 
   get '/linux' => 'linux#index'
 

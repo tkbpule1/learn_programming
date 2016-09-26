@@ -10,6 +10,7 @@ $str: #00a000;
 $num: #eb9800;
 $comment: #8c8c8c;
 $printf: #00aaff;
+$bash_var: red;
 
 
 ul {
@@ -170,13 +171,20 @@ table, tr, td {
   border: 2.5px solid white;
 }
 td {
-  padding: 15px;
+  padding: 25px;
   text-align: center;
+}
+
+.type {
+    font-family: serif;
+    background-color: #ffffcc;
+}
+
+.bg {
   background-color: #ffffcc;
 }
 
 .tcol1 {
-  text-align: left;
   border-right: 2px solid black;
 }
 
@@ -253,7 +261,7 @@ ol {
 }
 
 .var {
-  color: red;
+  color: $bash_var;
 }
 
 .phpfunc {

@@ -13,4 +13,7 @@ class BashController < ApplicationController
 
   def admin
   end
+
+  def conditionals
+  end
 end

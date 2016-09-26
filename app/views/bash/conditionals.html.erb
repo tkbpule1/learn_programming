@@ -1,0 +1,142 @@
+<%= provide(:title, "Conditionals") %>
+
+<h1>Conditionals</h1>
+<p>
+  Bash does not have types, therefore a different syntax is used for each type.
+</p>
+
+<h2>File test operators</h2>
+
+<div class="code">
+<pre>
+  usage:
+
+  if [[ -e $file ]]
+  <span class="preproc">then</span>
+  echo "something"
+  fi
+
+  returns true if file exists.
+</pre>
+</div>
+
+<div class="code">
+<pre>
+<ul>
+  <li>-e : file exists?</li>
+  <li>-f : file is a regular file?</li>
+  <li>-s : file is size not zero?</li>
+  <li>-d : file is a directory?</li>
+  <li>-b : file is a block device?</li>
+  <li>-c : file is a character device?</li>
+  <li>-p : file is a pipe?</li>
+  <li>-t : file (descriptor) is associated with a terminal device?</li>
+  <li>-r : file has read permission? (by the user running the test)</li>
+  <li>-x : file execute permission? (by the user running the test)</li>
+  <li>-w : file write permission? (by the user running the test)</li>
+  <li>-g : set-group-id</li>
+  <li>-u : set-user-id</li>
+  <li>-k : stick bit set</li>
+  <li>-h : file is a symbolic link?</li>
+  <li>-L : file is a symbolic link?</li>
+  <li>-S : file is a socket?</li>
+  <li>-O : you are the owner of the file</li>
+  <li>-N : file modified since last read</li>
+  <li>f1 -nt f2 : file f1 is newer than file f2</li>
+  <li>f1 -ot f2 : file f1 is older than file f2</li>
+  <li>f1 -ef f2 : file f1 and file f2 are hard links to the same file</li>
+</ul>
+</pre>
+</div>
+
+<h2>Integer Comparison</h2>
+<div class="code">
+<pre>
+  usage:
+
+  if [[ $a -gt $b ]]
+  <span class="preproc">then</span>
+  echo "something"
+  fi
+
+  returns true if a is greater than b.
+</pre>
+</div>
+<div class="code">
+<pre>
+  <ul>
+    <li>-eq : is equal to</li>
+    <li>-ne : is not equal to</li>
+    <li>-gt : is greater than</li>
+    <li>-ge : is greater than or equal to</li>
+    <li>-lt : is less than</li>
+    <li>-le : is less than or equal to</li>
+  </ul>
+</pre>
+</div>
+<div class="code">
+<pre>
+  usage: alternative
+
+  if (( $a < $b ))
+  <span class="preproc">then</span>
+  echo "something"
+  fi
+</pre>
+</div>
+<div class="code">
+<pre>
+  <li>== : is equal to</li>
+  <li>!= : is not equal to</li>
+  <li>> : is greater than</li>
+  <li>>= : is greater than or equal to</li>
+  <li>< : is less than</li>
+  <li><= : is less than or equal to</li>
+</pre>
+</div>
+
+<h2>String Comparison</h2>
+
+<div class="code">
+<pre>
+  <li>= : is equal to</li>
+  Usage: if [ $a = $b ] NOTE: the white space
+  <li>== : is equal to</li>
+  Usage: if [ $a == $b ]
+                OR
+         if [[ $a == $b ]]
+
+  NOTE: The = and == comparison operators behaves differently within
+        a double-brackets test than within single brackets.
+
+  Example:
+  x=<span class="str">"str test"</span>
+  1. <span class="preproc">if </span>[[ <span class="var">$x</span> == s* ]] # if x starts with s (pattern matching)
+  # Returns true
+
+  2. <span class="preproc">if </span>[[ <span class="var">$x</span> == "s*" ]] # if x is equal to s* (literal matching)
+  # Returns false
+
+  3. <span class="preproc">if </span>[ <span class="var">$x</span> == s* ] # if x starts with s
+  # Returns error:  line 123: [: too many arguments
+  # This happens because word splitting takes place.
+
+  4. <span class="preproc">if </span>[ "<span class="var">$x</span>" == "s*" ] # if x is equal to s* (literal matching)
+  # Returns false
+
+  <li>!= : is not equal to</li>
+  Works like == ; ie [[ ... ]] for pattern matching
+
+  <li>> : is greater than</li>
+  Usage: if [[ $a > $b ]]
+    Must be escaped within [..]
+         if [ $a /> $b ]
+
+  <li>< : is less than</li>
+  Usage: same as greater than
+    Must be escaped within [..]
+
+  <li>-z : string is null</li>
+  <li>-n : string is not null</li>
+</div>
+</pre>

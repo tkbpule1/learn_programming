@@ -21,6 +21,9 @@
 <div class="links">
   <%= link_to 'Inheritance', cpp_inheritance_path %>
 </div>
+<div class="links">
+  <%= link_to 'Linked Lists', cpp_linked_lists_path %>
+</div>
 
 
 
@@ -114,11 +117,13 @@
   A Token is the smallest individual unit of a program written in any language.  C++ tokens are divided into special symbols, word symbols, and identifiers.
 </p>
 <h2>Special Symbols:</h2>
+<pre>
 <p>
-  +&nbsp&nbsp&nbsp&nbsp&nbsp  -&nbsp&nbsp&nbsp&nbsp&nbsp  *&nbsp&nbsp&nbsp&nbsp&nbsp  / <br>
-  .&nbsp&nbsp&nbsp&nbsp&nbsp  ;&nbsp&nbsp&nbsp&nbsp&nbsp  ?&nbsp&nbsp&nbsp&nbsp&nbsp  , <br>
-  <=&nbsp&nbsp !=&nbsp&nbsp ==&nbsp&nbsp >= <br>
+  +    -    *    /
+  .    ;    ?    ,
+  <=   !=   ==   >=
 </p>
+</pre>
 
 <h2>Word Symbols (Reserved Words)</h2>
 <p>
@@ -290,59 +295,194 @@
 <p>
   ASCII (American Standard Code for Information Interchange) Table
 </p>
-<table>
+<table class="bg">
   <tr>
-    <td class="trow1 tcol1"></td><td class="trow1">0</td><td
-     class="trow1">1</td><td class="trow1">2</td><td
-     class="trow1">3</td><td class="trow1">4</td><td class="trow1">5</td><td
-     class="trow1">6</td><td class="trow1">7</td><td class="trow1">8</td><td
-     class="trow1">9</td>
+    <td class="trow1 tcol1"></td>
+    <td class="trow1">0</td>
+    <td class="trow1">1</td>
+     <td class="trow1">2</td>
+     <td class="trow1">3</td>
+     <td class="trow1">4</td>
+     <td class="trow1">5</td>
+     <td class="trow1">6</td>
+     <td class="trow1">7</td>
+     <td class="trow1">8</td>
+     <td class="trow1">9</td>
   </tr>
   <tr>
-    <td class="tcol1">0</td> <td>nul</td><td>soh</td><td>stx</td><td>etx</td><td>eot</td><td>enq</td><td>ack</td><td>bel</td><td>bs</td><td>ht</td>
+    <td class="tcol1">0</td>
+    <td>nul</td>
+    <td>soh</td>
+    <td>stx</td>
+    <td>etx</td>
+    <td>eot</td>
+    <td>enq</td>
+    <td>ack</td>
+    <td>bel</td>
+    <td>bs</td>
+    <td>ht</td>
   </tr>
   <tr>
-    <td class="tcol1">1</td> <td>lf</td><td>vt</td><td>ff</td><td>cr</td><td>so</td><td>si</td><td>dle</td><td>dc1</td><td>dc2</td><td>dc3</td>
+    <td class="tcol1">1</td>
+    <td>lf</td>
+    <td>vt</td>
+    <td>ff</td>
+    <td>cr</td>
+    <td>so</td>
+    <td>si</td>
+    <td>dle</td>
+    <td>dc1</td>
+    <td>dc2</td>
+    <td>dc3</td>
   </tr>
   <tr>
-    <td class="tcol1">2</td> <td>dc4</td><td>nak</td><td>syn</td><td>etb</td><td>can</td><td>em</td><td>sub</td><td>esc</td><td>fs</td><td>gs</td>
+    <td class="tcol1">2</td>
+    <td>dc4</td>
+    <td>nak</td>
+    <td>syn</td>
+    <td>etb</td>
+    <td>can</td>
+    <td>em</td>
+    <td>sub</td>
+    <td>esc</td>
+    <td>fs</td>
+    <td>gs</td>
   </tr>
   <tr>
-    <td class="tcol1">3</td> <td>rs</td><td>us</td><td>space</td><td>!</td><td>"</td><td>#</td><td>$</td><td>%</td><td>&</td><td>'</td>
+    <td class="tcol1">3</td>
+    <td>rs</td>
+    <td>us</td>
+    <td>space</td>
+    <td>!</td>
+    <td>"</td>
+    <td>#</td>
+    <td>$</td>
+    <td>%</td>
+    <td>&</td>
+    <td>'</td>
   </tr>
   <tr>
-    <td class="tcol1">4</td> <td>(</td><td>)</td><td>*</td><td>+</td><td>,</td><td>-</td><td>.</td><td>/</td><td>0</td><td>1</td>
+    <td class="tcol1">4</td>
+    <td>(</td>
+    <td>)</td>
+    <td>*</td>
+    <td>+</td>
+    <td>,</td>
+    <td>-</td>
+    <td>.</td>
+    <td>/</td>
+    <td>0</td>
+    <td>1</td>
   </tr>
   <tr>
-    <td class="tcol1">5</td> <td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>:</td><td>;</td>
+    <td class="tcol1">5</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+    <td>:</td>
+    <td>;</td>
   </tr>
   <tr>
-    <td class="tcol1">6</td> <td><</td><td>=</td><td>></td><td>?</td><td>@</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td>
+    <td class="tcol1">6</td>
+    <td><</td>
+    <td>=</td>
+    <td>></td>
+    <td>?</td>
+    <td>@</td>
+    <td>A</td>
+    <td>B</td>
+    <td>C</td>
+    <td>D</td>
+    <td>E</td>
   </tr>
   <tr>
-    <td class="tcol1">7</td> <td>F</td><td>G</td><td>H</td><td>I</td><td>J</td><td>K</td><td>L</td><td>M</td><td>N</td><td>O</td>
+    <td class="tcol1">7</td>
+    <td>F</td>
+    <td>G</td>
+    <td>H</td>
+    <td>I</td>
+    <td>J</td>
+    <td>K</td>
+    <td>L</td>
+    <td>M</td>
+    <td>N</td>
+    <td>O</td>
   </tr>
   <tr>
-    <td class="tcol1">8</td> <td>P</td><td>Q</td><td>R</td><td>S</td><td>T</td><td>U</td><td>V</td><td>W</td><td>X</td><td>Y</td>
+    <td class="tcol1">8</td>
+    <td>P</td>
+    <td>Q</td>
+    <td>R</td>
+    <td>S</td>
+    <td>T</td>
+    <td>U</td>
+    <td>V</td>
+    <td>W</td>
+    <td>X</td>
+    <td>Y</td>
   </tr>
   <tr>
-    <td class="tcol1">9</td> <td>Z</td><td>[</td><td>\</td><td>]</td><td>^</td><td>_</td><td>`</td><td>a</td><td>b</td><td>c</td>
+    <td class="tcol1">9</td>
+    <td>Z</td>
+    <td>[</td>
+    <td>\</td>
+    <td>]</td>
+    <td>^</td>
+    <td>_</td>
+    <td>`</td>
+    <td>a</td>
+    <td>b</td>
+    <td>c</td>
   </tr>
   <tr>
-    <td class="tcol1">10</td> <td>d</td><td>e</td><td>f</td><td>g</td><td>h</td><td>i</td><td>j</td><td>k</td><td>l</td><td>m</td>
+    <td class="tcol1">10</td>
+    <td>d</td>
+    <td>e</td>
+    <td>f</td>
+    <td>g</td>
+    <td>h</td>
+    <td>i</td>
+    <td>j</td>
+    <td>k</td>
+    <td>l</td>
+    <td>m</td>
   </tr>
   <tr>
-    <td class="tcol1">11</td> <td>n</td><td>o</td><td>p</td><td>q</td><td>r</td><td>s</td><td>t</td><td>u</td><td>v</td><td>w</td>
+    <td class="tcol1">11</td>
+    <td>n</td>
+    <td>o</td>
+    <td>p</td>
+    <td>q</td>
+    <td>r</td>
+    <td>s</td>
+    <td>t</td>
+    <td>u</td>
+    <td>v</td>
+    <td>w</td>
   </tr>
   <tr>
-    <td class="tcol1">12</td> <td>x</td><td>y</td><td>z</td><td>{</td><td>|</td><td>}</td><td>~</td><td>del</td>
+    <td class="tcol1">12</td>
+    <td>x</td>
+    <td>y</td>
+    <td>z</td>
+    <td>{</td>
+    <td>|</td>
+    <td>}</td>
+    <td>~</td>
+    <td>del</td>
   </tr>
 </table>
 <br>
 <br>
 <h3>Float-Point Data Types</h3>
 <p>
-  There are three data types to manipulate decimal numbers: <span class="preproc">float</span>, <span class="preproc">double</span>, and <span class="preproc">long double</span>.  <br>
+  There are three data types to manipulate decimal numbers: <span class="preproc">float</span>,
+  <span class="preproc">double</span>, and <span class="preproc">long double</span>.  <br>
 </p>
 <p>
   <span class="preproc">float</span>:
@@ -364,7 +504,8 @@
   <span class="preproc">long double</span>:
   <ul>
     <li>used to represent any real number between -1.18e+4932 and 1.18e+4932. </li>
-    <li>The memory allocation for a value of type <span class="preproc">long double</span> is 16 byes.</li>
+    <li>The memory allocation for a value of type <span class="preproc">long double</span> is 16
+    byes.</li>
     <li>The number of significant digits is 18.</li>
   </ul>
 </p>
@@ -399,25 +540,29 @@
   Let's look at an example:
 </p>
 <div class="code">
-  <span class="preproc">#include</span><span class="str">&#060iostream></span>
-  <br>
-  <span class="preproc">int</span> <span class="func">main</span>()
-  <br>
-  {<br>
-  &nbsp&nbsp std::cout << <span class="str">"static_cast&#060char>(65):
-    "</span> << static_cast&#060<span class="preproc">char</span>>(65) << std::endl;<br>
+<pre>
 
-  &nbsp&nbsp std::cout << <span class="str"> "static_cast&#060int>('A'): " </span> << static_cast&#060<span class="preproc">int</span>>('A') << std::endl;<br>
-<br>
-  &nbsp&nbsp <span class="preproc">return</span> <span class="num">0</span>;
-  <br>
+  <span class="preproc">#include</span><span class="str">&#060iostream></span>
+
+  <span class="preproc">int</span> <span class="func">main</span>()
+
+  {
+  std::cout << <span class="str">"static_cast&#060char>(65): "
+           </span> << static_cast&#060<span class="preproc">char</span>>(65) << std::endl;
+
+  std::cout << <span class="str"> "static_cast&#060int>('A'): "
+           </span> << static_cast&#060<span class="preproc">int</span>>('A') << std::endl;
+  <span class="preproc">return</span> <span class="num">0</span>;
+
   }
+</pre>
 </div>
 <h2>Output:</h2>
 <div class="code">
+<pre>
   static_cast&#060char>(65): A
-  <br>
   static_cast&#060int>('A'): 65
+</pre>
 </div>
 <br><br>
 
@@ -425,11 +570,13 @@
 <p>
   A string is a sequence of zero or more characters.  Strings are enclosed in double quotation marks.  A string containing no characters is called a <strong>null</strong> or <strong>empty</strong> string.
 </p>
-<code>
-  string your_name = "William Jacob";<br>
-  string his_name = "Mickey";<br>
+<div class="code">
+<pre>
+  string your_name = "William Jacob";
+  string his_name = "Mickey";
   string null_string = "";
-</code>
+</pre>
+</div>
 <p>
   Each character has a relative position in the string.  The position of the first character is 0, the position of the second character is 1, and so on.
 </p>
@@ -447,12 +594,14 @@
 <p>
   Examples:
 </p>
-<code>
+<div class="code">
+<pre>
   <span class="preproc">int</span> counter;<br>
   <span class="preproc">double</span> amount_due;<br>
   <span class="preproc">char</span> ch;<br>
   string name;
-</code>
+</pre>
+</div>
 <br><br>
 
 <h1>Constants</h1>
@@ -467,15 +616,14 @@
 <p>
   Examples:
 </p>
-<code>
+<div class="code">
+<pre>
   <span class="preproc">const int</span> MINUTE = 60; <span class="comment">// seconds</span>
-  <br>
   <span class="preproc">const float</span> PI = 3.141592f;
-  <br>
   <span class="preproc">const double</span> PI = 3.141592653589793;
-  <br>
   <span class="preproc">const long double</span> PI = 3.141592653589793238l;
-</code>
+</pre>
+</div>
 <br><br>
 
 
@@ -488,17 +636,20 @@
 </p>
 
 <div class="code">
+<pre>
+
   <span class="preproc">#include</span> <span class="str">&#060iostream></span>
-   <br>
-   <span class="preproc">int</span> <span class="func">main</span>()
-   <br>
-   {<br>
-     <span class="preproc">int</span> age = 21;<br>
-     std::cout << <span class="str">"This will print to the screen."</span> << std::endl;
-     <br>
-     std::cout << <span class="str">"The legal age is "</span> << age << std::endl;
-     <br>
-   }
+
+  <span class="preproc">int</span> <span class="func">main</span>()
+
+  {
+  <span class="preproc">int</span> age = 21;<br>
+  std::cout << <span class="str">"This will print to the screen."</span> << std::endl;
+
+  std::cout << <span class="str">"The legal age is "</span> << age << std::endl;
+  <span class="preproc">return</span> <span class="num">0</span>;
+  }
+</pre>
 </div>
 
 <h2>printf()</h2>
@@ -524,12 +675,12 @@
 <br>
 <h4>Type</h4>
 <p>
-  The most common used types are <code>d</code>, <code>f</code>, <code>s</code>,
+  The most common used types are <code>d</code>, <code>i</code>, <code>f</code>, <code>s</code>,
    <code>u</code>, and <code>c</code>.
 </p>
-<table>
+<table class="bg">
   <tr>
-    <td>d</td>
+    <td>d or i</td>
     <td>integer values</td>
   </tr>
   <tr>
