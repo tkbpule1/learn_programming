@@ -35,6 +35,18 @@ Rails.application.routes.draw do
 
   get '/c/basics' => 'c#basics'
 
+  get '/c/types' => 'c#types'
+
+  get '/c/iostream' => 'c#iostream'
+
+  get '/c/array' => 'c#array'
+
+  get '/c/carray' => 'c#carray'
+
+  get '/c/loops' => 'c#loops'
+
+  get '/c/conditionals' => 'c#conditionals'
+
   get '/cpp' => 'cpp#index'
 
   get '/cpp/basics' => 'cpp#basics'

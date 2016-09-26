@@ -1,87 +1,9 @@
-<%= provide(:title, "C | Types") %>
+<%= provide(:title, "C | I/O Stream") %>
 
 <%= render 'c/header' %>
 
-<h1>Basics</h1>
-<div class="links">
-  <a href="#types">Data Types</a>
-</div>
-<div class="links">
-  <a href="#output">Output</a>
-</div>
-<div class="links">
-  <a href="#input">Input</a>
-</div>
-<div class="links">
-  <a href="#char">Char Array</a>
-</div>
-
-
-<div id="types"></div>
-<br><br>
-<h2>Data Types</h2>
-<p>
-  There are several basics types of data that c has available for use; <b>char</b>, <b>int</b>, <b>unsigned int</b>, <b>short int</b>, <b>unsigned short int</b>, <b>long int</b>, <b>unsigned long int</b>, <b>float</b>, <b>double</b>, <b>long double</b>, <b>_Bool</b>, and <b>void</b>.
-</p>
-<p>
-  As you can see, there is not type string.  Instead, a character array is used to represent a string.  This is very different from most languages and must be understood.  I will do my best to explain it. (See <a href="#char">here</a>).
-</p>
-<p>
-  There are many data types dealing with numbers.  The difference is the size of the number they can hold.  The size is system dependent.  To see the size of each data type, C has defined some helpful constants that we can print to the screen:
-</p>
-<div class="code">
-<pre>
-  <span class="printf">printf</span>(<span class="str">"Max char value:   %i<span class="printf">\n</span>"</span>, CHAR_MAX</span>);
-  <span class="printf">printf</span>(<span class="str">"Min char value:   %i<span class="printf">\n</span>"</span>, CHAR_MIN</span>);
-  <span class="printf">printf</span>(<span class="str">"Max short value:  %i<span class="printf">\n</span>"</span>, SHRT_MAX</span>);
-  <span class="printf">printf</span>(<span class="str">"Min short value:  %i<span class="printf">\n</span>"</span>, SHRT_MIN</span>);
-  <span class="printf">printf</span>(<span class="str">"Max int value:    %i<span class="printf">\n</span>"</span>, INT_MAX</span>);
-  <span class="printf">printf</span>(<span class="str">"Min int value:    %i<span class="printf">\n</span>"</span>, INT_MIN</span>);
-  <span class="printf">printf</span>(<span class="str">"Max long value:   %li<span class="printf">\n</span>"</span>, LONG_MAX</span>);
-  <span class="printf">printf</span>(<span class="str">"Min long value:   %li<span class="printf">\n</span>"</span>, LONG_MIN</span>);
-  <span class="printf">printf</span>(<span class="str">"Max unsigned short value:   %u<span class="printf">\n</span>"</span>, USHRT_MAX</span>);
-  <span class="printf">printf</span>(<span class="str">"Max unsigned int value:   %u<span class="printf">\n</span>"</span>, UINT_MAX</span>);
-  <span class="printf">printf</span>(<span class="str">"Max unsigned long value:   %ul<span class="printf">\n</span>"</span>, ULONG_MAX</span>);
-  <span class="comment">// OUTPUT:
-  Max char value:   127
-  Min char value:   -128
-  Max short value:  32767
-  Min short value:  -32768
-  Max int value:    2147483647
-  Min int value:    -2147483648
-  Max long value:   9223372036854775807
-  Min long value:   -9223372036854775808
-  Max unsigned short value:   65535
-  Max unsigned int value:   4294967295
-  Max unsigned long value:   18446744073709551615
-</span>
-</pre>
-</div>
-
-
-<div id="char"></div>
-<br><br>
-<h2>Character Arrays as strings</h2>
-<p>
-  Since C does not have a data type of <b>string</b>, we must use character arrays.  As the name suggests this is just an array.  To declare a character array, we must specify the size of the array.  We also need to account for the \0 character, which is always in last index of the char array.
-  <br>
-</p>
-<h3>Declare a character array:</h3>
-<div class="code">
-<pre>
-  char name[5] = John;
-</pre>
-</div>
-<p>
-  The declaration above will create an array of 5 elements, but only 4 are available for use. After some experimenting, it seems if you declare and initalize the char array, <code><span class="preproc">char</span> name[5] = "Johnny"</code>, the compiler will not complain.  But if we use the scanf function, the compiler will complain - warning: initializer-string for array of chars is too long.  This does not prevent the program from compiling and running.
-</p>
-
-
-
-<div id="output"></div>
-<br><br>
-<h2>Output</h2>
-<h3>printf</h3>
+<h1>Output</h1>
+<h2>printf</h2>
 <table class="type">
     <tr>
         <td><b>Type</b></td>
@@ -217,8 +139,8 @@
 </p>
 <div id="input"></div>
 <br><br>
-<h2>Input</h2>
-<h3>scanf</h3>
+<h1>Input</h1>
+<h2>scanf</h2>
 <p>
    The <b>scanf</b> function is used to get input from the user.  It is very similar to the <b>printf</b> function in its syntax and application.
 </p>

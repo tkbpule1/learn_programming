@@ -1,0 +1,60 @@
+<%= provide(:title, "C | Loops") %>
+
+<%= render 'c/header' %>
+
+<h1>Loops</h1>
+
+<p>
+  A fundamental property of a computer it the ability to repetitively execute a set of statements.  This capability enable you to develop concise programs that would otherwise require thousand of statements to perform.  C has three different statements for programming loops: <code>for</code> loops, <code>while</code> loops, and <code>do..while</code> loops.
+</p>
+<p>
+  Before moving on, there are two statements we should take a look at: the <code>continue</code> statement and the <code>break</code> statement.  These statements allow you to get out of a loop if some condition is met.
+</p>
+<h3>break statement</h3>
+<p>
+  The execution of a <code>break</code> statement immediately exits the loop and the program goes to the next statement after the loop.
+</p>
+<h3>continue statement</h3>
+<p>
+  The <code>continue</code> statement is similar to the break statement, but rather than exiting the loop entirely, it exits the current iteration of the loop, and continues with the next iteration of the loop.
+</p>
+
+<h2>for loop</h2>
+<h3>Syntax</h3>
+<div class="code">
+<pre>
+  <span class="preproc">for</span>(<span class="preproc">int</span> i = <span
+   class="num">0</span>; i <span class="num">10</span>; i++)
+  {
+    <span class="printf">printf</span>(<span class="str">"<span class="num">%i<span
+       class="printf">\n</span></span>"</span>, i);
+  }
+</pre>
+</div>
+<h2>while loop</h2>
+<h3>Syntax</h3>
+<div class="code">
+<pre>
+  <span class="preproc">while</span>(<span class="preproc">int</span> i < <span
+   class="num">10</span>)
+  {
+    <span class="printf">printf</span>(<span class="str">"<span class="num">%i<span
+       class="printf">\n</span></span>"</span>, i);
+    i++;
+  }
+</pre>
+</div>
+<h2>do..while loop</h2>
+<h3>Syntax</h3>
+<div class="code">
+<pre>
+  <span class="preproc">do</span>
+  {
+    <span class="printf">printf</span>(<span class="str">"<span class="num">%i<span
+       class="printf">\n</span></span>"</span>, i);
+    i++;
+  }
+  <span class="preproc">while</span>(i < <span
+   class="num">10</span>)
+</pre>
+</div>

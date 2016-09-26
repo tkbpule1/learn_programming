@@ -1,0 +1,18 @@
+<%= provide(:title, "C | Character Arrays") %>
+
+<%= render 'c/header' %>
+
+<h2>Character Arrays as strings</h2>
+<p>
+  Since C does not have a data type of <b>string</b>, we must use character arrays.  As the name suggests this is just an array.  To declare a character array, we must specify the size of the array.  We also need to account for the \0 character, which is always in last index of the char array.
+  <br>
+</p>
+<h3>Declare a character array:</h3>
+<div class="code">
+<pre>
+  char name[5] = John;
+</pre>
+</div>
+<p>
+  The declaration above will create an array of 5 elements, but only 4 are available for use. After some experimenting, it seems if you declare and initalize the char array, <code><span class="preproc">char</span> name[5] = "Johnny"</code>, the compiler will not complain.  But if we use the scanf function, the compiler will complain - warning: initializer-string for array of chars is too long.  This does not prevent the program from compiling and running.
+</p>

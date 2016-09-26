@@ -1,0 +1,42 @@
+<%= provide(:title, "C | Data Types") %>
+
+<%= render 'c/header' %>
+
+<h2>Data Types</h2>
+<p>
+  There are several basics types of data that c has available for use; <b>char</b>, <b>int</b>, <b>unsigned int</b>, <b>short int</b>, <b>unsigned short int</b>, <b>long int</b>, <b>unsigned long int</b>, <b>float</b>, <b>double</b>, <b>long double</b>, <b>_Bool</b>, and <b>void</b>.
+</p>
+<p>
+  As you can see, there is not type string.  Instead, a character array is used to represent a string.  This is very different from most languages and must be understood.  I will do my best to explain it. (See <a href="/c/carray">here</a>).
+</p>
+<p>
+  There are many data types dealing with numbers.  The difference is the size of the number they can hold.  The size is system dependent.  To see the size of each data type, C has defined some helpful constants that we can print to the screen:
+</p>
+<div class="code">
+<pre>
+  <span class="printf">printf</span>(<span class="str">"Max char value:   %i<span class="printf">\n</span>"</span>, CHAR_MAX</span>);
+  <span class="printf">printf</span>(<span class="str">"Min char value:   %i<span class="printf">\n</span>"</span>, CHAR_MIN</span>);
+  <span class="printf">printf</span>(<span class="str">"Max short value:  %i<span class="printf">\n</span>"</span>, SHRT_MAX</span>);
+  <span class="printf">printf</span>(<span class="str">"Min short value:  %i<span class="printf">\n</span>"</span>, SHRT_MIN</span>);
+  <span class="printf">printf</span>(<span class="str">"Max int value:    %i<span class="printf">\n</span>"</span>, INT_MAX</span>);
+  <span class="printf">printf</span>(<span class="str">"Min int value:    %i<span class="printf">\n</span>"</span>, INT_MIN</span>);
+  <span class="printf">printf</span>(<span class="str">"Max long value:   %li<span class="printf">\n</span>"</span>, LONG_MAX</span>);
+  <span class="printf">printf</span>(<span class="str">"Min long value:   %li<span class="printf">\n</span>"</span>, LONG_MIN</span>);
+  <span class="printf">printf</span>(<span class="str">"Max unsigned short value:   %u<span class="printf">\n</span>"</span>, USHRT_MAX</span>);
+  <span class="printf">printf</span>(<span class="str">"Max unsigned int value:   %u<span class="printf">\n</span>"</span>, UINT_MAX</span>);
+  <span class="printf">printf</span>(<span class="str">"Max unsigned long value:   %ul<span class="printf">\n</span>"</span>, ULONG_MAX</span>);
+  <span class="comment">// OUTPUT:
+  Max char value:   127
+  Min char value:   -128
+  Max short value:  32767
+  Min short value:  -32768
+  Max int value:    2147483647
+  Min int value:    -2147483648
+  Max long value:   9223372036854775807
+  Min long value:   -9223372036854775808
+  Max unsigned short value:   65535
+  Max unsigned int value:   4294967295
+  Max unsigned long value:   18446744073709551615
+</span>
+</pre>
+</div>
