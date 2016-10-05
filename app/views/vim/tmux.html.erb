@@ -1,0 +1,233 @@
+<%= provide(:title, 'Vim | Tmux') %>
+
+<%= render 'header' %>
+
+<h1>Vim Tmux</h1>
+<div class="code">
+<pre>
+  # session management
+  tmux ls (or tmux list-sessions)
+  tmux new -s session-name
+  Ctrl-b d Detach from session
+  tmux attach -t [session name]
+  tmux kill-session -t session-name
+
+  touch Ctrl-b and touch c: don't hold crtl-b down while hitting command;
+
+
+  Ctrl-b c Create new window -- Not working use Ctrl-b :new-window
+  Ctrl-b d Detach current client
+  Ctrl-b l Move to previously selected window
+  Ctrl-b n Move to the next window
+  Ctrl-b p Move to the previous window
+  Ctrl-b & Kill the current window
+  Ctrl-b , Rename the current window
+  Ctrl-b q Show pane numbers (used to switch between panes)
+  Ctrl-b o Switch to the next pane
+  Ctrl-b ? List all keybindings
+
+
+  # moving between windows
+  Ctrl-b n (Move to the next window)
+  Ctrl-b p (Move to the previous window)
+  Ctrl-b l (Move to the previously selected window)
+  Ctrl-b w (List all windows / window numbers)
+  Ctrl-b window number (Move to the specified window number, the
+  default bindings are from 0 -- 9)
+
+  # Tiling commands
+  Ctrl-b % (Split the window vertically)
+  CTRL-b " (Split window horizontally)
+  Ctrl-b o (Goto next pane)
+  Ctrl-b q (Show pane numbers, when the numbers show up type the key to go to that pane)
+  Ctrl-b { (Move the current pane left)
+  Ctrl-b } (Move the current pane right)
+
+
+  # Make a pane its own window
+  Ctrl-b : "break-pane"
+
+
+  # add to ~/.tmux.conf
+  bind | split-window -h
+  bind - split-window -v
+
+  KEY BINDINGS
+ tmux may be controlled from an attached client by using a key combination
+ of a prefix key, ‘C-b’ (Ctrl-b) by default, followed by a command key.
+
+ The default command key bindings are:
+
+       C-b         Send the prefix key (C-b) through to the application.
+       C-o         Rotate the panes in the current window forwards.
+       C-z         Suspend the tmux client.
+       !           Break the current pane out of the window.
+       "           Split the current pane into two, top and bottom.
+       #           List all paste buffers.
+       $           Rename the current session.
+       %           Split the current pane into two, left and right.
+       &           Kill the current window.
+       '           Prompt for a window index to select.
+       (           Switch the attached client to the previous session.
+       )           Switch the attached client to the next session.
+       ,           Rename the current window.
+       -           Delete the most recently copied buffer of text.
+       .           Prompt for an index to move the current window.
+       0 to 9      Select windows 0 to 9.
+       :           Enter the tmux command prompt.
+       ;           Move to the previously active pane.
+       =           Choose which buffer to paste interactively from a list.
+       ?           List all key bindings.
+       D           Choose a client to detach.
+       L           Switch the attached client back to the last session.
+       [           Enter copy mode to copy text or view the history.
+       ]           Paste the most recently copied buffer of text.
+       c           Create a new window.
+       d           Detach the current client.
+       f           Prompt to search for text in open windows.
+       i           Display some information about the current window.
+       l           Move to the previously selected window.
+       n           Change to the next window.
+       o           Select the next pane in the current window.
+       p           Change to the previous window.
+       q           Briefly display pane indexes.
+       r           Force redraw of the attached client.
+       m           Mark the current pane (see select-pane -m).
+       M           Clear the marked pane.
+       s           Select a new session for the attached client interac‐
+                   tively.
+       t           Show the time.
+       w           Choose the current window interactively.
+       x           Kill the current pane.
+       z           Toggle zoom state of the current pane.
+       {           Swap the current pane with the previous pane.
+       }           Swap the current pane with the next pane.
+       ~           Show previous messages from tmux, if any.
+       Page Up     Enter copy mode and scroll one page up.
+       Up, Down
+       Left, Right
+                   Change to the pane above, below, to the left, or to the
+                   right of the current pane.
+       M-1 to M-5  Arrange panes in one of the five preset layouts: even-horizontal,
+                   even-vertical, main-horizontal, main-vertical, or tiled.
+       Space       Arrange the current window in the next preset layout.
+       M-n         Move to the next window with a bell or activity marker.
+       M-o         Rotate the panes in the current window backwards.
+       M-p         Move to the previous window with a bell or activity
+                   marker.
+       C-Up, C-Down
+       C-Left, C-Right
+                   Resize the current pane in steps of one cell.
+       M-Up, M-Down
+       M-Left, M-Right
+                   Resize the current pane in steps of five cells.
+
+  Key bindings may be changed with the bind-key and unbind-key commands.
+
+
+  This section contains a list of the commands supported by tmux.  Most
+  commands accept the optional -t (and sometimes -s) argument with one of
+  target-client, target-session target-window, or target-pane.  These spec‐
+  ify the client, session, window or pane which a command should affect.
+
+  target-client is the name of the pty(7) file to which the client is connected,
+  for example either of /dev/ttyp1 or ttyp1 for the client attached
+  to /dev/ttyp1.  If no client is specified, tmux attempts to work out the
+  client currently in use; if that fails, an error is reported.  Clients
+  may be listed with the list-clients command.
+
+  target-session is tried as, in order:
+
+     1.   A session ID prefixed with a $.
+
+     2.   An exact name of a session (as listed by the list-sessions command).
+
+     3.   The start of a session name, for example ‘mysess’ would match a session named ‘mysession’.
+
+     4.   An fnmatch(3) pattern which is matched against the session name.
+
+     If the session name is prefixed with an ‘=’, only an exact match is
+     accepted (so ‘=mysess’ will only match exactly ‘mysess’, not
+     ‘mysession’).
+
+     If a single session is found, it is used as the target session; multiple
+     matches produce an error.  If a session is omitted, the current session
+     is used if available; if no current session is available, the most
+     recently used is chosen.
+
+     target-window specifies a window in the form session:window.  session
+     follows the same rules as for target-session, and window is looked for in
+     order as:
+
+
+           1.   A special token, listed below.
+
+           2.   A window index, for example ‘mysession:1’ is window 1 in ses‐
+                sion ‘mysession’.
+
+           3.   A window ID, such as @1.
+
+           4.   An exact window name, such as ‘mysession:mywindow’.
+
+           5.   The start of a window name, such as ‘mysession:mywin’.
+
+           6.   As an fnmatch(3) pattern matched against the window name.
+
+   Like sessions, a ‘=’ prefix will do an exact match only.  An empty window
+   name specifies the next unused index if appropriate (for example the
+   new-window and link-window commands) otherwise the current window in
+   session is chosen.
+
+   The following special tokens are available to indicate particular win‐
+   dows.  Each has a single-character alternative form.
+
+   Token              Meaning
+   {start}       ^    The lowest-numbered window
+   {end}         $    The highest-numbered window
+   {last}        !    The last (previously current) window
+   {next}        +    The next window by number
+   {previous}    -    The previous window by number
+
+   target-pane may be a pane ID or takes a similar form to target-window but
+   with the optional addition of a period followed by a pane index or pane
+   ID, for example: ‘mysession:mywindow.1’.  If the pane index is omitted,
+   the currently active pane in the specified window is used.  The following
+   special tokens are available for the pane index:
+
+
+   Token                  Meaning
+   {last}            !    The last (previously active) pane
+   {next}            +    The next pane by number
+   {previous}        -    The previous pane by number
+   {top}                  The top pane
+   {bottom}               The bottom pane
+   {left}                 The leftmost pane
+   {right}                The rightmost pane
+   {top-left}             The top-left pane
+   {top-right}            The top-right pane
+   {bottom-left}          The bottom-left pane
+   {bottom-right}         The bottom-right pane
+   {up-of}                The pane above the active pane
+   {down-of}              The pane below the active pane
+   {left-of}              The pane to the left of the active pane
+   {right-of}             The pane to the right of the active pane
+
+   The tokens ‘+’ and ‘-’ may be followed by an offset, for example:
+
+         select-window -t:+2
+
+   In addition, target-session, target-window or target-pane may consist
+   entirely of the token ‘{mouse}’ (alternative form ‘=’) to specify the
+   most recent mouse event (see the MOUSE SUPPORT section) or ‘{marked}’
+   (alternative form ‘~’) to specify the marked pane (see select-pane -m).
+
+   Sessions, window and panes are each numbered with a unique ID; session
+   IDs are prefixed with a ‘$’, windows with a ‘@’, and panes with a ‘%’.
+   These are unique and are unchanged for the life of the session, window or
+   pane in the tmux server.  The pane ID is passed to the child process of
+   the pane in the TMUX_PANE environment variable.  IDs may be displayed
+   using the ‘session_id’, ‘window_id’, or ‘pane_id’ formats (see the
+   FORMATS section) and the display-message, list-sessions, list-windows or
+   list-panes commands.
+</pre>
+</div>

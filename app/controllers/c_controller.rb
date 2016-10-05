@@ -22,4 +22,7 @@ class CController < ApplicationController
 
     def conditionals
     end
+
+    def examples
+    end
 end

@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  get '/vim' => 'vim#index'
+
+  get '/vim/basics' => 'vim#basics'
+
+  get '/vim/tmux' => 'vim#tmux'
+
   get '/bash' => 'bash#index'
 
   get '/bash/basics' => 'bash#basics'
@@ -46,6 +53,8 @@ Rails.application.routes.draw do
   get '/c/loops' => 'c#loops'
 
   get '/c/conditionals' => 'c#conditionals'
+
+  get '/c/examples' => 'c#examples'
 
   get '/cpp' => 'cpp#index'
 

@@ -1,0 +1,49 @@
+<%= provide(:title, "Examples") %>
+
+<%= render 'c/header' %>
+
+<h1>Examples</h1>
+
+<h2>Arrays</h2>
+<div class="code">
+<pre>
+  <span class="comment">//Header File</span>
+  <span class="preproc">#include</span> <span class="str">&#060iostream></span>
+
+  <span class="comment">//Main Function</span>
+  <span class="preproc">int</span> <span class="func">main</span>()
+  {
+    <span class="comment">//Declare Variables</span>
+    <span class="preproc">int</span> ratingCount[<span class="num">11</span>], i, response;
+
+    <span class="preproc">for</span>(i = <span class="num">1</span>; i <= <span class="num">10</span>; i++)
+    {
+      ratingCount[i] = <span class="num">0</span>;
+    }
+
+    <span class="printf">printf</span>(<span class="str">"Enter 20 numbers between 1 and 10: <span class="printf">\n</span>"</span>);
+
+    <span class="preproc">for</span>(i = <span class="num">1</span>; i <= <span class="num">10</span>; i++)
+    {
+      <span class="printf">scanf</span>(<span class="str">"<span class="num">%i</span><span class="printf">\n</span>"</span>, &response</span>);
+
+      <span class="preproc">if</span>(response < <span class="num">1</span> || response > <span class="num">10</span>)
+      {
+        <span class="printf">printf</span>(<span class="str">"Invalid input<span class="printf">\n</span>"</span>);
+      }
+      <span class="preproc">else</span>
+      {
+        ++ratingCount[response];
+      }
+    }
+    <span class="printf">printf</span>(<span class="str">"<span class="num">%s%20s</span>"</span>, <span class="str">"Rating"</span>, <span class="str">"Number of Responses"</span>);
+
+    <span class="preproc">for</span>(i = <span class="num">1</span>; i <= <span class="num">10</span>; i++)
+    {
+      <span class="printf">printf</span>(<span class="str">"<span class="num">%4i%14i</span>"</span>, i, ratingCount[i]);
+    }
+  }
+
+
+</pre>
+</div>
