@@ -1,0 +1,574 @@
+<%= provide(:title, 'Vim | Movement') %>
+
+<%= render 'header' %>
+
+<h1>Movement</h1>
+
+<p>All movements that have a <span class="str">[#]</span> can be prepended with a number.  For example, 4j will move the cursor down four lines.</p>
+
+<table class="bg">
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>j
+			</code>
+		</td>
+
+		<td>
+			Move cursor to the next line
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>k
+			</code>
+		</td>
+
+		<td>
+			Move cursor to the previous line
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>l
+			</code>
+		</td>
+
+		<td>
+			Move cursor to next character
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>h
+			</code>
+		</td>
+
+		<td>
+			Move cursor to the previous character
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>w
+			</code>
+		</td>
+
+		<td>
+			Move cursor to beginning of next word
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>W
+			</code>
+		</td>
+
+		<td>
+			Move cursor to beginning of next WORD
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>b
+			</code>
+		</td>
+
+		<td>
+			Move cursor to beginning of previous word
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>B
+			</code>
+		</td>
+
+		<td>
+			Move cursor to beginning of previous WORD
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>e
+			</code>
+		</td>
+
+		<td>
+			Move cursor to end of next word
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>E
+			</code>
+		</td>
+
+		<td>
+			Move cursor to end of next WORD
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>ge
+			</code>
+		</td>
+
+		<td>
+			Move cursor to end of previous word
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>gE
+			</code>
+		</td>
+
+		<td>
+			Move cursor to end of previous WORD
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				0
+			</code>
+		</td>
+
+		<td>
+			Move cursor to beginning of line
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				$
+			</code>
+		</td>
+
+		<td>
+			Move cursor to end of line
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				_
+			</code>
+		</td>
+
+		<td>
+			Move cursor to first non-blank character<br>
+			underscore character
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				g_
+			</code>
+		</td>
+
+		<td>
+			Move cursor to last non-blank character<br>
+			g + underscore character
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				gg
+			</code>
+		</td>
+
+		<td>
+			Move cursor to first line of file
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<code>
+				G
+			</code>
+		</td>
+
+		<td>
+			Move cursor to last line of file
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>G
+			</code>
+		</td>
+
+		<td>
+			Move cursor to the line number #<br>
+			12G takes you to line 12
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				H
+			</code>
+		</td>
+
+		<td>
+			Move cursor to top of the current screen
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				M
+			</code>
+		</td>
+
+		<td>
+			Move cursor to middle of the current screen
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				L
+			</code>
+		</td>
+
+		<td>
+			Move cursor to bottom of the current screen
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				zz
+			</code>
+		</td>
+
+		<td>
+			Move current line to the middle of screen
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				zt
+			</code>
+		</td>
+
+		<td>
+			Move current line to the top of screen
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				zb
+			</code>
+		</td>
+
+		<td>
+			Move current line to bottom of screen
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>CTRL-d
+			</code>
+		</td>
+
+		<td>
+			Scroll half-page down
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>CTRL-u
+			</code>
+		</td>
+
+		<td>
+			Scroll half-page up
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>CTRL-b
+			</code>
+		</td>
+
+		<td>
+			Scroll whole page up
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>CTRL-f
+			</code>
+		</td>
+
+		<td>
+			Scroll whole page down
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>CTRL-o
+			</code>
+		</td>
+
+		<td>
+			Jump to last cursor position (after a previous jump)<br>
+			gg counts as a jump, j and k do not<br>
+			Jumps between windows/files<br>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				CTRL-i
+			</code>
+		</td>
+
+		<td>
+			Jump to next curosr position (after using CTRL-o)
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>CTRL-y
+			</code>
+		</td>
+
+		<td>
+			Scroll one line up
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>CTRL-e
+			</code>
+		</td>
+
+		<td>
+			Scroll one line down
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>n
+			</code>
+		</td>
+
+		<td>
+			Move cursor to next matching search pattern
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>N
+			</code>
+		</td>
+
+		<td>
+			Move cursor to previous matching search pattern
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>*
+			</code>
+		</td>
+
+		<td>
+			Move cursor to next whole word matching word under cursor
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>#
+			</code>
+		</td>
+
+		<td>
+			Move cursor to previous whole word matching word under cursor
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>g*
+			</code>
+		</td>
+
+		<td>
+			Move cursor to next matching search pattern under cursor<br>
+			Matches even if only part of a word<br>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>g#
+			</code>
+		</td>
+
+		<td>
+			Move cursor to previous matching search pattern under cursor
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				%
+			</code>
+		</td>
+
+		<td>
+			Move cursor to matching bracket {}, [], (), etc.
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>fX
+			</code>
+		</td>
+
+		<td>
+			Move cursor to next occurrence of 'X'<br>
+			Only works on single lines<br>
+			'X' can be any character<br>
+			<code>;</code> repeat in same direction<br>
+			<code>,</code> repeat in reverse direction<br>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>FX
+			</code>
+		</td>
+
+		<td>
+			Move cursor to previous occurrence of 'X'<br>
+			<code>;</code> repeat in same direction<br>
+			<code>,</code> repeat in reverse direction<br>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>tX
+			</code>
+		</td>
+
+		<td>
+			Move cursor to character before the next occurrence of 'X'<br>
+			<code>;</code> repeat in same direction<br>
+			<code>,</code> repeat in reverse direction<br>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>TX
+			</code>
+		</td>
+
+		<td>
+			Move cursor to character after previous occurrence of 'X'<br>
+			<code>;</code> repeat in same direction<br>
+			<code>,</code> repeat in reverse direction<br>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
+				<span class="str">[#]</span>W
+			</code>
+		</td>
+
+		<td>
+			Move cursor to beginning of next WORD
+		</td>
+	</tr>
+
+
+
+
+
+
+
+
+</table>

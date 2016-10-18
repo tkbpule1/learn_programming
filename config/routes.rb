@@ -2,7 +2,17 @@ Rails.application.routes.draw do
 
   get '/vim' => 'vim#index'
 
+  get '/vim/normal' => 'vim#normal'
+
+  get '/vim/text_objects' => 'vim#text_objects'
+
+  get '/vim/small_changes' => 'vim#small_changes'
+  
+  get '/vim/command' => 'vim#command'
+
   get '/vim/basics' => 'vim#basics'
+
+  get '/vim/movement' => 'vim#movement'
 
   get '/vim/tmux' => 'vim#tmux'
 

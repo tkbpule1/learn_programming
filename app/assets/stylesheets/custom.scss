@@ -169,7 +169,7 @@ code {
 }
 
 table, tr, td {
-  border: 2.5px solid white;
+  border: 2.5px solid black;
 }
 td {
   padding: 25px;
@@ -183,6 +183,8 @@ td {
 
 .bg {
   background-color: #ffffcc;
+  text-align: center;
+  width: 100%;
 }
 
 .tcol1 {
@@ -276,3 +278,8 @@ ol {
 .file {
   color: $preproc;
 }
+
+.note {
+	color: $bash_var;
+}
+

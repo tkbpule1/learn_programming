@@ -1,0 +1,143 @@
+<%= provide(:title, "Vim | Text Objects") %>
+
+<%= render "header" %>
+
+<h1>Text Objects</h1>
+
+
+<table class="bg">
+
+<tr>
+<td><code>aw</code></td>
+<td>"a word", white space included, but not counted</td>
+</tr>
+
+<tr>
+<td><code>aW</code></td>
+<td>"a WORD", white space included, but not counted</td>
+</tr>
+
+<tr>
+<td><code>iw</code></td>
+<td>"inner word", white space is counted</td>
+</tr>
+
+<tr>
+<td><code>iW</code></td>
+<td>"inner WORD", white space is counted</td>
+</tr>
+
+<tr>
+<td><code>as</code></td>
+<td>"a sentence", white space following included, but not counted</td>
+</tr>
+
+<tr>
+<td><code>is</code></td>
+<td>"inner sentence", white space not included, counted</td>
+</tr>
+
+<tr>
+<td><code>ap</code></td>
+<td>"a paragraph", white space following included, but not counted</td>
+</tr>
+
+<tr>
+<td><code>ip</code></td>
+<td>"inner paragraph", white space not included, counted</td>
+</tr>
+
+<tr>
+<td><code>a]</code></td>
+<td>
+	"a [] block", white space included, but not counted.  Must be in the block. a[, a] are the same.
+</td>
+</tr>
+
+<tr>
+<td><code>i]</code></td>
+<td>
+	"inner [] block", white space not included, counted<br>
+	Must be in the block.<br>
+	i[, i] are the same.
+</td>
+</tr>
+
+
+<tr>
+<td><code>a}</code></td>
+<td>
+	"a {} block", white space included, but not counted<br>
+	Must be in the block.<br>
+	a{, a}, aB are the same.
+</td>
+</tr>
+
+<tr>
+<td><code>i}</code></td>
+<td>
+	"inner {} block", white space not included, counted<br>
+	Must be in the block.<br>
+	i{, i}, iB are the same.
+</td>
+</tr>
+
+<tr>
+<td><code>a)</code></td>
+<td>
+	"a () block", white space included, but not counted<br>
+	Must be in the block.<br>
+	a(, a), ab are the same.
+</td>
+</tr>
+
+<tr>
+<td><code>i)</code></td>
+<td>
+	"inner () block", white space not included, counted<br>
+	Must be in the block.<br>
+	i(, i), ib are the same.
+</td>
+</tr>
+
+
+<tr>
+<td><code>a&#060</code></td>
+<td>
+	"a &#060&#062 block", white space included, but not counted<br>
+	Must be in the block.<br>
+	a&#060, a&#062 are the same.
+</td>
+</tr>
+
+<tr>
+<td><code>i&#060</code></td>
+<td>
+	"inner &#060&#062 block", white space not included, counted<br>
+	Must be in the block.<br>
+	i&#060, i&#062 are the same.
+</td>
+</tr>
+
+<tr>
+<td><code>a&#034</code></td>
+<td>
+	"a &#034&#034 block", Quotes included<br>
+	Must be in the block.<br>
+	Also works with '' and ``.
+	Only works when entire quote is on the same line.
+</td>
+</tr>
+
+<tr>
+<td><code>i&#034</code></td>
+<td>
+	"inner &#034&#034 block", Quotes not included<br>
+	Must be in the block.<br>
+	Also works with '' and ``.
+	Only works when entire quote is on the same line.
+</td>
+</tr>
+
+
+</table>

@@ -1,8 +1,58 @@
-<%= provide(:title, 'Vim | Home') %>
+<%= provide(:title, "Vim | Home") %>
 
-<%= render 'header' %>
+<%= render "header" %>
 
 <h1>Vim</h1>
+
 <p>
-  Vim is a text editor that is very powerful.  It has a steep learning curve, but once mastered, it will increase productivity.
+	Vim is a text editor that is very powerful.  It has a steep learning curve, but once
+	mastered, it will increase productivity. All of the information here was gathered from the
+	help files associated with vim.  To see the help files, open Vim and type 
+	<code>:help</code>.  
 </p>
+
+
+<h4>
+	<span class="note">Note:</span> Notice the colon, <code>:</code>. 
+</h4>
+
+
+<h3>Open file and split window vertically</h3>
+
+<div class="code">
+<pre>
+  :vs filename.c
+</pre>
+</div>
+
+<h3>Open multiple files and split window vertically</h3>
+
+<div class="code">
+<pre>
+  vim -O filename.c file2.c file3.c
+</pre>
+</div>
+
+<h3>Open file and split window horizontally</h3>
+
+<div class="code">
+<pre>
+  :sp filename.c
+</pre>
+</div>
+
+<h3>Open multiple files and split window horizontally</h3>
+
+<div class="code">
+<pre>
+  vim -o filename.c file2.c file3.c
+</pre>
+</div>
+
+<h3>Resize window</h3>
+
+<div class="code">
+<pre>
+  :vertical resize 60
+</pre>
+</div>

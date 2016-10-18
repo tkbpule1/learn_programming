@@ -1,0 +1,1006 @@
+<%= provide(:title, "Vim | Normal Mode") %>
+
+<%= render "header" %>
+
+
+<h1>Normal Mode</h1>
+
+<h2>All Normal Commands in Alphabetical Order</h2>
+
+<table class="bg">
+
+<tr>
+	<td>
+		<code>
+			a
+		</code>
+	</td>
+
+	<td>
+		Enter insert mode, after the cursor
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			A
+		</code>
+	</td>
+
+	<td>
+		Enter insert mode, at end of line
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			b
+		</code>
+	</td>
+
+	<td>
+		Move cursor back to start of word
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			B
+		</code>
+	</td>
+	
+	<td>
+		Move cursor back to start of WORD
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			c[op]
+		</code>
+	</td>
+
+	<td>
+		Delete word/paragraph/character/selection and enter insert mode.<br>
+		Must be used with an option, such as a text object or with
+		visual mode selection
+	</td>
+
+</tr>
+
+<tr>
+	<td>
+		<code>
+			C
+		</code>
+	</td>
+
+	<td>
+		Delete from cursor to end of line and enter insert mode.
+		Same as c$
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			d[op]
+		</code>
+	</td>
+
+	<td>
+		Delete word/paragraph/character/selection.
+		Must be used with an option, such as a text object or with
+		visual mode selection
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			D
+		</code>
+	</td>
+
+	<td>
+		Delete from cursor to end of line. 
+		Same as d$
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			e
+		</code>
+	</td>
+
+	<td>
+		Move cursor to end of word
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			E
+		</code>
+	</td>
+
+	<td>
+		Move cursor to end of WORD
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			f[char]
+		</code>
+	</td>
+
+	<td>
+		Find next occurrence of character.
+		Can only be one character.
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			F[char]
+		</code>
+	</td>
+
+	<td>
+		Find previous occurrence of character, can only be one character
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			gg
+		</code>
+	</td>
+
+	<td>
+		Move cursor the the first line
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			G
+		</code>
+	</td>
+
+	<td>
+		Move cursor the the end of the file
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			ge
+		</code>
+	</td>
+
+	<td>
+		Move cursor to end of previous word
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			gE
+		</code>
+	</td>
+
+	<td>
+		Move cursor to end of previous WORD
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			h
+		</code>
+	</td>
+
+	<td>
+		Move cursor on character to the left
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			H
+		</code>
+	</td>
+
+	<td>
+		Move cursor to top of screen
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			i
+		</code>
+	</td>
+
+	<td>
+		Enter insert mode, at cursor position
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			I
+		</code>
+	</td>
+
+	<td>
+		Enter insert mode, at beginning of line
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			j
+		</code>
+	</td>
+
+	<td>
+		Move cursor to next line, down
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			J
+		</code>
+	</td>
+
+	<td>
+		Delete new line character at end of current line
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			k
+		</code>
+	</td>
+
+	<td>
+		Move cursor to previous line, up
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			K
+		</code>
+	</td>
+
+	<td>
+		If there is a man page associated with the word under the cursor, display it.
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			l
+		</code>
+	</td>
+
+	<td>
+		Move cursor one character to the right
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			L
+		</code>
+	</td>
+
+	<td>
+		Move cursor to bottom of screen
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			m[char]
+		</code>
+	</td>
+
+	<td>
+		Create mark 'op' at cursor location
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			M
+		</code>
+	</td>
+
+	<td>
+		Move cursor to middle of screen
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			n
+		</code>
+	</td>
+
+	<td>
+		Move cursor to next occurrence of last search
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			N
+		</code>
+	</td>
+
+	<td>
+		Move cursor to previous occurrence of last search
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			o
+		</code>
+	</td>
+
+	<td>
+		Insert new line below cursor, move cursor to new line and enter insert mode
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			O
+		</code>
+	</td>
+
+	<td>
+		Insert new line above cursor, move cursor to new line and enter insert mode
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			p
+		</code>
+	</td>
+
+	<td>
+		Paste contents of register "" after the cursor
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			P
+		</code>
+	</td>
+
+	<td>
+		Paste contents of register "" before the cursor
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			q[char]
+		</code>
+	</td>
+
+	<td>
+		Begin recording keystrokes in register [char]<br>
+		If already recording, q stops(quits) the recording
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			Q
+		</code>
+	</td>
+
+	<td>
+		Enter Ex mode
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			r
+		</code>
+	</td>
+
+	<td>
+		Replace character under cursor
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			R
+		</code>
+	</td>
+
+	<td>
+		Enter Replace mode
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			s
+		</code>
+	</td>
+
+	<td>
+		Delete character under cursor and enter insert mode
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			S
+		</code>
+	</td>
+
+	<td>
+		Delete line and enter insert mode
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			t[char]
+		</code>
+	</td>
+
+	<td>
+		Move cursor to the character before the next occurrence of [char]
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			T[char]
+		</code>
+	</td>
+
+	<td>
+		Move cursor to the character after the previous occurrence of [char]
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			u
+		</code>
+	</td>
+
+	<td>
+		Undo last change
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			U
+		</code>
+	</td>
+
+	<td>
+		Undo all latest changes on one line, the line where the lastest change was made
+		U itself also counts as a change, thus U undoes a previous U
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			v
+		</code>
+	</td>
+
+	<td>
+		Enter character-wise visual mode
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			V
+		</code>
+	</td>
+
+	<td>
+		Enter line-wise visual mode
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			w
+		</code>
+	</td>
+
+	<td>
+		Move to beginning of next word
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			W
+		</code>
+	</td>
+
+	<td>
+		Move to beginning of next WORD
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			x
+		</code>
+	</td>
+
+	<td>
+		Delete character under cursor
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			X
+		</code>
+	</td>
+
+	<td>
+		Delete character before cursor
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			y[ob]
+		</code>
+	</td>
+
+	<td>
+		Copy [ob], where [ob] is a text object
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			Y
+		</code>
+	</td>
+
+	<td>
+		Copy line, same as yy
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			zt
+		</code>
+	</td>
+
+	<td>
+		Move current line to the top of screen
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			zz
+		</code>
+	</td>
+
+	<td>
+		Move current line to middle of screen
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			zb
+		</code>
+	</td>
+
+	<td>
+		Move current line to bottom of screen
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			ZZ
+		</code>
+	</td>
+
+	<td>
+		Save file and quit, same as :wq
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			0
+		</code>
+	</td>
+
+	<td>
+		Move to beginning of current line
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			$
+		</code>
+	</td>
+
+	<td>
+		Move to end of current line
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			^
+		</code>
+	</td>
+
+	<td>
+		Move to first non-blank character on line
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			~
+		</code>
+	</td>
+
+	<td>
+		Change case of character under cursor and move cursor to next character
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			/[pattern]
+		</code>
+	</td>
+
+	<td>
+		Search forward for [pattern]
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			?[pattern]
+		</code>
+	</td>
+
+	<td>
+		Search backwards for [pattern]
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			%
+		</code>
+	</td>
+
+	<td>
+		Move cursor to matching parens, (){}[], etc.
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			*
+		</code>
+	</td>
+
+	<td>
+		Find next occurrence of word under cursor, case sensitive
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			#
+		</code>
+	</td>
+
+	<td>
+		Find previous occurrence of word under cursor
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			gf
+		</code>
+	</td>
+
+	<td>
+		If file ~/test.c is under cursor, open in Vim
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			q:
+		</code>
+	</td>
+
+	<td>
+		List of recent command mode commands
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			:
+		</code>
+	</td>
+
+	<td>
+		Enter command mode
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			CTRL-u
+		</code>
+	</td>
+
+	<td>
+		Scroll half screen up
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			CTRL-d
+		</code>
+	</td>
+
+	<td>
+		Scroll half screen down
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			CTRL-e
+		</code>
+	</td>
+
+	<td>
+		Scroll one line down
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			CTRL-y
+		</code>
+	</td>
+
+	<td>
+		Scroll one line up
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			CTRL-f
+		</code>
+	</td>
+
+	<td>
+		Scroll one screen forward
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			CTRL-b
+		</code>
+	</td>
+
+	<td>
+		Scroll one screen back
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			CTRL-o
+		</code>
+	</td>
+
+	<td>
+		Jump to last cursor position (even between files)
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			CTRL-i
+		</code>
+	</td>
+
+	<td>
+		Jump to next cursor position (after using CTRL-o
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			CTRL-g
+		</code>
+	</td>
+
+	<td>
+		Display info about location of cursor in file
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			CTRL-R
+		</code>
+	</td>
+
+	<td>
+		Redo last undo, capital R
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			CTRL-v
+		</code>
+	</td>
+
+	<td>
+		Enter Visual Block Mode
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			`[char]
+		</code>
+	</td>
+
+	<td>
+		go to mark named [char]
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			``
+		</code>
+	</td>
+
+	<td>
+		Move cursor to position before jump
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<code>
+			'[char]
+		</code>
+	</td>
+
+	<td>
+		Go to beginning of line where mark named [char] is located
+	</td>
+</tr>
+
+</table>
