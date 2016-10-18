@@ -185,7 +185,8 @@
 
 		<td>
 			Move cursor to first non-blank character<br>
-			underscore character
+			underscore character<br>
+			<code>^</code>  same as <code>_</code>
 		</td>
 	</tr>
 
@@ -497,6 +498,19 @@
 	<tr>
 		<td>
 			<code>
+				<span class="str">[#]</span>%
+			</code>
+		</td>
+
+		<td>
+			Move cursor to [#]% of file<br>
+			50% moves cursor to middle of file
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<code>
 				<span class="str">[#]</span>fX
 			</code>
 		</td>
@@ -555,15 +569,27 @@
 	<tr>
 		<td>
 			<code>
-				<span class="str">[#]</span>W
+				`[char]
 			</code>
 		</td>
 
 		<td>
-			Move cursor to beginning of next WORD
+			Move cursor to mark named [char]<br>
+			<code>`a</code> moves cursor to mark a
 		</td>
 	</tr>
 
+	<tr>
+		<td>
+			<code>
+				'[char]
+			</code>
+		</td>
+
+		<td>
+			Move cursor to first non-blank character on line where mark [char] is found
+		</td>
+	</tr>
 
 
 

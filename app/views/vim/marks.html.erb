@@ -1,0 +1,75 @@
+<%= provide(:title, "Vim | Marks") %>
+
+<%= render "header" %>
+
+
+<h1>Marks</h1>
+
+<p>
+	Marks are used to 'remember' a location.  They remember the line number
+	and the column number. <br>
+	Marks can only be letters (a-z).  Capital letters
+	(A-Z) are global marks.
+</p>
+
+<p>
+	To create a mark, type m plus a letter:
+</p>
+
+<span class="code1">
+	ma
+</span>
+
+<p>
+	This creates a mark named a.
+</p>
+
+<p>
+  To go to a mark type ` plus the name:
+</p>
+
+<span class="code1">
+	`a
+</span>
+
+<br>
+<br>
+
+<p>
+	If you want to go the the first non-blank character of the line where
+	a mark is located, type ' plus the name:
+</p>
+
+<span class="code1">
+	'a
+</span>
+
+<br>
+<br>
+
+<p>
+	To see a list of all marks:
+</p>
+
+<span class="code1">
+	:marks
+</span>
+
+<br>
+<br>
+
+<h2>Global Marks</h2>
+
+<p>
+	As mentioned earlier, a Global mark is a mark named with a capital letter.
+	For example, <code>mF</code> makes a global mark named F.  These are useful and can be
+	called from anywhere, even a different file, and the cursor will jump to 
+	that mark.
+</p>
+
+<p>
+	For example, let's assume you made a mark in file.c at line number 50 on the fifth
+	character.  Now you are editing file.h and want to go back to file.c at your mark.
+	Simply execute the command <code>`F</code> and the cursor will jump to file.c at your mark.
+</p>
+

@@ -5,5 +5,157 @@
 
 <h1>Making Small Changes</h1>
 
+<h3>
+	Operator: a character that requires more input to perform a task.<br>
+	Motion commands and text objects can be used after operators.
+</h3>
+
+<table class="bg">
+	<tr>
+		<td>
+			c
+		</td>
+		<td>
+			change operator
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			d
+		</td>
+		<td>
+			delete operator
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			y
+		</td>
+		<td>
+			yank/copy into register (does not change the text)
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			g~
+		</td>
+		<td>
+			swap case
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			gu
+		</td>
+		<td>
+			make lowercase
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			gU
+		</td>
+		<td>
+			make uppercase
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			!
+		</td>
+		<td>
+			filter through external program
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			gq
+		</td>
+		<td>
+			text formatting
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			&#062
+		</td>
+		<td>
+			shift right
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			&#060
+		</td>
+		<td>
+			shift left
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			zf
+		</td>
+		<td>
+			define a fold
+		</td>
+	</tr>
+
+</table>
 
 
+<h2>Examples</h2>
+
+<h3>Deleting Text</h3>
+
+<div class="tb">
+	<table>
+		<tr>
+			<td>
+				d4w    -    delete 4 words
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				di{    -    delete the inner {} block (does not include braces)
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				c4w    -    delete four words and enter insert mode.
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				ci{    -    delete inner {} block and enter insert mode
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+<h2>Replace Mode</h2>
+
+<p>
+	Enter Replace mode with 'R'.  Now when you type, the characters are replaced.
+	When you backspace, the original character is put back, like an undo.
+</p>
+
+<h2>Repeating a change</h2>
+
+<p>
+	If you make a change and can use it again somewhere else, move the cursor to the 
+	next position and press the '.' (period) character.  The change will be replicated
+	exactly as the last change was.

@@ -6,6 +6,16 @@ Rails.application.routes.draw do
 
   get '/vim/text_objects' => 'vim#text_objects'
 
+  get '/vim/buffer' => 'vim#buffer'
+
+  get '/vim/windows' => 'vim#windows'
+
+  get '/vim/sessions' => 'vim#sessions'
+
+  get '/vim/recording' => 'vim#recording'
+
+  get '/vim/marks' => 'vim#marks'
+
   get '/vim/small_changes' => 'vim#small_changes'
   
   get '/vim/command' => 'vim#command'
