@@ -4,3 +4,75 @@
 
 <h1>Working with Windows</h1>
 
+<p>
+	Windows allow you to view multiple files at the same time. In <a href="buffers">Buffers</a>
+	we talked about opening multiples files. 
+</p>
+
+<p>
+	Let's assume you have 3 files in the buffer and you would like to see all of them.
+	To split the window horizontally:
+</p>
+
+<span class="code1">
+	:split file2.txt
+</span>
+
+<br>
+
+<p>
+	To split the window vertically:
+</p>
+
+<span class="code1">
+	:vsplit file2.txt
+</span>
+
+<p>
+	To move between windows:
+</p>
+
+<span class="code1">
+	CTRL-w w
+</span>
+
+<p>
+	If you have more than two windows open, you can move more efficiently:
+</p>
+
+<p>
+	<code>CTRL-w l</code>: Move to window on the right<br>
+	<code>CTRL-w h</code>: Move to window on the left<br>
+	<code>CTRL-w k</code>: Move to window above<br>
+	<code>CTRL-w j</code>: Move to window below<br>
+</p>
+
+<p>
+	You can also move the windows around:
+</p>
+
+<p>
+	<code>CTRL-w L</code>: Move window right<br>
+	<code>CTRL-w H</code>: Move window left<br>
+	<code>CTRL-w K</code>: Move window up<br>
+	<code>CTRL-w J</code>: Move window down<br>
+</p>
+
+<p>
+	Here are some other useful commands for working with windows
+</p>
+
+<p>
+	<code>:split</code> - Splits window horizontally and displays same file in both windows<br>
+	<code>:vsplit</code> - Splits window vertically and displays same file in both windows<br>
+	<code>:close</code> - Close current window<br>
+	<code>:only</code> - Close all windows except current window<br>
+	<code>:new</code> - Open new file in new horizontally split window <br>
+	<code>:vert new</code> - Open new file in new vertically split window<br>
+	<code>:qall</code> - Quit all <br>
+	<code>:wall</code> - Save all <br>
+	<code>:wqall</code> - Save and quit all <br>
+	<code>:qall!</code> - Force quit all without saving<br>
+	<code>:all</code> - Opens new window for all files in args list<br>
+	<code>:vert all</code> - Opens new vertically windows for all files in args list <br>
+</p>

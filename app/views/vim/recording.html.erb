@@ -4,3 +4,85 @@
 
 <h1>Recording and Playback</h1>
 
+<p>
+	Suppose for example, you have multiple function names you want to change. 
+	You would have to search for the function name, edit it, go to the
+	next search, edit again, and so on.  With Recording this is made easier 
+	and faster.
+</p>
+
+<p>
+	Recording allows you to record a sequence of commands and then repeat them with ease.
+</p>
+
+<p>
+	To start recording, type q plus a lower case letter:
+</p>
+
+<span class="code1">
+	qa
+</span>
+
+<br>
+<br>
+
+<p>
+	Now you can type in the commands that you want to repeat and save to <code>a</code>.
+</p>
+
+<p>
+	To stop recording press <code>q</code>.
+</p>
+
+<p>
+	To play back the recording, type <code>@</code> plus the name:
+</p>
+
+<span class="code1">
+	@a
+</span>
+
+<p>
+	To repeat the play back:
+</p>
+
+<span class="code1">
+	@@
+</span>
+
+<br>
+<br>
+
+<p>
+	Let's go back to our example. We will record the sequence in <code>f</code>. 
+</p>
+
+<p>
+	<code>qf</code>: Begin recording in f.
+</p>
+
+<p>
+	<code>/\&#060func_name\&#062</code>: Search for func_name.
+</p>
+
+<p>
+	<code>ciwNew_Func_Name</code>: Change inner word to New_Func_Name.
+</p>
+
+<p>
+	<code>n</code>: Move to cursor to next match.
+</p>
+
+<p>
+	<code>@f</code>: Call the recording of f.  
+	(even though we are still recording, this will work)
+</p>
+
+<p>
+	<code>q</code>: Stop recording.
+</p>
+
+<p>
+	<code>@f</code>: Play back the recording.  
+	This will continue until there are no more matches.
+</p>
