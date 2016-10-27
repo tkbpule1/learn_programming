@@ -4,4 +4,58 @@
 
 <h1>Sessions</h1>
 
+<p>
+	Sessions allow you to save the configuration of your windows, the files
+	listed in the buffer, and other information.  You can edit what is saved 
+	with 'sessionoptions' (":help sessionoptions" - for more details). Make a
+	session for each project to save options about the editing of that project.
+</p>
+
+<p>
+	To save these options:
+</p>
+
+<span class="code1">
+	:mksession! ~/secret/file.vim
+</span>
+
+
+<h2>viminfo</h2>
+
+<p>
+	Sessions can be used with vim-info to save more information about the current
+	editing session.
+</p>
+
+<p>
+	To save the vim-info:
+</p>
+
+<span class="code1">
+	wviminfo! ~/secret/secret.viminfo
+</span>
+
+<h2>Views</h2>
+
+<p>
+	Similar to sessions, views save information, but only for a single window.
+	You can make 10 views per window, blank and 1-9.
+	To make a view of the current window:
+</p>
+
+<span class="code1">
+	mkview ~/secret/main.vim
+</span>
+
+<span class="code1">
+	mkview1 ~/secret/main1.vim
+</span>
+
+<p>
+	To load the view:
+</p>
+
+<span class="code1">
+	loadview ~/secret/main.vim
+</span>
 

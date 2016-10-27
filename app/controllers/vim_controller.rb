@@ -34,4 +34,7 @@ class VimController < ApplicationController
 
   def movement
   end
+
+  def substitution
+  end
 end

@@ -25,6 +25,34 @@
 		<li>
 			:args file.php
 		</li>
-
-
+	</ol>
 </div>
+
+<p>
+	Let's discuss how each of these ways differ from each other.  We'll
+	assume that you executed all of the commands in the above sequence:
+</p>	
+<ol>
+	<li>
+	The first command opens Vim with the three files in the buffer and in the
+	args list.  The first file, file1, is displayed for editing. 
+	</li>
+	<li>
+	The second command adds file.txt to the buffer, not the args list, and opens
+	it for editings.  
+	</li>
+	<li>
+	The third command add file.c to the buffer, not the args list, and does not
+	open it for editing.  
+	</li>
+	<li>
+	The fourth command adds file.php to the args list and the buffer, and opens
+	it for editing.
+	</li>
+</ol>
+  
+<p>
+	The args list is a subset of the buffer list.  It a file is in the args list 
+	it is in the buffer list, but if a file is in the buffer list, it does not mean 
+	that it is in that args list.
+</p>

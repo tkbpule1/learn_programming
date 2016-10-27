@@ -1,0 +1,317 @@
+<%= provide(:title, "Linux | Help Pages") %>
+
+<%= render 'header' %>
+
+<h1>Help Pages</h1>
+
+<!-- <div class="side-navigation">
+	<ul>
+		<li>
+			<a href="#man">Man Pages</a>
+		</li>
+	</ul>
+</div>
+
+<div id='man'>
+</div>
+<br>
+<br>
+--!>
+<h2>Man Pages</h2>
+
+<p>
+	Man stands for Manual.  To access these pages type <code>man grep</code>, where
+	grep is the command you want to read the manual pages about.
+</p>
+
+<p>
+	There are different section numbers associated with the man pages.  They
+	range from 1 to 9, and each is associated with specific types of commands.
+
+</p>
+
+<table class="bg">
+	<tr>
+		<th>
+			Section Number
+		</th>
+		<th>
+			Area Contents
+		</th>
+	</tr>
+	<tr>
+		<td>
+			1
+		</td>
+		<td>
+			Executable programs/shell commands
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			2
+		</td>
+		<td>
+			System calls
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			3
+		</td>
+		<td>
+			Library calls
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			4
+		</td>
+		<td>
+			Special files
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			5
+		</td>
+		<td>
+			File formats and conventions
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			6
+		</td>
+		<td>
+			Games
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			7
+		</td>
+		<td>
+			Overviews, conventions and miscellaneous
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			8
+		</td>
+		<td>
+			Super user and system administration commands
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			9
+		</td>
+		<td>
+			Kernel routines
+		</td>
+	</tr>
+</table>
+
+<p>
+	When you enter the man pages, you will notice different named sections.
+	Here is	the breakdown of what each section contains:
+</p>
+
+<table class="bg">
+	<tr>
+		<th>
+			Section Names
+		</th>
+		<th>
+			Description
+		</th>
+	</tr>
+	<tr>
+		<td>
+			Name
+		</td>
+		<td>
+			Command name and a short description
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Synopsis
+		</td>
+		<td>
+			Shows command syntax
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Configuration
+		</td>
+		<td>
+			Provides configuration information
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Description
+		</td>
+		<td>
+			Describes command generally
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Options
+		</td>
+		<td>
+			Describes command options
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Exit Status
+		</td>
+		<td>
+			Defines command exit status indicators
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Return Value
+		</td>
+		<td>
+			Describes command return values
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Errors
+		</td>
+		<td>
+			Provides command error messages
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Environment
+		</td>
+		<td>
+			Describes environment variables used
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Files
+		</td>
+		<td>
+			Defines files used by command
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Versions
+		</td>
+		<td>
+			Describes command version information
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Conforming To
+		</td>
+		<td>
+			Provides standards followed
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Notes
+		</td>
+		<td>
+			Describes additional helpful command material
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Bugs
+		</td>
+		<td>
+			Provides the location to report found bugs
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Example
+		</td>
+		<td>
+			Shows command use examples
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Authors
+		</td>
+		<td>
+			Provides information on command developers
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Copyright
+		</td>
+		<td>
+			Defines command code copyright status
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			See Also
+		</td>
+		<td>
+			Refers similalr available commands
+		</td>
+	</tr>
+</table>
+
+
+<p>
+	If you don't know the command name you can search for it:
+</p>
+
+<span class="code1">
+	man -k <i>keyword</i>
+</span>
+
+<p>
+	To see a specific section number of the man pages:
+</p>
+
+<span class="code1">
+	man 7 hostname
+</span>
+

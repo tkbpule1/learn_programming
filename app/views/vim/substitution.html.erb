@@ -1,0 +1,116 @@
+<%= provide(:title, "Vim | Substitution") %>
+
+<%= render "header" %>
+
+
+<h1>Substitution</h1>
+
+<h2>Basic Syntax</h2>
+
+<span class="code1">
+	:<span class="str">[range]</span>s/wrong/right/<span class="str">[flags]</span>
+</span>
+
+<p> 
+	This will substitute the first occurrence of "wrong" with "right" on the
+	current line.
+	<br> 
+	Let's suppose you have multiple "wrong"'s that you want to make "right"
+	sitting on the same line. We would need to use a flag to do this.
+</p>
+
+<span class="code1">
+	:s/wrong/right/<span class="str">g</span>
+</span>
+
+<p>
+	This will change all occurrences of "wrong" to "right" on the current line.
+	<br>
+	Now let's suppose you want to change every "wrong" in the file to "right".
+	We need to use a range and keep the g flag.
+</p>
+
+<span class="code1">
+	:<span class="str">%</span>s/wrong/right/<span class="str">g</span>
+</span>
+
+<p>
+	The % is a special character used for the range; it means all lines in the file.
+	The g flag means for every occurrence on the lines in [range]
+</p>
+
+<h3>Useful Flags</h3>
+<ol>
+	<li>g - every occurrence on line</li>
+	<li>c - confirm substitution (yes, no, all, quit, last, ctrl-e, ctrl-y)</li>
+	<li>p - print changed lines at command line</li>
+</ol>
+
+<h3>Range</h3>
+
+<p>You can use several techniques to specify the range.</p>
+
+<ol>
+	<li><span class="str">{first},{last}</span> - from line number "first" to
+		line number "last"</li> 
+	<li><span class="str">{number}</span> - single line "number" </li>
+	<li><span class="str">.,</span> - from current line to end of file</li>
+	<li><span class="str">{.+3},{$-5}</span> - from 3 lines below current line
+		to 5 lines above end of file</li>
+	<li><span class="str">{regexp}</span> - can use regular expressions</li>
+</ol>
+
+<h3>Examples</h3>
+
+<p>Let's take a look at some examples.</p>
+
+<span class="code1">:s/this/that</span>
+
+<p>This will substitute the first occurrence of "this" with "that" on the current
+line.</p>
+
+<span class="code1">:s/this/that/g</span>
+
+<p>This will sub. every occurrence of "this" with "that" on the current line.</p>
+
+<span class="code1">:%s/this/that/g</span>
+
+<p>Substitute every occurrence of "this" with "that" on every line.</p>
+
+<span class="code1">:.,$s/this/that/g</span>
+
+<p>Substitute every occurrence of "this" with "that" from current line to end of
+file.</p>
+
+<span class="code1">:1,5s/this/that/g</span>
+
+<p>Substitute every occurrence of "this" with "that" from line 1 to line 5.</p>
+
+<span class="code1">:54s/this/that/</span>
+
+<p>Substitute first occurrence of "this" with "that" on line 54.</p>
+
+<span class="code1">:?^Chapter?,/^Chapter/s/This/That/</span>
+
+<p>This might need a little more explaining, so let's take a look: </p>
+
+<span class="code1">:?^Chapter?</span>
+
+<p>The <code>?</code> means start searching backwards</p>
+<p>The <code>^</code> means beginning of the line</p>
+<p><code>Chapter</code> is the string we are searching for</p>
+<p>The next <code>?</code> marks the end of the backwards search</p>
+
+<span class="code1">:,/^Chapter/</span>
+
+<p>The <code>,</code> separates the [range]</p>
+<p>The <code>/</code> searches forward</p>
+<p>The <code>^</code> means at the beginning of the line</p>
+<p><code>Chapter</code> is the string we are searching for</p>
+<p>The next <code>/</code> marks the end of the forward search</p>
+
+<p>Putting this all together and we get this:</p>
+
+<p>Search backwards for a line that begins with <code>Chapter</code>, Search
+forwards for a line that begins with <code>Chapter</code>, Substitute the first
+occurrence of <code>This</code> with <code>That</code></p>

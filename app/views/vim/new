@@ -1,0 +1,7 @@
+<%= provide(:title, "Vim | Buffer") %>
+
+<%= render "header" %>
+
+
+<h1>Working with the Buffer</h1>
+

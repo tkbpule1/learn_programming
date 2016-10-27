@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 45px;
   letter-spacing: -2px;
   margin-bottom: 30px;
   margin-top: 30px;
@@ -75,24 +75,24 @@ h1 {
 }
 
 h2 {
-  font-size: 2.0em;
+  font-size: 35px;
   margin-bottom: 25px;
   margin-top: 40px;
   font-weight: normal;
 }
 
 h3 {
-  font-size: 1.8em;
+  font-size: 30px;
   margin-bottom: 25px;
   margin-top: 40px;
   font-weight: normal;
 }
 
 p {
-  font-size: 1.8em;
-  line-height: 2.5em;
-  margin-top: 25px;
-  margin-bottom: 15px;
+  font-size: 25px;
+  line-height: 35px;
+  margin-top: 20px;
+  margin-bottom: 35px;
 }
 
 /* header */
@@ -120,7 +120,7 @@ p {
   border: solid 1px black;
   border-radius: 5px;
   text-align: left;
-  padding: 10px 10px 10px 20px;
+  padding: 20px 10px 10px 20px;
   font-weight: bold;
   font-family: "Courier new";
   font-size: 1.5em;
@@ -136,7 +136,7 @@ p {
   padding: 10px 20px 10px 20px;
   font-weight: bold;
   font-family: "Courier new";
-  font-size: 1.5em;
+  font-size: 25px;
   margin-bottom: 10px;
   width: 20%;
 }
@@ -150,20 +150,18 @@ p {
   padding: 5px 10px 5px 10px;
 }
 
-// .container {
-//   min-width: 980px;
-//   display: grid;
-// }
-
 .side-navigation {
   ul{
-    margin: 0px;
+  font-size: 1.2em !important;
+  border: solid 1px black;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: $gray-medium-light;
+  padding: 5px 10px 5px 10px;
+    margin: 10px;
     list-style-type: none;
-    padding: 0;
-    width: 10%;
-    background-color: $gray-medium-light;
-    height: 100%;
     position: fixed;
+	clear: both;
     overflow: auto;
   }
 }
@@ -202,6 +200,17 @@ table, tr, td {
 	  padding: 25px;
 	  text-align: center;
   }
+  th {
+	  font-size: 20px;
+	  text-align: center;
+	  padding: 25px;
+	  border: black 2px solid;
+  }
+}
+
+table {
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 .tcol1 {
@@ -243,7 +252,7 @@ p {
 
 ol {
   li {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
