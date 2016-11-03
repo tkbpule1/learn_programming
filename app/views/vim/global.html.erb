@@ -1,0 +1,53 @@
+<%= provide(:title, "Vim | Global") %>
+
+<%= render "header" %>
+
+
+<h1>Global Command</h1>
+
+
+<p>
+	The ":global" command is a very powerful feature of Vim.  It allows you to
+	find a match for a pattern and execute a command there.  
+</p>
+
+<h2>Basic Syntax</h2>
+
+<span class="code1">
+	:<span class="str">[range]</span>g/<span class="func">{pattern}</span>/<span
+	class="num">{command}</span>
+</span>
+
+<p>
+	This syntax is similar to the syntax of the ":substitute" command but,
+	instead of replacing the matched text, the command <span
+	class="num">{command}</span> is executed.
+</p>
+<p>
+	The default range for the global command is the entire file.
+<h2>Examples</h2>
+
+<p>
+	Suppose you want to change "foobar" to "barfoo", but only in C++ style
+	comments, comments starting with "//":
+</p>
+
+<span class="code1">
+	:g+<span class="func">//</span>+<span class="num">s/foobar/barfoo/gc</span>
+</span>
+
+<p>
+	Since our <span class="func">{pattern}</span> contains a slash, we used "+"
+	to separate the pattern; we could have used any other character. Then, the
+	substitute command is used like normal.  
+</p>
+
+<p>
+	Let's say you have a function prototype, named func, that you want to delete.
+	You can use the global command to do this:
+</p>
+
+<span class="code1">
+	:g/<span class="func">func</span>/<span class="num">:normal dd</span>
+</span>
+

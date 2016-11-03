@@ -5,16 +5,22 @@
 
 <h1>Substitution</h1>
 
+<p>
+	Substitution is used to search a range of lines for a string; once found it
+	replaces the string with a different string.
+</p>
+
 <h2>Basic Syntax</h2>
 
 <span class="code1">
-	:<span class="str">[range]</span>s/wrong/right/<span class="str">[flags]</span>
+	:<span class="str">[range]</span>s/wrong/right/<span
+		class="str">[flags]</span>
 </span>
 
 <p> 
 	This will substitute the first occurrence of "wrong" with "right" on the
 	current line.
-	<br> 
+	<br><br> 
 	Let's suppose you have multiple "wrong"'s that you want to make "right"
 	sitting on the same line. We would need to use a flag to do this.
 </p>
@@ -25,7 +31,7 @@
 
 <p>
 	This will change all occurrences of "wrong" to "right" on the current line.
-	<br>
+	<br><br>
 	Now let's suppose you want to change every "wrong" in the file to "right".
 	We need to use a range and keep the g flag.
 </p>
@@ -39,14 +45,14 @@
 	The g flag means for every occurrence on the lines in [range]
 </p>
 
-<h3>Useful Flags</h3>
+<h2>Useful Flags</h2>
 <ol>
 	<li>g - every occurrence on line</li>
 	<li>c - confirm substitution (yes, no, all, quit, last, ctrl-e, ctrl-y)</li>
 	<li>p - print changed lines at command line</li>
 </ol>
 
-<h3>Range</h3>
+<h2>Range</h2>
 
 <p>You can use several techniques to specify the range.</p>
 
@@ -57,10 +63,13 @@
 	<li><span class="str">.,</span> - from current line to end of file</li>
 	<li><span class="str">{.+3},{$-5}</span> - from 3 lines below current line
 		to 5 lines above end of file</li>
+	<li><span class="str">{'a},{'b}</span> - from line with mark 'a' to
+		line with mark 'b'</li>
 	<li><span class="str">{regexp}</span> - can use regular expressions</li>
+	<li>Visual Mode - Select the lines you want to include in the range</li>
 </ol>
 
-<h3>Examples</h3>
+<h2>Examples</h2>
 
 <p>Let's take a look at some examples.</p>
 
@@ -69,30 +78,53 @@
 <p>This will substitute the first occurrence of "this" with "that" on the current
 line.</p>
 
+<br><br>
+
 <span class="code1">:s/this/that/g</span>
 
 <p>This will sub. every occurrence of "this" with "that" on the current line.</p>
 
+<br><br>
+
 <span class="code1">:%s/this/that/g</span>
 
 <p>Substitute every occurrence of "this" with "that" on every line.</p>
+
+<br><br>
 
 <span class="code1">:.,$s/this/that/g</span>
 
 <p>Substitute every occurrence of "this" with "that" from current line to end of
 file.</p>
 
+<br><br>
+
 <span class="code1">:1,5s/this/that/g</span>
 
 <p>Substitute every occurrence of "this" with "that" from line 1 to line 5.</p>
+
+<br><br>
 
 <span class="code1">:54s/this/that/</span>
 
 <p>Substitute first occurrence of "this" with "that" on line 54.</p>
 
+<br><br>
+
+<span class="code1">:'a,'b/s/This/That/</span>
+
+<p>
+	Starting from line where mark 'a' is found and ending where mark 'b' is
+	found, replace "This" with "That"
+</p>
+
+<br><br>
+
 <span class="code1">:?^Chapter?,/^Chapter/s/This/That/</span>
 
 <p>This might need a little more explaining, so let's take a look: </p>
+
+<br><br>
 
 <span class="code1">:?^Chapter?</span>
 

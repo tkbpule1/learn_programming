@@ -28,6 +28,8 @@ Rails.application.routes.draw do
 
   get '/vim/substitution' => 'vim#substitution'
 
+  get '/vim/global' => 'vim#global'
+
   get '/vim/movement' => 'vim#movement'
 
   get '/vim/tmux' => 'vim#tmux'

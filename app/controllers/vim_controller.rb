@@ -37,4 +37,7 @@ class VimController < ApplicationController
 
   def substitution
   end
+
+  def global
+  end
 end
