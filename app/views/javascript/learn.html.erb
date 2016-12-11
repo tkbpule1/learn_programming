@@ -4,5 +4,47 @@
 
 <h1>Setup</h1>
 <p>
-  To setup a javascript app, make a directory in which to work.  Then make a file called index.html (or something similar).  Also make another directory called jscripts for js files. Make a file called scripts.js. Link index.html to scripts.js file (&#060script scr=jscripts/scripts.js>&#060/script>)
+	To setup a javascript app, make a directory in which to work.  Then make a
+	file called index.html (or something similar).  Also make another directory
+	called jscripts for js files. Make a file called scripts.js. Link index.html
+	to scripts.js file (&#060script scr=scripts.js&#062&#060/script&#062) 
 </p>
+
+<p>
+	Let's make the html file:
+</p>
+
+<div class="code">
+<pre>
+&#060!doctype html&#062
+	&#060html&#062
+		&#060head&#062
+			&#060title&#062Learn JavaScript&#060/title&#062
+		&#060/head&#062
+
+		&#060body&#062
+			&#060button id="button"&#062ClickMe&#060/button&#062
+			&#060script src="scripts.js"&#062&#060/script&#062
+		&#060/body&#062
+	&#060/html&#062
+</pre>
+</div>
+<p>
+	Now let's fill in the scripts.js file:
+</p>
+
+<div class="code"> 
+<pre>
+	<span class="func">var</span> button = <span class="num">document</span>.getElementById(<span class="str">"button"</span>); 
+
+	<span class="func">var</span> rainbow = <span class="func">[</span> <span class="str">"red"</span>, <span class="str">"orange"</span>, <span class="str">"yellow"</span>, <span class="str">"green"</span>, <span class="str">"blue"</span>, 
+					<span class="str">"indigo"</span> <span class="func"> ]</span>; 
+	<span class="func">function</span> change() <span class="func"> { </span>
+	<span class="num">document</span>.body.style.background = rainbow<span class="func">[</span>
+					Math.floor(7*Math.random())<span class="func">]</span>; 
+	<span class="func">}</span>
+	
+	button.addEventListener(<span class="str">"click"</span>, change);
+</div>
+
+

@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get '/vim' => 'vim#index'
 
+  get '/vim/movement' => 'vim#movement'
+
   get '/vim/normal' => 'vim#normal'
 
   get '/vim/text_objects' => 'vim#text_objects'
@@ -30,7 +32,9 @@ Rails.application.routes.draw do
 
   get '/vim/global' => 'vim#global'
 
-  get '/vim/movement' => 'vim#movement'
+  get '/vim/visual' => 'vim#visual'
+
+  get '/vim/search' => 'vim#search'
 
   get '/vim/tmux' => 'vim#tmux'
 

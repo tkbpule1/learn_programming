@@ -4,6 +4,7 @@
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
+$gray-dark: #d8d8d8;
 $func: #0000e0;
 $preproc: #b000ff;
 $str: #00a000;
@@ -11,6 +12,7 @@ $num: #eb9800;
 $comment: #8c8c8c;
 $printf: #00aaff;
 $bash_var: red;
+
 
 
 ul {
@@ -150,6 +152,7 @@ p {
   display: inline-block;
   background-color: $gray-medium-light;
   padding: 5px 10px 5px 10px;
+  margin: 3.5px;
 }
 
 .side-navigation {
@@ -176,11 +179,12 @@ p {
 
 code {
   color: black;
-  background-color: $gray-medium-light;
+  border-radius: 5px;
+  background-color: $gray-dark;
   font-size: 1.1em;
   font-family: monospace;
   letter-spacing: 1.5px;
-  padding: 7.5px;
+  padding: 3px 5px 3px 5px;
 }
 
 table, tr, td {

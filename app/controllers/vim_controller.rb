@@ -40,4 +40,7 @@ class VimController < ApplicationController
 
   def global
   end
+
+  def visual
+  end
 end

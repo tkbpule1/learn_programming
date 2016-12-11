@@ -1,0 +1,48 @@
+<%= provide(:title, "Vim | Visual Mode") %>
+
+<%= render "header" %>
+
+
+<h1>Visual Mode</h1>
+
+<p>
+	Visual Mode allows you to select characters, lines, or blocks of characters.
+	Let's see how we can do this.
+</p>
+
+<h2>Enter Visual Mode</h2>
+
+<p>
+	<span class="code1">v</span> enters visual mode character wise
+</p>
+
+<p>
+	<span class="code1">V</span> enters visual mode line wise
+</p>
+
+<p>
+	<span class="code1">&#060c-v&#062</span> enters visual mode block wise
+	(Control Key + v)
+</p>
+
+<p>
+	Let's say you have some text:<br>
+	include &#060stdio.h&#062<br>
+	include &#060math.h&#062<br>
+	include &#060stdlib.h&#062<br>
+	include &#060stdio.h&#062<br>
+	include &#060unistd.h&#062<br>
+	<br>
+	You realize that you for got the '#' at the beginning of the lines.
+	You could edit each line separately, or you could use visual block mode.
+</p>
+
+<p class="hascode">
+	What you would do is move the the first line of the file, with
+	<code1>gg</code>, then to the first character, with <code>^</code>.  Now
+	enter visual block mode with <code>ctrl-v</code> and move down 4 lines,
+	<code>4j</code>. Now if you press <code>I</code> you will enter insert mode
+	at the beginning of the selected block, type <code>'#&#060esc&#062'</code>.
+	Now each line has a '#' at the beginning.
+</p>
+

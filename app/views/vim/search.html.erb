@@ -1,0 +1,104 @@
+<%= provide(:title, 'Vim | Searching') %>
+
+<%= render 'header' %>
+
+<h1>Searching</h1>
+
+<p>
+	By default, searches are case sensitive
+</p>
+<p>
+	To search forward for a pattern:
+</p>
+
+<div class="code">
+	/pattern
+</div>
+
+<p>
+	To search backward for a pattern:
+</p>
+
+<div class="code">
+	?pattern
+</div>
+
+<p>
+	To search for an exact pattern:
+</p>
+
+<div class="code">
+	/\&#060pattern\&#062
+</div>
+
+<p>
+	To search for a blank line:
+</p>
+
+<div class="code">
+	/^$
+</div>
+
+<p>
+	To search for a pattern at the beginning of the line:
+</p>
+
+<div class="code">
+	/^pattern
+</div>
+
+<p>
+	To search for a pattern that contains any character somewhere in it; for
+	example, this will match 'came' and 'come'
+</p>
+
+<div class="code">
+	/c.me
+</div>
+
+<p> 
+	By default, the cursor is placed at the first character of the search
+	pattern.  You can use offsets to change where the cursor is placed.  There are
+	two offsets available: character and line.  Let's look at these offsets.
+</p>
+
+<p>
+	Offset by lines: if positive, the cursor moves down, if negative, the cursor
+	moves up
+</p>
+
+<div class="code">
+	/default/2<br>
+	/default/-2
+</div>
+
+<p>
+	Offset by characters: e moves cursor to the end of the search pattern
+	if positive, the cursor moves right, if negative, the cursor moves left
+	b works in a similar way, but from the beginning of the pattern.
+</p>
+
+<div class="code">
+	/default/e<br>
+	/default/e+2<br>
+	?default?e-2<br>
+	/default/b+2<br>
+	/default/b-2<br>
+</div>
+
+<p>
+	Repeating the last search pattern:
+</p>
+
+<div class="code">
+	n<br>
+	N
+</div>
+
+<p>
+	Repeating the last search pattern, but with a different offset:
+</p>
+
+<div class="code">
+	//e+2
+</div>
