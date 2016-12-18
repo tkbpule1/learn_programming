@@ -1,0 +1,51 @@
+<%= provide(:title, "Apache2") %>
+
+<div class='wrapper2'>
+<nav class='nav'>
+<%= render 'header' %>
+</nav>
+
+<main class='main'>
+<h1>Install Apache2</h1>
+
+<p>
+Assuming you are using Ubuntu:
+</p>
+
+<div class='code'>
+<pre>
+<span class='prompt'>$</span> sudo apt-get update && sudo apt-get upgrade
+<span class='prompt'>$</span> sudo apt-get install apache2 apache2-utils apache2-doc
+</pre>
+</div>
+
+<p>
+Check to make sure everything is working:
+</p> 
+
+<div class='code'>
+<pre>
+<span class='prompt'>$</span> service apache2 status
+<span class='prompt'>$</span> apache2 -v
+</pre>
+</div>
+
+<p>
+To start/stop/restart the server:
+</p> 
+
+<div class='code'>
+<pre>
+<span class='prompt'>$</span> service apache2 start
+<span class='prompt'>$</span> service apache2 stop
+<span class='prompt'>$</span> service apache2 restart
+</pre>
+</div>
+
+<p>
+You should have a working web server now.  Go to localhost:80 to see the default
+page.  This code is located at <code>/var/www/html/index.html</code>.  The config files are
+located at <code>/etc/apache2/</code>.
+</p>
+</main>
+</div>

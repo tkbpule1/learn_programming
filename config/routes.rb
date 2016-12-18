@@ -124,4 +124,9 @@ Rails.application.routes.draw do
 
   get '/javascript/learn' => 'javascript#learn'
 
+  get '/apache' => 'apache#index'
+
+  get '/apache/install' => 'apache#install'
+
+  get '/apache/configure' => 'apache#configure'
 end
