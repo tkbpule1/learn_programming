@@ -1,7 +1,12 @@
-<% provide(:title, 'Shabang') %>
+<% provide(:title, 'Bash | Shabang') %>
 
+<div class="wrapper2">
+
+<nav class="nav">
 <%= render 'header' %>
+</nav>
 
+<main class='main'>
 
 <h1>Starting with a Sha-Bang</h1>
 
@@ -20,12 +25,14 @@
 <br>
 <br>
 <div class="code">
-    #!/bin/sh <br>
-    #!/bin/bash <br>
-    #!/usr/bin/perl <br>
-    #!/usr/bin/tcl <br>
-    #!/bin/sed -f <br>
-    #!/bin/awk -f <br>
+<pre>
+  #!/bin/sh 
+  #!/bin/bash 
+  #!/usr/bin/perl 
+  #!/usr/bin/tcl 
+  #!/bin/sed -f 
+  #!/bin/awk -f 
+</pre>
 </div>
 
 <p>
@@ -40,3 +47,5 @@
   Replacing the literal ("hard-wired") constants by variables is a step in
   that direction, as is replacing repetitive code blocks by functions.
 </p>
+</main>
+</div>

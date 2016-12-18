@@ -1,7 +1,13 @@
 <%= provide(:title, 'C++ | Input/Output') %>
 
-<%= render 'header' %>
 
+<div class="wrapper2">
+
+<nav class="nav">
+<%= render 'header' %>
+</nav>
+
+<main class='main'>
 
 
 <h1>I/O Streams and Standard I/O Devices</h1>
@@ -116,7 +122,7 @@
 </p>
 <div class="code">
 <pre>
-  std::cout << <span class="func">setprecision</span>(<span class="num">2</span>);
+  std::cout &#060&#060 <span class="func">setprecision</span>(<span class="num">2</span>);
 </pre>
 </div>
 <br><br>
@@ -127,7 +133,7 @@
 </p>
 <div class="code">
 <pre>
-  std::cout << fixed;
+  std::cout &#060&#060 fixed;
 </pre>
 </div>
 
@@ -147,7 +153,7 @@
 </p>
 <div class="code">
 <pre>
-  std::cout << scientific;
+  std::cout &#060&#060 scientific;
 </pre>
 </div>
 <p>
@@ -166,7 +172,7 @@
 </p>
 <div class="code">
 <pre>
-  std::cout << showpoint;
+  std::cout &#060&#060 showpoint;
 </pre>
 </div>
 <p>
@@ -185,7 +191,7 @@
 </p>
 <div class="code">
 <pre>
-  std::cout << <span class="func">setw</span>(<span class="num">2</span>) << a << std::endl;
+  std::cout &#060&#060 <span class="func">setw</span>(<span class="num">2</span>) &#060&#060 a &#060&#060 std::endl;
 </pre>
 </div>
 <br><br>
@@ -196,7 +202,7 @@
 </p>
 <div class="code">
 <pre>
-  std::cout << <span class="func">setfill</span>(<span class="str">'*'</span>) << a << std::endl;
+  std::cout &#060&#060 <span class="func">setfill</span>(<span class="str">'*'</span>) &#060&#060 a &#060&#060 std::endl;
 </pre>
 </div>
 <br><br>
@@ -206,29 +212,23 @@
   These manipulator are used to change whether the output is left/right-justified.
 </p>
 
-<h3>
-  Left-justified
-</h3>
+<h3>Left-justified</h3>
 <div class="code">
 <pre>
-  std::cout << <span class="func">left</span>;
+  std::cout &#060&#060 <span class="func">left</span>;
 </pre>
 </div>
 
-<h3>
-  You can disable the left justification like this:
-</h3>
+<h3>You can disable the left justification like this:</h3>
 <div class="code">
 <pre>
   std::cout.<span class="func">unsetf</span>(ios::left);
 </pre>
 </div>
 
-<h3>
-  Right-justified
-</h3>
+<h3>Right-justified</h3>
 <div class="code">
-  std::cout << <span class="func">right</span>;
+  std::cout &#060&#060 <span class="func">right</span>;
 </div>
 <br><br>
 
@@ -240,7 +240,7 @@
     <li>Include the header file <strong>fstream</strong></li>
     <li>Declare file stream variables</li>
     <li>Associate the file stream variables with the input/output sources</li>
-    <li>Use the file stream variables with >>, <<, or other input/output functions</li>
+    <li>Use the file stream variables with &#062&#062, &#060&#060, or other input/output functions</li>
     <li>Close the files</li>
   </ol>
 </p>
@@ -308,4 +308,6 @@
 <pre>
   outFile.close();
 </pre>
+</div>
+</main>
 </div>

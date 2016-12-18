@@ -1,7 +1,13 @@
 <%= provide(:title, 'C++ | Examples') %>
 
-<%= render 'header' %>
 
+<div class="wrapper2">
+
+<nav class="nav">
+<%= render 'header' %>
+</nav>
+
+<main class='main'>
 
 
 <h1>Basics</h1>
@@ -31,28 +37,28 @@
     <span class="preproc">double</span> centimeters;
 
     <span class="comment">//Statement to prompt the user for input</span>
-    std::cout << <span class="str">"Enter two integers, one for feet and one for inches: "</span>;
+    std::cout &#060&#060 <span class="str">"Enter two integers, one for feet and one for inches: "</span>;
 
     <span class="comment">//Statement to read the input from the user</span>
-    std::cin >> feet >> inches;
+    std::cin &#062&#062 feet &#062&#062 inches;
 
     <span class="comment">//Statement to output the input from the user</span>
-    std::cout << <span class="str">"You entered:"</span> << feet << <span class="str">" Feet and "</span>
-              << inches << <span class="str">" Inches."</span> << std::endl;
+    std::cout &#060&#060 <span class="str">"You entered:"</span> &#060&#060 feet &#060&#060 <span class="str">" Feet and "</span>
+              &#060&#060 inches &#060&#060 <span class="str">" Inches."</span> &#060&#060 std::endl;
 
     <span class="comment">//Calculate total number of inches</span>
     totalInches = INCHES_PER_FOOT * feet + inches;
 
     <span class="comment">//Output the total number of inches</span>
-    std::cout << <span class="str">"The total number of inches = "</span>
-              << totalInches << std::endl;
+    std::cout &#060&#060 <span class="str">"The total number of inches = "</span>
+              &#060&#060 totalInches &#060&#060 std::endl;
 
     <span class="comment">//Convert inches into centimeters</span>
     centimeters = CENTIMETERS_PER_INCH * totalInches;
 
     <span class="comment">//Output the number of centimeters</span>
-    std::cout << <span class="str">"The number of centimeters = "</span>
-              << centimeters << std::endl;
+    std::cout &#060&#060 <span class="str">"The number of centimeters = "</span>
+              &#060&#060 centimeters &#060&#060 std::endl;
 
     <span class="preproc">return</span> <span class="num">0</span>;
   }
@@ -66,7 +72,7 @@
 <div class="code">
 <pre>
   <span class="comment">//Header File</span>
-  <span class="preproc">#include</span> <span class="str">&#060iostream></span>
+  <span class="preproc">#include</span> <span class="str">&#060iostream&#062</span>
 
   <span class="comment">//Named Constants</span>
   <span class="preproc">const int</span> HALF_DOLLAR= 50;
@@ -86,10 +92,10 @@
     <span class="preproc">int</span> pennies;
 
     <span class="comment">//Statement to prompt the user to input amount of change in cents</span>
-    std::cout << <span class="str">"Enter change in cents: "</span>;
+    std::cout &#060&#060 <span class="str">"Enter change in cents: "</span>;
 
     <span class="comment">//Statement to store input into variable, change</span>
-    std::cin >> change;
+    std::cin &#062&#062 change;
 
     <span class="comment">//Statement to calculate number of half dollars</span>
     half_dollars = change / HALF_DOLLAR;
@@ -119,16 +125,16 @@
     pennies = change;
 
     <span class="comment">//Output the results of our calculations</span>
-    std::cout << <span class="str">"The number of half dollars: "</span>
-              << half_dollars << std::endl;
-    std::cout << <span class="str">"The number of quarters: "</span>
-              << quarters << std::endl;
-    std::cout << <span class="str">"The number of dimes: "</span>
-              << dimes << std::endl;
-    std::cout << <span class="str">"The number of nickels: "</span>
-              << nickels << std::endl;
-    std::cout << <span class="str">"The number of pennies: "</span>
-              << pennies << std::endl;
+    std::cout &#060&#060 <span class="str">"The number of half dollars: "</span>
+              &#060&#060 half_dollars &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"The number of quarters: "</span>
+              &#060&#060 quarters &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"The number of dimes: "</span>
+              &#060&#060 dimes &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"The number of nickels: "</span>
+              &#060&#060 nickels &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"The number of pennies: "</span>
+              &#060&#060 pennies &#060&#060 std::endl;
 
     <span class="preproc">return</span> <span class="num">0</span>;
   }
@@ -137,22 +143,21 @@
 
 <h1>File Input/Output</h1>
 <p>
-  Write a program that reads a student name followed by five test scores.  The program should output the student name, the five test scores, and the average score.  Output the average score with two decimal places.<br>
-  The data is stored in a file called test.txt and the output should be stored in a file called testavg.txt.
+  Write a program that reads a student name followed by five test scores.  The
+  program should output the student name, the five test scores, and the average
+  score.  Output the average score with two decimal places.<br>
+  The data is stored in a file called test.txt and the output should be stored
+  in a file called testavg.txt.
 </p>
-<h3>
-  test.txt
-</h3>
-<p>
-  Andrew Miller 87.50 89 65.75 37 98.50
-</p>
+<h3>test.txt</h3>
+<p>Andrew Miller 87.50 89 65.75 37 98.50</p>
 <div class="code">
 <pre>
   <span class="comment">//Header File</span>
-  <span class="preproc">#include</span> <span class="str">&#060iostream></span>
-  <span class="preproc">#include</span> <span class="str">&#060fstream></span>
-  <span class="preproc">#include</span> <span class="str">&#060iomanip></span>
-  <span class="preproc">#include</span> <span class="str">&#060string></span>
+  <span class="preproc">#include</span> <span class="str">&#060iostream&#062</span>
+  <span class="preproc">#include</span> <span class="str">&#060fstream&#062</span>
+  <span class="preproc">#include</span> <span class="str">&#060iomanip&#062</span>
+  <span class="preproc">#include</span> <span class="str">&#060string&#062</span>
 
   <span class="comment">//Main Function</span>
   <span class="preproc">int</span> <span class="func">main</span>()
@@ -168,26 +173,26 @@
     inFile.open(<span class="str">"/home/ubuntu/Desktop/test.txt"</span>);
     outFile.open(<span class="str">"/home/ubuntu/Desktop/testavg.txt"</span>);
 
-    outFile << fixed << showpoint;
-    outFile << setprecision</span>(2</span>);
+    outFile &#060&#060 fixed &#060&#060 showpoint;
+    outFile &#060&#060 setprecision(<span class="num">2</span>);
 
-    std::cout << <span class="str">"Processing Data"</span> << std::endl;
+    std::cout &#060&#060 <span class="str">"Processing Data"</span> &#060&#060 std::endl;
 
-    inFile >> firstName >> lastName;
-    outFile << <span class="str">"Student name: "</span> << firstName << " "</span> << lastName << std::endl;
+    inFile &#062&#062 firstName &#062&#062 lastName;
+    outFile &#060&#060 <span class="str">"Student name: "</span> &#060&#060 firstName &#060&#060 " "</span> &#060&#060 lastName &#060&#060 std::endl;
 
-    inFile >> test1 >> test2 >> test3 >> test4 >> test5;
-    outFile << "Test scores: "
-            << <span class="func">setw</span>(<span class="num">6</span>) << test1
-            << <span class="func">setw</span>(<span class="num">6</span>) << test2
-            << <span class="func">setw</span>(<span class="num">6</span>) << test3
-            << <span class="func">setw</span>(<span class="num">6</span>) << test4
-            << <span class="func">setw</span>(<span class="num">6</span>) << test5
-            << std::endl;
+    inFile &#062&#062 test1 &#062&#062 test2 &#062&#062 test3 &#062&#062 test4 &#062&#062 test5;
+    outFile &#060&#060 "Test scores: "
+            &#060&#060 <span class="func">setw</span>(<span class="num">6</span>) &#060&#060 test1
+            &#060&#060 <span class="func">setw</span>(<span class="num">6</span>) &#060&#060 test2
+            &#060&#060 <span class="func">setw</span>(<span class="num">6</span>) &#060&#060 test3
+            &#060&#060 <span class="func">setw</span>(<span class="num">6</span>) &#060&#060 test4
+            &#060&#060 <span class="func">setw</span>(<span class="num">6</span>) &#060&#060 test5
+            &#060&#060 std::endl;
 
     average = (test1 + test2 + test3 + test4 + test5) / 5.0;
 
-    outFile << <span class="str">"Average test score: "</span> << <span class="func">setw</span>(<span class="num">6</span>) << average << std::endl;
+    outFile &#060&#060 <span class="str">"Average test score: "</span> &#060&#060 <span class="func">setw</span>(<span class="num">6</span>) &#060&#060 average &#060&#060 std::endl;
 
     inFile.close();
     outFile.close();
@@ -204,9 +209,9 @@
 
   <span class="comment">// Flag-controlled while loop</span>
 
-  <span class="preproc">#include</span> <span class="str">&#060iostream></span>
-  <span class="preproc">#include</span> <span class="str">&#060cstdlib></span>
-  <span class="preproc">#include</span> <span class="str">&#060ctime></span>
+  <span class="preproc">#include</span> <span class="str">&#060iostream&#062</span>
+  <span class="preproc">#include</span> <span class="str">&#060cstdlib&#062</span>
+  <span class="preproc">#include</span> <span class="str">&#060ctime&#062</span>
 
   <span class="preproc">int</span> <span class="func">main</span>()
   {
@@ -218,22 +223,22 @@
     done = <span class="num">false</span>;
     <span class="preproc">while</span>(!done)
     {
-      std::cout << <span class="str">"Enter an integer >= 0 < 100: "</span>;
-      std::cin >> guess;
+      std::cout &#060&#060 <span class="str">"Enter an integer &#062= 0 &#060 100: "</span>;
+      std::cin &#062&#062 guess;
       <span class="preproc">if</span> (guess == num)
       {
-        std::cout << <span class="str">"You guessed the correct number!"</span> << std::endl;
+        std::cout &#060&#060 <span class="str">"You guessed the correct number!"</span> &#060&#060 std::endl;
         done = <span class="num">true</span>;
       }
       <span class="preproc">else</span>
       {
-        <span class="preproc">if</span> (guess < num)
+        <span class="preproc">if</span> (guess &#060 num)
         {
-          std::cout << <span class="str">"Your guess is too low"</span> << std::endl;
+          std::cout &#060&#060 <span class="str">"Your guess is too low"</span> &#060&#060 std::endl;
         }
         <span class="preproc">else</span>
         {
-          std::cout << <span class="str">"Your guess is too high"</span> << std::endl;
+          std::cout &#060&#060 <span class="str">"Your guess is too high"</span> &#060&#060 std::endl;
         }
       }
     }
@@ -248,7 +253,7 @@
 <pre>
   <span class="comment">// nth Fibonacci Number</span>
 
-  <span class="preproc">#include</span> <span class="str">&#060iostream></span>
+  <span class="preproc">#include</span> <span class="str">&#060iostream&#062</span>
 
   <span class="preproc">using namespace</span> <span class="num">std</span>;
 
@@ -260,9 +265,9 @@
     <span class="preproc">int</span> counter;
     <span class="preproc">int</span> nthFibonacci;
 
-    std::cout << <span class="str">"Enter the first two fibonacci numbers: "</span>;
-    std::cin >> previous1 >> previous2;
-    std::cout << <span class="str">"Enter the position of the sequence: "</span>;
+    std::cout &#060&#060 <span class="str">"Enter the first two fibonacci numbers: "</span>;
+    std::cin &#062&#062 previous1 &#062&#062 previous2;
+    std::cout &#060&#060 <span class="str">"Enter the position of the sequence: "</span>;
     <span class="preproc">if</span> (nthFibonnaci == <span class="num">1</span>)
     {
       current = previous1;
@@ -274,7 +279,7 @@
     <span class="preproc">else</span>
     {
       counter = <span class="num">3</span>;
-      <span class="preproc">while</span> (counter <= nthFibonacci)
+      <span class="preproc">while</span> (counter &#060= nthFibonacci)
       {
         current = previous2 + previous1;
         previous1 = previous2;
@@ -282,8 +287,8 @@
         counter++;
       }
     }
-    std::cout << <span class="str">"The Fibonacci number at position "</span>;
-    std::cout << nthFibonacci << <span class="str">" is: "</span> << current << std::endl;
+    std::cout &#060&#060 <span class="str">"The Fibonacci number at position "</span>;
+    std::cout &#060&#060 nthFibonacci &#060&#060 <span class="str">" is: "</span> &#060&#060 current &#060&#060 std::endl;
 
     <span class="preproc">return</span> <span class="num">0</span>;
   }
@@ -297,7 +302,7 @@
 <h2>Largest Number</h2>
 <div class="code">
 <pre>
-  <span class="preproc">#include</span> <span class="str">&#060iostream></span>
+  <span class="preproc">#include</span> <span class="str">&#060iostream&#062</span>
 
   <span class="preproc">double</span> <span class="func">larger</span>(<span class="preproc">double</span> x, <span class="preproc">double</span> y); <span class="comment">// Function Prototype</span>
 
@@ -306,24 +311,24 @@
     <span class="preproc">double</span> num, max;
     <span class="preproc">int</span> count;
 
-    std::cout << <span class="str">"Enter 10 numbers: "</span>;
-    std::cin >> num;
+    std::cout &#060&#060 <span class="str">"Enter 10 numbers: "</span>;
+    std::cin &#062&#062 num;
     max = num;
 
-    <span class="preproc">for</span> (count = 1; count < <span class="num">10</span>; count++)
+    <span class="preproc">for</span> (count = 1; count &#060 <span class="num">10</span>; count++)
     {
-      std::cin >> num;
+      std::cin &#062&#062 num;
       max = <span class="func">larger</span>(max, num); <span class="comment">// Call to function</span>
     }
 
-    std::cout << <span class="str">"The largest number is: "</span> << max << std::endl;
+    std::cout &#060&#060 <span class="str">"The largest number is: "</span> &#060&#060 max &#060&#060 std::endl;
 
     <span class="preproc">return</span> <span class="num">0</span>;
   }
 
   <span class="preproc">double</span> <span class="func">larger</span>(<span class="preproc">double</span> x, <span class="preproc">double</span> y) <span class="comment">// Function definition</span>
   {
-    <span class="preproc">if</span> (x >=y)
+    <span class="preproc">if</span> (x &#062=y)
       <span class="preproc">return</span> x;
     <span class="preproc">else</span>
       <span class="preproc">return</span> y;
@@ -338,8 +343,8 @@
 </p>
 <div class="code">
 <pre>
-  <span class="preproc">#include</span> <span class="str">&#060iostream></span>
-  <span class="preproc">#include</span> <span class="str">&#060cmath></span>
+  <span class="preproc">#include</span> <span class="str">&#060iostream&#062</span>
+  <span class="preproc">#include</span> <span class="str">&#060cmath&#062</span>
 
   <span class="preproc">bool</span> <span class="func">isNumPalindrome</span>(<span class="preproc">int</span> num); <span class="comment">// Function Prototype</span>
 
@@ -348,13 +353,13 @@
     <span class="preproc">int</span> num;
     <span class="preproc">bool</span> isNumPalindrome;
 
-    std::cout << <span class="str">"Enter a number: "</span>;
-    std::cin >> num;
+    std::cout &#060&#060 <span class="str">"Enter a number: "</span>;
+    std::cin &#062&#062 num;
 
     isNumPalindrome = <span class="func">larger</span>(max, num); <span class="comment">// Call to function</span>
 
     <span class="preproc">if</span> (isNumPalindrome == <span class="preproc">true</span>)
-    std::cout << <span class="str">"The number is a palindrome"</span> << std::endl;
+    std::cout &#060&#060 <span class="str">"The number is a palindrome"</span> &#060&#060 std::endl;
 
     <span class="preproc">return</span> <span class="num">0</span>;
   }
@@ -363,13 +368,15 @@
   {
     <span class="preproc">int</span> pwr = <span class="num">0</span>;
 
-    <span class="preproc">if</span> (num < <span class="num">10</span>)
+    <span class="preproc">if</span> (num &#060 <span class="num">10</span>)
       <span class="preproc">return true</span>;
     <span class="preproc">else</span>
-      <span class="preproc">while</span> (num / static_cast&#060<span class="preproc">int</span>>(<span class="func">pow</span>(<span class="num">10</span>, pwr)) >= <span class="num">10</span>)
+      <span class="preproc">while</span> (num / static_cast&#060<span class="preproc">int</span>&#062(<span class="func">pow</span>(<span class="num">10</span>, pwr)) &#062= <span class="num">10</span>)
       {
 
       }
   }
 </pre>
+</div>
+</main>
 </div>

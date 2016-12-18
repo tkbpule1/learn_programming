@@ -1,7 +1,13 @@
-<%= provide(:title, "Inheritance") %>
+<%= provide(:title, "C++ | Inheritance") %>
 
+
+<div class="wrapper2">
+
+<nav class="nav">
 <%= render 'header' %>
+</nav>
 
+<main class='main'>
 
 <h1>Inheritance</h1>
 <p>
@@ -11,7 +17,7 @@
 
 <div class="code">
 <pre>
-  <span class="preproc">#include</span> <span class="str">&#060sstream></span>
+  <span class="preproc">#include</span> <span class="str">&#060sstream&#062</span>
   <span class="preproc">using namespace</span> <span class="num">std</span>;
 
 
@@ -52,7 +58,7 @@
         <span class="comment">// Want to do this:  return name + ": " + pay;</span>
         <span class="comment">// Need #include &#060sstream></span>
         stringstream stm;
-        stm << name << <span class="str">": "</span> << pay;
+        stm &#060&#060 name &#060&#060 <span class="str">": "</span> &#060&#060 pay;
         <span class="preproc">return</span> stm.str();
       }
   };
@@ -80,7 +86,7 @@
 
     string <span class="func">toString</span>() {
       stringstream stm;
-      stm << <span class="func">Employee::toString</span>() << <span class="str">": "</span> << salaried;
+      stm &#060&#060 <span class="func">Employee::toString</span>() &#060&#060 <span class="str">": "</span> &#060&#060 salaried;
       <span class="preproc">return</span> stm.<span class="func">str</span>();
     }
 };
@@ -91,3 +97,5 @@
   As you can see, to inherit from a class, you use a colon <code>:</code> followed by a member access specifier(<code>public</code>) then, the base class name. <br>
   When creating the constructor for the derived class, you define it normally, but make a call to the base class constructor with a colon, <code>:</code>, followed by the name of the base class and the parameters.
 </p>
+</main>
+</div>

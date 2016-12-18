@@ -1,7 +1,12 @@
-<%= provide(:title, 'C++ | Basics') %>
+<% provide(:title, 'C++ | Basics') %>
 
+<div class="wrapper2">
+
+<nav class="nav">
 <%= render 'header' %>
+</nav>
 
+<main class='main'>
 
 
 <h1>Basics</h1>
@@ -11,13 +16,13 @@
   Create a file named first_program.cpp
 </p>
 <div class="code">
-  <span class="preproc">#include </span><span class="str">&#060iostream></span>
+  <span class="preproc">#include </span><span class="str">&#060iostream&#062</span>
   <br>
   <span class="preproc">int </span><span class="func">main</span>()
   <br>
   {<br>
-    std::cout << <span class="str">"This is how to output some text to the standard output (the console)"</span>;<br>
-    std::cout << std::endl;<br>
+    std::cout &#060&#060 <span class="str">"This is how to output some text to the standard output (the console)"</span>;<br>
+    std::cout &#060&#060 std::endl;<br>
     <span class="preproc">return</span> <span class="num">0</span>;<br>
   }<br>
 </div>
@@ -34,7 +39,7 @@
 <h1>The Preprocessor Directives</h1>
 <p>
   The first line, <code><span class="preproc">#include </span><span
-  class="str">&#060iostream></span></code>, is a directive read and interpreted
+  class="str">&#060iostream&#062</span></code>, is a directive read and interpreted
   by the preprocessor.  In this case, we are telling the preprocessor that we
   want to include the header file <em>iostream</em>.  This file allows us to
   take input from the keyboard and send output the the screen.
@@ -81,7 +86,7 @@
   <br>
   <br>
   As in the example above, to use the entities of the standard library, you must   explicitly qualify the element:<br>
-  <code>std::cout << </span><span class="str">"Fully Qualified"</span> << std::endl;</code><br>
+  <code>std::cout &#060&#060 </span><span class="str">"Fully Qualified"</span> &#060&#060 std::endl;</code><br>
   This is how we will be using the std namespace libraries.<br><br>
   For completeness, you can also include the <code>using</code> statement:<br>
   <code><span class="preproc">using namespace </span><span class="num">std</span>;</code><br>
@@ -98,7 +103,7 @@
 <p>
   +    -    *    /
   .    ;    ?    ,
-  <=   !=   ==   >=
+  &#060=   !=   ==   &#062=
 </p>
 </pre>
 
@@ -154,94 +159,68 @@
   Let's write a program to find the values of these data types:
 </p>
 <div class="code">
-  <span class="preproc">#include </span><span class="str">&#060iostream></span>
-  <br>
-  <span class="preproc">#include </span><span class="str">&#060climits></span>
-  <br>
-  <span class="preproc">#include </span><span class="str">&#060cfloat></span>
-  <br>
+<pre>
+  <span class="preproc">#include </span><span class="str">&#060iostream&#062</span>
+  <span class="preproc">#include </span><span class="str">&#060climits&#062</span>
+  <span class="preproc">#include </span><span class="str">&#060cfloat&#062</span>
   <span class="preproc">int </span><span class="func">main</span>()
-  <br>
-  {<br>
-    std::cout << <span class="str">"Approximate number of significant digits in a float value: "</span>
-    <br>
-    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp << FLT_DIG << std::endl;
-    <br>
-    std::cout << <span class="str">"Maximum positive float value: "</span> << FLT_MAX << std::endl;
-    <br>
-    std::cout << <span class="str">"Minimum positive float value: "</span> << FLT_MIN << std::endl;
-    <br>
-    std::cout << <span class="str">"Approximate number of significant digits in a double value: "</span>
-    <br>
-    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp << DBL_DIG << std::endl;
-    <br>
-    std::cout << <span class="str">"Maximum positive double value: "</span> << DBL_MAX << std::endl;
-    <br>
-    std::cout << <span class="str">"Minimum positive double value: "</span> << DBL_MIN << std::endl;
-    <br>
-    std::cout << <span class="str">"Approximate number of significant digits in a long double value: "</span>
-    <br>
-    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp << LDBL_DIG << std::endl;
-    <br>
-    std::cout << <span class="str">"Maximum positive long double value: "</span> << LDBL_MAX << std::endl;
-    <br>
-    std::cout << <span class="str">"Minimum positive long double value: "</span> << LDBL_MIN << std::endl;
-    <br>
-    std::cout << <span class="str">"Number of bits in a byte: "</span> << CHAR_BIT << std::endl;
-    <br>
-    std::cout << <span class="str">"Maximum char value: "</span> << CHAR_MAX << std::endl;
-    <br>
-    std::cout << <span class="str">"Minimum char value: "</span> << CHAR_MIN << std::endl;
-    <br>
-    std::cout << <span class="str">"Maximum short value: "</span> << SHRT_MAX << std::endl;
-    <br>
-    std::cout << <span class="str">"Minimum short value: "</span> << SHRT_MIN << std::endl;
-    <br>
-    std::cout << <span class="str">"Maximum int value: "</span> << INT_MAX << std::endl;
-    <br>
-    std::cout << <span class="str">"Minimum int value: "</span> << INT_MIN << std::endl;
-    <br>
-    std::cout << <span class="str">"Maximum long value: "</span> << LONG_MAX << std::endl;
-    <br>
-    std::cout << <span class="str">"Minimum long value: "</span> << LONG_MIN << std::endl;
-    <br>
-    std::cout << <span class="str">"Maximum unsigned char value: "</span> << UCHAR_MAX << std::endl;
-    <br>
-    std::cout << <span class="str">"Maximum unsigned short value: "</span> << USHRT_MAX << std::endl;
-    <br>
-    std::cout << <span class="str">"Maximum unsigned int value: "</span> << UINT_MAX << std::endl;
-    <br>
-    std::cout << <span class="str">"Maximum unsigned long value: "</span> << ULONG_MAX << std::endl;
-    <br>
+  {
+    std::cout &#060&#060 <span class="str">"Approximate number of significant digits in a float value: "</span>
+              &#060&#060 FLT_DIG &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Maximum positive float value: "</span> &#060&#060 FLT_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Minimum positive float value: "</span> &#060&#060 FLT_MIN &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Approximate number of significant digits in a double value: "</span>
+              &#060&#060 DBL_DIG &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Maximum positive double value: "</span> &#060&#060 DBL_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Minimum positive double value: "</span> &#060&#060 DBL_MIN &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Approximate number of significant digits in a long double value: "</span>
+              &#060&#060 LDBL_DIG &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Maximum positive long double value: "</span> &#060&#060 LDBL_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Minimum positive long double value: "</span> &#060&#060 LDBL_MIN &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Number of bits in a byte: "</span> &#060&#060 CHAR_BIT &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Maximum char value: "</span> &#060&#060 CHAR_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Minimum char value: "</span> &#060&#060 CHAR_MIN &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Maximum short value: "</span> &#060&#060 SHRT_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Minimum short value: "</span> &#060&#060 SHRT_MIN &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Maximum int value: "</span> &#060&#060 INT_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Minimum int value: "</span> &#060&#060 INT_MIN &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Maximum long value: "</span> &#060&#060 LONG_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Minimum long value: "</span> &#060&#060 LONG_MIN &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Maximum unsigned char value: "</span> &#060&#060 UCHAR_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Maximum unsigned short value: "</span> &#060&#060 USHRT_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Maximum unsigned int value: "</span> &#060&#060 UINT_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class="str">"Maximum unsigned long value: "</span> &#060&#060 ULONG_MAX &#060&#060 std::endl;
     <span class="preproc">return </span><span class="num">0</span>;
-    <br>
-  }<br>
+  }
+</pre>
 </div>
 
 <h2>The output of this program on my system is as follows (Note: Your output may differ):</h2>
 <div class="code">
-  Approximate number of significant digits in a float value: 6 <br>
-  Maximum positive float value: 3.40282e+38 <br>
-  Minimum positive float value: 1.17549e-38 <br>
-  Approximate number of significant digits in a double value: 15 <br>
-  Maximum positive double value: 1.79769e+308 <br>
-  Minimum positive double value: 2.22507e-308 <br>
-  Approximate number of significant digits in a long double value: 18 <br>
-  Maximum positive long double value: 1.18973e+4932 <br>
-  Minimum positive long double value: 3.3621e-4932 <br>
-  Number of bits in a byte: 8 <br>
-  Maximum char value: 127 <br>
-  Minimum char value: -128 <br>
-  Maximum short value: 32767 <br>
-  Minimum short value: -32768 <br>
-  Maximum int value: 2147483647 <br>
-  Minimum int value: -2147483648 <br>
-  Maximum long value: 9223372036854775807 <br>
-  Minimum long value: -9223372036854775808 <br>
-  Maximum unsigned char value: 255 <br>
-  Maximum unsigned short value: 65535 <br>
-  Maximum unsigned int value: 4294967295 <br>
+<pre>
+  Approximate number of significant digits in a float value: 6
+  Maximum positive float value: 3.40282e+38
+  Minimum positive float value: 1.17549e-38
+  Approximate number of significant digits in a double value: 15
+  Maximum positive double value: 1.79769e+308
+  Minimum positive double value: 2.22507e-308
+  Approximate number of significant digits in a long double value: 18
+  Maximum positive long double value: 1.18973e+4932
+  Minimum positive long double value: 3.3621e-4932
+  Number of bits in a byte: 8
+  Maximum char value: 127
+  Minimum char value: -128
+  Maximum short value: 32767
+  Minimum short value: -32768
+  Maximum int value: 2147483647
+  Minimum int value: -2147483648
+  Maximum long value: 9223372036854775807
+  Minimum long value: -9223372036854775808
+  Maximum unsigned char value: 255
+  Maximum unsigned short value: 65535
+  Maximum unsigned int value: 4294967295
   Maximum unsigned long value: 18446744073709551615
+</pre>
 </div>
 
 <p>
@@ -268,7 +247,7 @@
 </div>
 <p>
 The <code><span class="preproc">char</span></code> data type allows only one symbol to be
-placed between single quotation marks.  Even though '<=\' and similar special symbols are
+placed between single quotation marks.  Even though '&#060=\' and similar special symbols are
 considered one symbol, they are not regarded as values of the <code>
 	<span class="preproc">char</span></code> data type.
 </p>
@@ -369,9 +348,9 @@ considered one symbol, they are not regarded as values of the <code>
   </tr>
   <tr>
     <td class="tcol1">6</td>
-    <td><</td>
+    <td>&#060</td>
     <td>=</td>
-    <td>></td>
+    <td>&#062</td>
     <td>?</td>
     <td>@</td>
     <td>A</td>
@@ -510,10 +489,15 @@ considered one symbol, they are not regarded as values of the <code>
 
 <h1>Type Conversion (Casting)</h1>
 <p>
-  Type casting is the act of converting one data type into another.  For example, you can cast a char into an int, or you could cast a double into an int.<br>
-  General Form:<br>
-  <span class="preproc">static_cast</span>&#060dataTypeName>(expression)
-  <br><br>
+  Type casting is the act of converting one data type into another.  For example, you can cast a char into an int, or you could cast a double into an int.
+</p>
+<p>
+General Form:<br>
+<div class='code'>
+  <span class="preproc">static_cast</span>&#060dataTypeName&#062(expression)
+</div>
+</p>
+<p>
   First, the expression is evaluated.  Its value is then converted to a value of the type specified by dataTypeName.
 </p>
 <p>
@@ -522,16 +506,16 @@ considered one symbol, they are not regarded as values of the <code>
 <div class="code">
 <pre>
 
-  <span class="preproc">#include</span><span class="str">&#060iostream></span>
+  <span class="preproc">#include</span><span class="str">&#060iostream&#062</span>
 
   <span class="preproc">int</span> <span class="func">main</span>()
 
   {
-  std::cout << <span class="str">"static_cast&#060char>(65): "
-           </span> << static_cast&#060<span class="preproc">char</span>>(65) << std::endl;
+  std::cout &#060&#060 <span class="str">"static_cast&#060char&#062(65): "
+           </span> &#060&#060 static_cast&#060<span class="preproc">char</span>&#062(65) &#060&#060 std::endl;
 
-  std::cout << <span class="str"> "static_cast&#060int>('A'): "
-           </span> << static_cast&#060<span class="preproc">int</span>>('A') << std::endl;
+  std::cout &#060&#060 <span class="str"> "static_cast&#060int&#062('A'): "
+           </span> &#060&#060 static_cast&#060<span class="preproc">int</span>&#062('A') &#060&#060 std::endl;
   <span class="preproc">return</span> <span class="num">0</span>;
 
   }
@@ -540,8 +524,8 @@ considered one symbol, they are not regarded as values of the <code>
 <h2>Output:</h2>
 <div class="code">
 <pre>
-  static_cast&#060char>(65): A
-  static_cast&#060int>('A'): 65
+  static_cast&#060char&#062(65): A
+  static_cast&#060int&#062('A'): 65
 </pre>
 </div>
 <br><br>
@@ -566,9 +550,9 @@ considered one symbol, they are not regarded as values of the <code>
 <p>
   General form:<br>
 </p>
-<code>
+<div class='code'>
   <span class="preproc">dataType</span> identifier, identifier, . . .;
-</code>
+</div>
 <br>
 <br>
 <p>
@@ -588,9 +572,9 @@ considered one symbol, they are not regarded as values of the <code>
 <p>
   General form:<br>
 </p>
-<code>
+<div class='code'>
   <span class="preproc">const dataType</span> IDENTIFIER = value;
-</code>
+</div>
 <br>
 <br>
 <p>
@@ -612,21 +596,21 @@ considered one symbol, they are not regarded as values of the <code>
 <h2>std::cout</h2>
 
 <p>
-  To output text to the screen, use the cout keyword along with the stream insertion operator, <<, and the string/variable you wish to print.
+  To output text to the screen, use the cout keyword along with the stream insertion operator, &#060&#060, and the string/variable you wish to print.
 </p>
 
 <div class="code">
 <pre>
 
-  <span class="preproc">#include</span> <span class="str">&#060iostream></span>
+  <span class="preproc">#include</span> <span class="str">&#060iostream&#062</span>
 
   <span class="preproc">int</span> <span class="func">main</span>()
 
   {
   <span class="preproc">int</span> age = 21;<br>
-  std::cout << <span class="str">"This will print to the screen."</span> << std::endl;
+  std::cout &#060&#060 <span class="str">"This will print to the screen."</span> &#060&#060 std::endl;
 
-  std::cout << <span class="str">"The legal age is "</span> << age << std::endl;
+  std::cout &#060&#060 <span class="str">"The legal age is "</span> &#060&#060 age &#060&#060 std::endl;
   <span class="preproc">return</span> <span class="num">0</span>;
   }
 </pre>
@@ -637,7 +621,7 @@ considered one symbol, they are not regarded as values of the <code>
   You can also use the printf function.
 </p>
 <h3>Syntax:</h3>
-<code>printf(%[parameter][flags][width][.precision][length]type, arg1, arg2, argN)</code>
+<div class='code'>printf(%[parameter][flags][width][.precision][length]type, arg1, arg2, argN)</div>
 <br><br>
 <h4>Parameter Field</h4>
 <p>
@@ -688,11 +672,11 @@ considered one symbol, they are not regarded as values of the <code>
 <h1>Input (Read) Statements</h1>
 <p>
   Storing data into variables from the standard input device is accomplished via
-  the use of <code>cin</code> and the <code>>></code> operator, known as the
+  the use of <code>cin</code> and the <code>&#062&#062</code> operator, known as the
   <strong>stream extraction operator</strong>.
 </p>
 <div class="code">
-  cin >> variable >> variable ...;
+  cin &#062&#062 variable &#062&#062 variable ...;
 </div>
 <p>
   cin can only get one "value".  It stops reading at either a space or if the
@@ -715,16 +699,16 @@ considered one symbol, they are not regarded as values of the <code>
 
 <h1>Incrementing and Decrementing</h1>
 <div class="code">
-  ++x;&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-      Pre-increment
+<pre>
+  ++x;                    Pre-increment
       <br>
-  x++;&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-      Post-increment
+  x++;                    Post-increment
       <br>
-  --x;&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-      Pre-decrement
+  --x;                    Pre-decrement
       <br>
-  x--;&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-      Post-decrement
+  x--;                    Post-decrement
+</pre>
 </div>
 <br><br>
+</main>
+</div>

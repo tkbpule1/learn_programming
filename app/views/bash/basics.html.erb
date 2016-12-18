@@ -1,33 +1,23 @@
-<%= provide(:title, "Basics") %>
+<%= provide(:title, "Bash | Basics") %>
 
+<div class="wrapper2">
+
+<nav class='nav'>
 <%= render 'header' %>
+</nav>
 
 
+<main class='main'>
+<h1>Basics</h1>
+<h3>Move to the beginning of the line: CTRL a</h3>
+<h3>Move to the end of the line: CTRL e</h3>
+<h3>Show previous command: CTRL p</h3>
+<h3>Show next command: CTRL n</h3>
+<h3>Search history: CTRL r + beginning of command (string)</h3>
+<h3>Press CTRL r to see previous commands that contain the string</h3>
 
-<h3>
-  Move to the beginning of the line: CTRL a
-</h3>
-<h3>
-  Move to the end of the line: CTRL e
-</h3>
-<h3>
-  Show previous command: CTRL p
-</h3>
-<h3>
-  Show next command: CTRL n
-</h3>
-<h3>
-  Search history: CTRL r + beginning of command (string)
-</h3>
-<h3>
-  Press CTRL r to see previous commands that contain the string
-</h3>
 <br>
-<br>
-<br>
-<h3>
-  Create a Symbolic Link(ln -s) to a file/directory
-</h3>
+<h3>Create a Symbolic Link(ln -s) to a file/directory</h3>
 <div class="code">
   <span class='prompt'>[~]$ </span>ln -s filename linkname
 </div>
@@ -39,17 +29,13 @@
 </div>
 <br>
 <br>
-<h3>
-  To see the last few lines of a file with retime update:(tail -f)
-</h3>
+<h3>To see the last few lines of a file with retime update:(tail -f)</h3>
 <div class="code">
   <span class='prompt'>[~]$ </span>tail -f /var/log/dmesg
 </div>
 <br>
 <br>
-<h3>
-  To shutdown/restart the system
-</h3>
+<h3>To shutdown/restart the system</h3>
 <br>
 <div class="code">
   Shutdown:
@@ -70,36 +56,28 @@
 </div>
 <br>
 <br>
-<h3>
-  See who is logged in:
-</h3>
+<h3>See who is logged in:</h3>
 <br>
 <div class="code">
   <span class='prompt'>[~]$ </span>w
 </div>
 <br>
 <br>
-<h3>
-  See what processes are running:
-</h3>
+<h3>See what processes are running:</h3>
 <br>
 <div class="code">
   <span class='prompt'>[~]$ </span>htop
 </div>
 <br>
 <br>
-<h3>
-  See network connections:
-</h3>
+<h3>See network connections:</h3>
 <br>
 <div class="code">
   <span class='prompt'>[~]$ </span>sudo netstat -tupln
 </div>
 <br>
 <br>
-<h3>
-  Redirections:
-</h3>
+<h3>Redirections:</h3>
 <p>
   First need to know this:
 <br>
@@ -109,53 +87,40 @@
 <br>
   STDERR -->2;
 </p>
-<h2>
-  Output
-<br>
-<br>
+<h3>Output</h3>
+
+<h3>
   Create/Overwrite a file:
-</h2>
+</h3>
 <div class="code">
   <span class='prompt'>[~]$ </span>echo "this should be in a file" > somefile.txt
 </div>
 
-<h2>
-  Create/Append to a file:
-</h2>
+<h3>Create/Append to a file:</h3>
 <div class="code">
   <span class='prompt'>[~]$ </span>echo "this should be in a file" >> somefile.txt
 </div>
-<h2>
-  Create/Append to a file:
-</h2>
+<h3>Create/Append to a file:</h3>
 <div class="code">
   <span class='prompt'>[~]$ </span>echo "this should be in a file" 1>> somefile.txt
 </div>
-<h2>
-  Redirect error to file:
-</h2>
+<h3>Redirect error to file:</h3>
 <div class="code">
   <span class='prompt'>[~]$ </span>ls -asjklf 2>> err.txt
 </div>
-<h2>
-  Input
-</h2>
+<h3>Input</h3>
 <div class="code">
   <span class='prompt'>[~]$ </span>mail -s "subject" ubuntu < message.txt
 </div>
 <br>
 <br>
-<h3>
-  Pipes
-</h3>
+<h3>Pipes</h3>
 <div class="code">
   <span class="prompt">[~]$ </span>ps aux | uniq | sort | grep "some search"
 </div>
 <br>
 <br>
-<h3>
-  Cut
-</h3>
+<h3>Cut</h3>
 <div class="code">
   <span class="prompt">[~]$ </span>cat text.txt | cut -d : -f2
 </div>
@@ -164,9 +129,7 @@
   See ~/text.txt
 </p>
 <br>
-<h3>
-  Sort
-</h3>
+<h3>Sort</h3>
 <div class="code">
   <span class="prompt">[~]$ </span>cat text.txt | sort -bf
 </div>
@@ -175,9 +138,7 @@
   See ~/text.txt
 </p>
 <br>
-<h3>
-  Uniq
-</h3>
+<h3>Uniq</h3>
 <div class="code">
   <span class="prompt">[~]$ </span>cat text.txt | uniq
 </div>
@@ -186,9 +147,7 @@
   See ~/text.txt
 </p>
 <br>
-<h3>
-  Grep
-</h3>
+<h3>Grep</h3>
 <div class="code">
   <span class="prompt">[~]$ </span>cat text.txt | grep love
 </div>
@@ -242,3 +201,5 @@
 <p>
   PS1='[\W]\$ '
 </p>
+</main>
+</div>

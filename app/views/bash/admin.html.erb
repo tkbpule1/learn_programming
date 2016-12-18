@@ -1,12 +1,15 @@
-<%= provide(:title, "Administration") %>
+<%= provide(:title, "Bash | Administration") %>
 
+<div class="wrapper2">
 
+<nav class="nav">
 <%= render 'header' %>
+</nav>
 
+<main class='main'>
+<h1>Administration</h1>
 
-<h3>
-  CHMOD
-</h3>
+<h3>CHMOD</h3>
 <p>
   7: rwx <br>
   6: rw- <br>
@@ -18,9 +21,7 @@
   0: ---
 </p>
 
-<h3>
-  User Account Management
-</h3>
+<h3>User Account Management</h3>
 <div class="code">
   <span class="prompt">[~]$ </span>tail /etc/login.defs <br> <br>
   OUTPUT: <br>
@@ -39,3 +40,5 @@
   shell: /bin/false means user does not have access to the shell <br>
   shell: /bin/nologin means user cannot log in
 </p>
+</main>
+</div>

@@ -1,7 +1,13 @@
 <%= provide(:title, 'Vim | Searching') %>
 
-<%= render 'header' %>
 
+<div class="wrapper2">
+
+<nav class="nav">
+<%= render 'header' %>
+</nav>
+
+<main class='main'>
 <h1>Searching</h1>
 
 <p>
@@ -11,7 +17,7 @@
 	To search forward for a pattern:
 </p>
 
-<div class="code">
+<div class="code1">
 	/pattern
 </div>
 
@@ -19,7 +25,7 @@
 	To search backward for a pattern:
 </p>
 
-<div class="code">
+<div class="code1">
 	?pattern
 </div>
 
@@ -27,7 +33,7 @@
 	To search for an exact pattern:
 </p>
 
-<div class="code">
+<div class="code1">
 	/\&#060pattern\&#062
 </div>
 
@@ -35,7 +41,7 @@
 	To search for a blank line:
 </p>
 
-<div class="code">
+<div class="code2">
 	/^$
 </div>
 
@@ -43,7 +49,7 @@
 	To search for a pattern at the beginning of the line:
 </p>
 
-<div class="code">
+<div class="code1">
 	/^pattern
 </div>
 
@@ -52,7 +58,7 @@
 	example, this will match 'came' and 'come'
 </p>
 
-<div class="code">
+<div class="code2">
 	/c.me
 </div>
 
@@ -67,7 +73,7 @@
 	moves up
 </p>
 
-<div class="code">
+<div class="code1">
 	/default/2<br>
 	/default/-2
 </div>
@@ -78,7 +84,7 @@
 	b works in a similar way, but from the beginning of the pattern.
 </p>
 
-<div class="code">
+<div class="code1">
 	/default/e<br>
 	/default/e+2<br>
 	?default?e-2<br>
@@ -90,7 +96,7 @@
 	Repeating the last search pattern:
 </p>
 
-<div class="code">
+<div class="code2">
 	n<br>
 	N
 </div>
@@ -99,6 +105,8 @@
 	Repeating the last search pattern, but with a different offset:
 </p>
 
-<div class="code">
+<div class="code2">
 	//e+2
+</div>
+</main>
 </div>

@@ -1,7 +1,13 @@
 <%= provide(:title, "Vim | Marks") %>
 
-<%= render "header" %>
 
+<div class="wrapper2">
+
+<nav class="nav">
+<%= render 'header' %>
+</nav>
+
+<main class='main'>
 
 <h1>Marks</h1>
 
@@ -16,7 +22,7 @@
 	To create a mark, type m plus a letter:
 </p>
 
-<span class="code1">
+<span class="code2">
 	ma
 </span>
 
@@ -28,7 +34,7 @@
   To go to a mark type ` plus the name:
 </p>
 
-<span class="code1">
+<span class="code2">
 	`a
 </span>
 
@@ -40,7 +46,7 @@
 	a mark is located, type ' plus the name:
 </p>
 
-<span class="code1">
+<span class="code2">
 	'a
 </span>
 
@@ -51,7 +57,7 @@
 	To see a list of all marks:
 </p>
 
-<span class="code1">
+<span class="code2">
 	:marks
 </span>
 
@@ -77,10 +83,12 @@
 	You can also use a different syntax to make a mark:
 </p>
 
-<span class="code1">
+<span class="code2">
 	50%mF
 </span>
 
 <br>
 <br>
 
+</main>
+</div>
