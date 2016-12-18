@@ -65,6 +65,8 @@ body {
 }
 
 .wrapper2 {
+	min-width: 1770px;
+	max-width: 1770px;
 	display: flex;
 }
 
@@ -84,12 +86,6 @@ ul {
 }
 
 
-@mixin box_sizing {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
 /* Miscellaneous */
 
 .debug_dump {
@@ -97,7 +93,6 @@ ul {
 	float: left;
 	width: 100%;
 	margin-top: 45px;
-	@include box-sizing;
 }
 
 /* Universal */
@@ -174,52 +169,57 @@ p {
 	text-decoration: none;
   }
 
-
+span {
+	display: inline-block;
+}
 
 .code {
-  color: black !important;
-  background: $gray-medium-light;
-  border: solid 1px black;
-  border-radius: 5px;
-  text-align: left;
-  padding: 20px 10px 10px 20px;
-  font-weight: bold;
-  font-family: "Courier new";
-  font-size: 1.5em;
-  margin-bottom: 10px;
+	display: inline-block;
+	color: black !important;
+	background: $gray-medium-light;
+	border: solid 1px black;
+	border-radius: 5px;
+	text-align: left;
+	padding: 20px 10px 10px 20px;
+	font-weight: bold;
+	font-family: "Courier new";
+	font-size: 1.5em;
+	margin-bottom: 10px;
 }
 
 .code1 {
-  color: black !important;
-  background: $gray-medium-light;
-  border: solid 1px black;
-  border-radius: 5px;
-  text-align: left;
-  padding: 10px 20px 10px 20px;
-  font-weight: bold;
-  font-family: "Courier new";
-  font-size: 25px;
-  margin-bottom: 10px;
-  width: 20%;
+	display: inline-block;
+	color: black !important;
+	background: $gray-medium-light;
+	border: solid 1px black;
+	border-radius: 5px;
+	text-align: left;
+	padding: 10px 20px 10px 20px;
+	font-weight: bold;
+	font-family: "Courier new";
+	font-size: 25px;
+	margin-bottom: 10px;
+	width: 20%;
 }
 
 .links {
-  font-size: 1.2em;
-  border: solid 1px black;
-  border-radius: 5px;
-  background-color: $gray-medium-light;
-  padding: 5px 10px 5px 10px;
-  margin: 3.5px;
+	font-size: 1.2em;
+	border: solid 1px black;
+	border-radius: 5px;
+	background-color: $gray-medium-light;
+	padding: 5px 10px 5px 10px;
+	margin: 3.5px;
 }
 
 code {
-  color: black;
-  border-radius: 5px;
-  background-color: $gray-dark;
-  font-size: 1.1em;
-  font-family: monospace;
-  letter-spacing: 1.5px;
-  padding: 3px 5px 3px 5px;
+	display: inline-block;
+	color: black;
+	border-radius: 5px;
+	background-color: $gray-dark;
+	font-size: 1.1em;
+	font-family: monospace;
+	letter-spacing: 1.5px;
+	padding: 3px 5px 3px 5px;
 }
 
 table, tr, td {
