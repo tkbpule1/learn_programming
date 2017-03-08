@@ -2,8 +2,8 @@ class CController < ApplicationController
     def index
     end
 
-    def basics
-    end
+	def basics
+	end
 
     def types
     end
@@ -25,4 +25,7 @@ class CController < ApplicationController
 
     def examples
     end
+
+	def preprocessor
+	end
 end

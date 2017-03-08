@@ -1,0 +1,49 @@
+<%= provide(:title, 'IP Addresses') %>
+
+<div class='wrapper2'>
+
+<nav class='nav'>
+<%= render 'header' %>
+</nav>
+
+<main class='main'>
+<h1>IP Addresses</h1>
+
+<h3>Structure/Binary</h3>
+<p>
+IPv4 addresses are 32-bit addrs divided into 4 octets.<br />
+Each octet is between 0 - 255.<br />
+
+IPv6 addresses are 128-bit addrs divided into 8 groups, 16 bits each.<br />
+
+<h3>Classful Addressing</h3>
+
+<h4>Class A</h4>
+<p>
+IP Addr: 1.0.0.0 - 126.0.0.0<br />
+Subnet: 255.0.0.0<br />
+</p>
+
+<h4>Class B</h4>
+<p>
+IP Addr: 128.0.0.0 - 191.255.0.0<br />
+Subnet: 255.255.0.0
+</p>
+
+<h4>Class C</h4>
+<p>
+IP Addr: 192.0.0.0 - 223.255.255.0<br />
+Subnet: 255.255.255.0<br />
+</p>
+
+<h4>Class D</h4>
+<p>
+Multicast
+IP Addr: 224.0.0.0 - 239.0.0.0<br />
+</p>
+
+
+
+
+</main>
+</div>

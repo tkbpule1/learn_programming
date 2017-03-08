@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  get '/emacs' => 'emacs#index'
+
+  get '/emacs/movement' => 'emacs#movement'
+
   get '/html' => 'html#index'
 
   get '/html/basics' => 'html#basics'
@@ -88,6 +92,8 @@ Rails.application.routes.draw do
 
   get '/c/examples' => 'c#examples'
 
+  get '/c/preprocessor' => 'c#preprocessor'
+
   get '/cpp' => 'cpp#index'
 
   get '/cpp/basics' => 'cpp#basics'
@@ -129,4 +135,17 @@ Rails.application.routes.draw do
   get '/apache/install' => 'apache#install'
 
   get '/apache/configure' => 'apache#configure'
+
+  get '/python' => 'python#index'
+
+  get '/python/basics' => 'python#basics'
+
+  get '/network' => 'network#index'
+  
+  get '/network/osi' => 'network#osi'
+
+  get '/network/ipaddr' => 'network#ipaddr'
+
+  get '/network/devices' => 'network#devices'
+
 end

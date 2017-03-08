@@ -1,0 +1,138 @@
+<%= provide(:title, 'OSI Model') %>
+
+<div class='wrapper2'>
+
+<nav class='nav'>
+<%= render 'header' %>
+</nav>
+
+<main class='main'>
+<h1>OSI Model</h1>
+
+<table class='bg'>
+	<tr>
+		<td>Layer 1</td>
+		<td>Physical Layer</td>
+	</tr>
+	<tr>
+		<td>Layer 2</td>
+		<td>Data Link Layer</td>
+	</tr>
+	<tr>
+		<td>Layer 3</td>
+		<td>Network Layer</td>
+	</tr>
+	<tr>
+		<td>Layer 4</td>
+		<td>Transport Layer</td>
+	</tr>
+	<tr>
+		<td>Layer 5</td>
+		<td>Session Layer</td>
+	</tr>
+	<tr>
+		<td>Layer 6</td>
+		<td>Presentation Layer</td>
+	</tr>
+	<tr>
+		<td>Layer 7</td>
+		<td>Application Layer</td>
+	</tr>
+</table>
+
+<h3>Let's break down each layer and see what's going on:</h3>
+
+<h2>Layer 1 - Physical Layer</h2>
+<p>
+This layer includes things like cables, electrical signals, wireless signals.
+Conversion from bits of data to electrical signals occurs at this layer.
+Components include:
+<ol>
+	<li>Network Interface Cards (NICs)</li>
+	<li>Hubs</li>
+</ol>
+</p>
+
+<h2>Layer 2 - Data Link Layer</h2>
+<p>
+Have access to device/computer (via MAC Addr).<br />
+MAC Address is known and the bits/data are
+packaged into frames.<br />
+Frames are just segments of data being pushed
+over the Data Link Layer (Layer 2).<br />  
+Frames = Layer 2.  
+<br \>
+Components include:
+<ol>
+	<li>MAC Address (Media Access Control Address - on NICs: Physical Addr)</li>
+	<li>Switches : map to MAC Addr</li>
+	<li>EUI-64 (IPv6 Global Unicast)</li>
+</ol>
+</p>
+
+<h2>Layer 3 - Network Layer</h2>
+<p>
+Commonly refered to as the "IP Layer", the Network Layer is about the transfer
+of data between one or more networks.<br />
+Translate IP Addresses to MAC Address.<br />
+Performs network routing functinos and fragmentation/reassembly.<br />
+Packets = Level 3 Protocol Delivery Unit (Segment of data)<br />
+Components include:
+<ol>
+	<li>Routers : Moves data across Network</li>
+	<li>IP Address (Logical Address mapped to Physical Address (MAC Addr)</li>
+	<li>Multi-Layer Switch (performs both Layer 2 and Layer 3 functions)
+</ol>
+</p>
+
+<h2>Layer 4 - Transport Layer</h2>
+<p>
+Management/Control<br />
+Transfer of Data<br />
+Split communications into packages<br />
+Different Protocols operate over either TCP or UDP (HTTP, HTTPS, SSL, SSH, etc.)
+Types: 
+<ol>
+	<li>Transmissoin Control Protocol (TCP) : Verification Receipt</li>
+	<li>User Datagram Protocol (UDP) : No Receipt</li>
+</ol>
+</p>
+
+<h2>Layer 5 - Session Layer</h2>
+<p>
+Who is sending/receiving at what time<br />
+Traffic control<br />
+Controls connections<br />
+Establishes/Manages/Terminates Connections<br />
+Regulates when computer can send data/how much<br />
+Coordinates Conversations
+</p>
+
+<h2>Layer 6 - Presentation Layer</h2>
+<p>
+Formats Data : 
+Encrypt/Decrypt
+</p>
+
+<h2>Layer 7 - Application Layer</h2>
+<p>
+Network Access for applications<br />
+Idenfify Communication Partners<br />
+Determine Resource Availability<br />
+Syncronize Communications<br />
+Includes:<br />
+<ol>
+	<li>SMTP</li>
+	<li>HTTP</li>
+	<li>FTP</li>
+</ol>
+
+</p>
+
+
+
+
+
+</main>
+</div>
+

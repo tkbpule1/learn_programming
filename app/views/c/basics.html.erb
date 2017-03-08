@@ -9,224 +9,56 @@
 <main class='main'>
 
 <h1>Basics</h1>
-<div class="links">
-  <a href="#types">Data Types</a>
-</div>
-<div class="links">
-  <a href="#output">Output</a>
-</div>
-<div class="links">
-  <a href="#input">Input</a>
-</div>
-<div class="links">
-  <a href="#char">Char Array</a>
-</div>
 
+<p>Let's introduce you to the language with a program:</p>
 
-<div id="types"></div>
-<br><br>
-<h2>Data Types</h2>
-<p>
-  There are several basics types of data that c has available for use; <b>char</b>, <b>int</b>, <b>unsigned int</b>, <b>short int</b>, <b>unsigned short int</b>, <b>long int</b>, <b>unsigned long int</b>, <b>float</b>, <b>double</b>, <b>long double</b>, <b>_Bool</b>, and <b>void</b>.
-</p>
-<p>
-  As you can see, there is not type string.  Instead, a character array is used to represent a string.  This is very different from most languages and must be understood.  I will do my best to explain it. (See <a href="#char">here</a>).
-</p>
-<p>
-  There are many data types dealing with numbers.  The difference is the size of the number they can hold.  The size is system dependent.  To see the size of each data type, C has defined some helpful constants that we can print to the screen:
-</p>
 <div class="code">
 <pre>
-  <span class="printf">printf</span>(<span class="str">"Max char value:   %i<span class="printf">\n</span>"</span>, CHAR_MAX</span>);
-  <span class="printf">printf</span>(<span class="str">"Min char value:   %i<span class="printf">\n</span>"</span>, CHAR_MIN</span>);
-  <span class="printf">printf</span>(<span class="str">"Max short value:  %i<span class="printf">\n</span>"</span>, SHRT_MAX</span>);
-  <span class="printf">printf</span>(<span class="str">"Min short value:  %i<span class="printf">\n</span>"</span>, SHRT_MIN</span>);
-  <span class="printf">printf</span>(<span class="str">"Max int value:    %i<span class="printf">\n</span>"</span>, INT_MAX</span>);
-  <span class="printf">printf</span>(<span class="str">"Min int value:    %i<span class="printf">\n</span>"</span>, INT_MIN</span>);
-  <span class="printf">printf</span>(<span class="str">"Max long value:   %li<span class="printf">\n</span>"</span>, LONG_MAX</span>);
-  <span class="printf">printf</span>(<span class="str">"Min long value:   %li<span class="printf">\n</span>"</span>, LONG_MIN</span>);
-  <span class="printf">printf</span>(<span class="str">"Max unsigned short value:   %u<span class="printf">\n</span>"</span>, USHRT_MAX</span>);
-  <span class="printf">printf</span>(<span class="str">"Max unsigned int value:   %u<span class="printf">\n</span>"</span>, UINT_MAX</span>);
-  <span class="printf">printf</span>(<span class="str">"Max unsigned long value:   %ul<span class="printf">\n</span>"</span>, ULONG_MAX</span>);
-  <span class="comment">// OUTPUT:
-  Max char value:   127
-  Min char value:   -128
-  Max short value:  32767
-  Min short value:  -32768
-  Max int value:    2147483647
-  Min int value:    -2147483648
-  Max long value:   9223372036854775807
-  Min long value:   -9223372036854775808
-  Max unsigned short value:   65535
-  Max unsigned int value:   4294967295
-  Max unsigned long value:   18446744073709551615
-</span>
+<span class="preproc">#include</span> <span class="str">&#060stdio.h&#062</span>
+
+<span class="preproc">int</span> <span class="func">main</span>(<span class="preproc">void</span>)
+{
+    <span class="printf">printf</span>(<span class="str">"C programming is cool"</span>);
+
+    <span class="preproc">return</span> <span class="num">0</span>;
+}
 </pre>
 </div>
 
-
-<div id="char"></div>
-<br><br>
-<h2>Character Arrays as strings</h2>
-<p>
-  Since C does not have a data type of <b>string</b>, we must use character arrays.  As the name suggests this is just an array.  To declare a character array, we must specify the size of the array.  We also need to account for the \0 character, which is always in last index of the char array.
-  <br>
-</p>
-<h3>Declare a character array:</h3>
-<div class="code">
-<pre>
-  char name[5] = John;
-</pre>
-</div>
-<p>
-  The declaration above will create an array of 5 elements, but only 4 are available for use. After some experimenting, it seems if you declare and initalize the char array, <code><span class="preproc">char</span> name[5] = "Johnny"</code>, the compiler will not complain.  But if we use the scanf function, the compiler will complain - warning: initializer-string for array of chars is too long.  This does not prevent the program from compiling and running.
-</p>
-
-
-
-<div id="output"></div>
-<br><br>
-<h2>Output</h2>
-<h3>printf</h3>
-<table class="type">
-    <tr>
-        <td><b>Type</b></td>
-        <td><b>Constant Examples</b></td>
-        <td><b>printf chars</b></td>
-    </tr>
-    <tr>
-        <td>char</td>
-        <td>'a', '\n'</td>
-        <td>%c</td>
-    </tr>
-    <tr>
-        <td>_BOOL</td>
-        <td>0, 1</td>
-        <td>%i, %u</td>
-    </tr>
-    <tr>
-        <td>short int</td>
-        <td></td>
-        <td>%hi, %hx, %ho</td>
-    </tr>
-    <tr>
-        <td>unsigned short int</td>
-        <td></td>
-        <td>%hu, %hx, %ho</td>
-    </tr>
-    <tr>
-        <td>int</td>
-        <td>12, 0xFFE0, 0117</td>
-        <td>%i, %x, %o</td>
-    </tr>
-    <tr>
-        <td>unsigned int</td>
-        <td>12u</td>
-        <td>%u, %x, %o</td>
-    </tr>
-    <tr>
-        <td>long int</td>
-        <td>12L, 0xffffL</td>
-        <td>%li, %lx, %lo</td>
-    </tr>
-    <tr>
-        <td>unsigned long int</td>
-        <td>12UL, 0xffffUL</td>
-        <td>%li, %lx, %lo</td>
-    </tr>
-    <tr>
-        <td>float</td>
-        <td>12.34f</td>
-        <td>%f, %e, %g, %a</td>
-    </tr>
-    <tr>
-        <td>double</td>
-        <td>12.34</td>
-        <td>%f, %e, %g, %a</td>
-    </tr>
-    <tr>
-        <td>long double</td>
-        <td>12.3412</td>
-        <td>%Lf, %Le, %Lg</td>
-    </tr>
+<p>Let's go through this program line by line:</p>
+<table class='blist'>
+<tr>
+		<td>1.</td>
+		<td>
+				<span class="preproc">#include</span> - This allows you to include
+				libraries; we have chosen <span class="str">&#060stdio.h&#062</span>
+				which is the standard input/output library
+		</td>
+</tr>
+<tr>
+		<td>2.</td>
+		<td>
+				<span class="preproc">int</span> <span class="func">main</span>(<span
+						class="preproc">void</span>) - Here, we are declaring a function
+				that will return an integer value (int) called main which takes no
+				parameters (void); Every program must have the main function.
+		</td>
+</tr>
+<tr>
+		<td>3.</td>
+		<td>
+				{ - The curly braces indicate the beginning and ending of blocks;
+				functions, conditional blocks, loops, etc.
+		</td>
+</tr>
+<tr>
+		<td>4.</td>
+		<td>
+				<span class="printf">printf</span>(<span class="str">"Some text"</span>); - 
+				This is called a print statement, or more generally a statement.  
+		</td>
+</tr>
 </table>
 
-<h2>Examples:</h2>
-
-<div class="code">
-<pre>
-  <span class="comment">// print octal value of 127 with leading zero;</span>
-  <span class="printf">printf</span>(<span class="str">"Octal value of 127: <span class="num">%#o<span class="printf">\n</span></span>"</span>, <span class="num">127</span>);
-  <span class="comment">OUTPUT: Octal value of 127: 0177</span>
-
-  <span class="comment">// print decimal value of octal 0177;</span>
-  <span class="printf">printf</span>(<span class="str">"Decimal value of 0177:  <span class="num">%i<span class="printf">\n</span></span>"</span>, <span class="num">0177</span>);
-  <span class="comment">OUTPUT: Decimal value of 0177: 127</span>
-
-  <span class="comment">// print hexadecimal value of 127 with leading 0x;</span>
-  <span class="printf">printf</span>(<span class="str">"Hexadecimal value of 127: <span class="num">%#x<span class="printf">\n</span></span>"</span>, <span class="num">127</span>);
-  <span class="comment">OUTPUT: Hexadecimal value of 127: 0x7f</span>
-
-  <span class="comment">// print decimal value of hexadecimal 0x7f;</span>
-  <span class="printf">printf</span>(<span class="str">"Decimal value of 0x7f: <span class="num">%i<span class="printf">\n</span></span>"</span>, <span class="num">0x7f</span>);
-  <span class="comment">OUTPUT: Decimal value of 0x7f: 127</span>
-
-  <span class="comment">// print scientific notation of 0.00225,
-  // expects an argument of type double;</span>
-  <span class="printf">printf</span>(<span class="str">"Scientific notation of 0.00225: <span class="num">%e<span class="printf">\n</span></span>"</span>, <span class="num">0.00225</span>);
-  <span class="comment">OUTPUT: Scientific notation of 0.00225: 2.25e-3</span>
-
-  <span class="comment">// print float/double to precise decimal;</span>
-  <span class="printf">printf</span>(<span class="str">"print 2.250125 to 2 decimal places: <span class="num">%.*f<span class="printf">\n</span></span>"</span>, <span class="num">2</span>, <span class="num">2.250125</span>);
-  <span class="printf">printf</span>(<span class="str">"print 2.250125 to 2 decimal places: <span class="num">%.2f<span class="printf">\n</span></span>"</span>, <span class="num">2.250125</span>);
-  <span class="comment">OUTPUT: print 2.250125 to 2 decimal places: 2.25</span>
-
-  <span class="comment">// print a space then a char then 9 spaces than a char;</span>
-  <span class="printf">printf</span>(<span class="str">"<span class="num">%*c%*c<span
-  class="printf">\n</span></span>"</span>, <span class="num">2</span>, <span class="str">'n'</span
-  >, <span class="num">10</span>, <span class="str">'x'</span>);
-  <span class="printf">printf</span>(<span class="str">"<span class="num">%2c%10c<span
-  class="printf">\n</span></span>"</span>, <span class="str">'n'</span>, <span class="str">'x'</span>);
-  <span class="comment">OUTPUT:
-   n         x</span>
-
-</pre>
-</div>
-<p>
-  Antoher use of <code>printf</code> is to print an "arguments" with different formatting:
-</p>
-<div class="code">
-<pre>
-  <span class="printf">printf</span>(<span class="str">"<span class="num">%1$.3f : %1$e : %2$i : %3$c<span class="printf">\n</span></span>"</span>, <span class="num">121.232</span>, <span class="num">23</span>, <span class="str">'x'</span>);
-  <span class="comment">OUTPUT: 121.232 : 1.212320e+02 : 23 : x </span>
-</pre>
-</div>
-<p>
-  The function <span class="printf">printf</span> does not have a method to print a character
-  multiple times, except spaces and zeros. Instead, loops must be used to do this.  Here is how to
-  print multiple spaces and zeros:
-</p>
-<div class="code">
-<pre>
-  <span class="comment">// Print 5 spaces and then a char</span>
-  <span class="comment">// Print 5 zeroes</span>
-  <span class="printf">printf</span>(<span class="str">"<span class="num">%*s%c<span class="printf">\n</span></span>"</span>, <span class="num">5</span>, <span class="str">""</span>, <span class="str">'x'</span>);
-  <span class="printf">printf</span>(<span class="str">"<span class="num">%0*i<span class="printf">\n</span></span>"</span>, <span class="num">5</span>, <span class="num">0</span>);
-  <span class="comment">// OUTPUT:
-       x
-  00000 </span>
-</pre>
-</div>
-
-<p>
-  From the examples above, one should be able to interpolate the use of other printf chars in the table at the top of the page.
-</p>
-<div id="input"></div>
-<br><br>
-<h2>Input</h2>
-<h3>scanf</h3>
-<p>
-   The <b>scanf</b> function is used to get input from the user.  It is very similar to the <b>printf</b> function in its syntax and application.
-</p>
 </main>
 </div>

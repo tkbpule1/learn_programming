@@ -1,8 +1,8 @@
 <% provide(:title, 'C++ | Basics') %>
 
-<div class="wrapper2">
+<div class='wrapper2'>
 
-<nav class="nav">
+<nav class='nav'>
 <%= render 'header' %>
 </nav>
 
@@ -15,15 +15,15 @@
   Create a directory for all your c++ programs
   Create a file named first_program.cpp
 </p>
-<div class="code">
-  <span class="preproc">#include </span><span class="str">&#060iostream&#062</span>
+<div class='code'>
+  <span class='preproc'>#include </span><span class='str'>&#060iostream&#062</span>
   <br>
-  <span class="preproc">int </span><span class="func">main</span>()
+  <span class='preproc'>int </span><span class='func'>main</span>()
   <br>
   {<br>
-    std::cout &#060&#060 <span class="str">"This is how to output some text to the standard output (the console)"</span>;<br>
+    std::cout &#060&#060 <span class='str'>'This is how to output some text to the standard output (the console)'</span>;<br>
     std::cout &#060&#060 std::endl;<br>
-    <span class="preproc">return</span> <span class="num">0</span>;<br>
+    <span class='preproc'>return</span> <span class='num'>0</span>;<br>
   }<br>
 </div>
 <br><br>
@@ -38,8 +38,8 @@
 
 <h1>The Preprocessor Directives</h1>
 <p>
-  The first line, <code><span class="preproc">#include </span><span
-  class="str">&#060iostream&#062</span></code>, is a directive read and interpreted
+  The first line, <code><span class='preproc'>#include </span><span
+  class='str'>&#060iostream&#062</span></code>, is a directive read and interpreted
   by the preprocessor.  In this case, we are telling the preprocessor that we
   want to include the header file <em>iostream</em>.  This file allows us to
   take input from the keyboard and send output the the screen.
@@ -60,7 +60,7 @@
 
 <h1>The Main Function</h1>
 <p>
-  The next line, <code><span class="preproc">int </span><span class="func">main</span>()</code>, defines the function main.  This is a special function in C++;&nbsp it is the function called when the source code is executed.
+  The next line, <code><span class='preproc'>int </span><span class='func'>main</span>()</code>, defines the function main.  This is a special function in C++;&nbsp it is the function called when the source code is executed.
 </p>
 
 <p>
@@ -71,7 +71,7 @@
 
 <h1>The Return Statement</h1>
 <p>
-  The return statement, <code><span class="preproc">return </span><span class="num">0</span>;</code>, returns a value of 0 to the operating system when the program terminates.  Thus, it must be the last statement in the function main.  When a return statement is executed in a function, the function immediately terminates and the control goes back to the caller.  Moreover, the function call statement is replaced by the value returned by the return statement.  When a return statement executes in the function main, the program terminates.
+  The return statement, <code><span class='preproc'>return </span><span class='num'>0</span>;</code>, returns a value of 0 to the operating system when the program terminates.  Thus, it must be the last statement in the function main.  When a return statement is executed in a function, the function immediately terminates and the control goes back to the caller.  Moreover, the function call statement is replaced by the value returned by the return statement.  When a return statement executes in the function main, the program terminates.
 </p>
 <br><br>
 
@@ -79,17 +79,17 @@
 <p>
   All the entities (variables, types, constants, and functions) of the standard C++ library are declared within the std namespace.<br>
   To include the std namespace:<br>
-  <code><span class="preproc">using namespace </span><span class="num">std</span>;</code><br>
+  <code><span class='preproc'>using namespace </span><span class='num'>std</span>;</code><br>
   <br>
 
   This introduces direct visibility of all the names of the std namespace into the code.  Many programmers prefer to qualify each of the elements of the standard library used in their programs. Whether the elements in the std namespace are introduced with using declarations or are fully qualified on every use does not change the behavior or efficiency of the resulting program in any way. Although for projects mixing libraries, explicit qualification tends to be preferred.
   <br>
   <br>
   As in the example above, to use the entities of the standard library, you must   explicitly qualify the element:<br>
-  <code>std::cout &#060&#060 </span><span class="str">"Fully Qualified"</span> &#060&#060 std::endl;</code><br>
+  <code>std::cout &#060&#060 </span><span class='str'>'Fully Qualified'</span> &#060&#060 std::endl;</code><br>
   This is how we will be using the std namespace libraries.<br><br>
   For completeness, you can also include the <code>using</code> statement:<br>
-  <code><span class="preproc">using namespace </span><span class="num">std</span>;</code><br>
+  <code><span class='preproc'>using namespace </span><span class='num'>std</span>;</code><br>
   This would be placed before the main function and after the preprocessor directives.
 </p>
 <br><br>
@@ -109,7 +109,7 @@
 
 <h2>Word Symbols (Reserved Words)</h2>
 <p>
-  <span class="preproc">int</span>, <span class="preproc">float</span>, <span class="preproc">double</span>, <span class="preproc">char</span>, <span class="preproc">const</span>, <span class="preproc">void</span>, <span class="preproc">return</span>
+  <span class='preproc'>int</span>, <span class='preproc'>float</span>, <span class='preproc'>double</span>, <span class='preproc'>char</span>, <span class='preproc'>const</span>, <span class='preproc'>void</span>, <span class='preproc'>return</span>
 </p>
 
 <h2>Identifiers</h2>
@@ -143,60 +143,60 @@
     <li>Integral Data Type</li>
   </ol>
   <ul>
-    <li><span class="preproc">char</span></li>
-    <li><span class="preproc">short</span></li>
-    <li><span class="preproc">int</span></li>
-    <li><span class="preproc">long</span></li>
-    <li><span class="preproc">bool</span></li>
-    <li><span class="preproc">unsigned char</span></li>
-    <li><span class="preproc">unsigned short</span></li>
-    <li><span class="preproc">unsigned int</span></li>
-    <li><span class="preproc">unsigned long</span></li>
+    <li><span class='preproc'>char</span></li>
+    <li><span class='preproc'>short</span></li>
+    <li><span class='preproc'>int</span></li>
+    <li><span class='preproc'>long</span></li>
+    <li><span class='preproc'>bool</span></li>
+    <li><span class='preproc'>unsigned char</span></li>
+    <li><span class='preproc'>unsigned short</span></li>
+    <li><span class='preproc'>unsigned int</span></li>
+    <li><span class='preproc'>unsigned long</span></li>
   </ul>
 </p>
 
 <p>
   Let's write a program to find the values of these data types:
 </p>
-<div class="code">
+<div class='code'>
 <pre>
-  <span class="preproc">#include </span><span class="str">&#060iostream&#062</span>
-  <span class="preproc">#include </span><span class="str">&#060climits&#062</span>
-  <span class="preproc">#include </span><span class="str">&#060cfloat&#062</span>
-  <span class="preproc">int </span><span class="func">main</span>()
+  <span class='preproc'>#include </span><span class='str'>&#060iostream&#062</span>
+  <span class='preproc'>#include </span><span class='str'>&#060climits&#062</span>
+  <span class='preproc'>#include </span><span class='str'>&#060cfloat&#062</span>
+  <span class='preproc'>int </span><span class='func'>main</span>()
   {
-    std::cout &#060&#060 <span class="str">"Approximate number of significant digits in a float value: "</span>
+    std::cout &#060&#060 <span class='str'>'Approximate number of significant digits in a float value: '</span>
               &#060&#060 FLT_DIG &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Maximum positive float value: "</span> &#060&#060 FLT_MAX &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Minimum positive float value: "</span> &#060&#060 FLT_MIN &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Approximate number of significant digits in a double value: "</span>
+    std::cout &#060&#060 <span class='str'>'Maximum positive float value: '</span> &#060&#060 FLT_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class='str'>'Minimum positive float value: '</span> &#060&#060 FLT_MIN &#060&#060 std::endl;
+    std::cout &#060&#060 <span class='str'>'Approximate number of significant digits in a double value: '</span>
               &#060&#060 DBL_DIG &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Maximum positive double value: "</span> &#060&#060 DBL_MAX &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Minimum positive double value: "</span> &#060&#060 DBL_MIN &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Approximate number of significant digits in a long double value: "</span>
+    std::cout &#060&#060 <span class='str'>'Maximum positive double value: '</span> &#060&#060 DBL_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class='str'>'Minimum positive double value: '</span> &#060&#060 DBL_MIN &#060&#060 std::endl;
+    std::cout &#060&#060 <span class='str'>'Approximate number of significant digits in a long double value: '</span>
               &#060&#060 LDBL_DIG &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Maximum positive long double value: "</span> &#060&#060 LDBL_MAX &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Minimum positive long double value: "</span> &#060&#060 LDBL_MIN &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Number of bits in a byte: "</span> &#060&#060 CHAR_BIT &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Maximum char value: "</span> &#060&#060 CHAR_MAX &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Minimum char value: "</span> &#060&#060 CHAR_MIN &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Maximum short value: "</span> &#060&#060 SHRT_MAX &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Minimum short value: "</span> &#060&#060 SHRT_MIN &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Maximum int value: "</span> &#060&#060 INT_MAX &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Minimum int value: "</span> &#060&#060 INT_MIN &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Maximum long value: "</span> &#060&#060 LONG_MAX &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Minimum long value: "</span> &#060&#060 LONG_MIN &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Maximum unsigned char value: "</span> &#060&#060 UCHAR_MAX &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Maximum unsigned short value: "</span> &#060&#060 USHRT_MAX &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Maximum unsigned int value: "</span> &#060&#060 UINT_MAX &#060&#060 std::endl;
-    std::cout &#060&#060 <span class="str">"Maximum unsigned long value: "</span> &#060&#060 ULONG_MAX &#060&#060 std::endl;
-    <span class="preproc">return </span><span class="num">0</span>;
+    std::cout &#060&#060 <span class='str'>'Maximum positive long double value: '</span> &#060&#060 LDBL_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class='str'>'Minimum positive long double value: '</span> &#060&#060 LDBL_MIN &#060&#060 std::endl;
+    std::cout &#060&#060 <span class='str'>'Number of bits in a byte: '</span> &#060&#060 CHAR_BIT &#060&#060 std::endl;
+    std::cout &#060&#060 <span class='str'>'Maximum char value: '</span> &#060&#060 CHAR_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class='str'>'Minimum char value: '</span> &#060&#060 CHAR_MIN &#060&#060 std::endl;
+    std::cout &#060&#060 <span class='str'>'Maximum short value: '</span> &#060&#060 SHRT_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class='str'>'Minimum short value: '</span> &#060&#060 SHRT_MIN &#060&#060 std::endl;
+    std::cout &#060&#060 <span class='str'>'Maximum int value: '</span> &#060&#060 INT_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class='str'>'Minimum int value: '</span> &#060&#060 INT_MIN &#060&#060 std::endl;
+    std::cout &#060&#060 <span class='str'>'Maximum long value: '</span> &#060&#060 LONG_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class='str'>'Minimum long value: '</span> &#060&#060 LONG_MIN &#060&#060 std::endl;
+    std::cout &#060&#060 <span class='str'>'Maximum unsigned char value: '</span> &#060&#060 UCHAR_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class='str'>'Maximum unsigned short value: '</span> &#060&#060 USHRT_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class='str'>'Maximum unsigned int value: '</span> &#060&#060 UINT_MAX &#060&#060 std::endl;
+    std::cout &#060&#060 <span class='str'>'Maximum unsigned long value: '</span> &#060&#060 ULONG_MAX &#060&#060 std::endl;
+    <span class='preproc'>return </span><span class='num'>0</span>;
   }
 </pre>
 </div>
 
 <h2>The output of this program on my system is as follows (Note: Your output may differ):</h2>
-<div class="code">
+<div class='code'>
 <pre>
   Approximate number of significant digits in a float value: 6
   Maximum positive float value: 3.40282e+38
@@ -224,52 +224,52 @@
 </div>
 
 <p>
-  You might be asking yourself "Why are there so many categories of the same data type?".  Well, as you can see, each category has a set of values associated with it and which category you use depends on the calculations you are computing.  In the early days, computers and main memory were very expensive.  As a result, programmers had to optimize the use of memory by selecting the data type that could handle the calculations.  This is expescially important today in certain situations.  For example, when you have a spacecraft, you have limited resources avaiable and need to use it accordingly.
+  You might be asking yourself 'Why are there so many categories of the same data type?'.  Well, as you can see, each category has a set of values associated with it and which category you use depends on the calculations you are computing.  In the early days, computers and main memory were very expensive.  As a result, programmers had to optimize the use of memory by selecting the data type that could handle the calculations.  This is expescially important today in certain situations.  For example, when you have a spacecraft, you have limited resources avaiable and need to use it accordingly.
 </p>
 <br>
-<h3><span class="preproc">int</span> Data Type</h3>
+<h3><span class='preproc'>int</span> Data Type</h3>
 <p>
-  The <code><span class="preproc">int</span></code> data type consists of integers between -2147483648 and 2147483647.
+  The <code><span class='preproc'>int</span></code> data type consists of integers between -2147483648 and 2147483647.
 </p>
 
-<h3><span class="preproc">bool</span> Data Type</h3>
+<h3><span class='preproc'>bool</span> Data Type</h3>
 <p>
-  The <code><span class="preproc">bool</span></code> data type consists of only two values: <code><span class="preproc">true</span></code> and <code><span class="preproc">false</span></code>.
+  The <code><span class='preproc'>bool</span></code> data type consists of only two values: <code><span class='preproc'>true</span></code> and <code><span class='preproc'>false</span></code>.
 </p>
 
-<h3><span class="preproc">char</span> Data Type</h3>
+<h3><span class='preproc'>char</span> Data Type</h3>
 <p>
-  The <code><span class="preproc">char</span></code> data type deals with small numbers (-128 to 127) and is used to represent the characters, letters, digits, and special symbols.  This data type is responsible for representing every key on your keyboard.  <br>
+  The <code><span class='preproc'>char</span></code> data type deals with small numbers (-128 to 127) and is used to represent the characters, letters, digits, and special symbols.  This data type is responsible for representing every key on your keyboard.  <br>
   When using the char data type, you enclose each character within single quotation marks:
 </p>
-<div class="code">
+<div class='code'>
   'A', 'a', '0', '*', '\n', ' '
 </div>
 <p>
-The <code><span class="preproc">char</span></code> data type allows only one symbol to be
+The <code><span class='preproc'>char</span></code> data type allows only one symbol to be
 placed between single quotation marks.  Even though '&#060=\' and similar special symbols are
 considered one symbol, they are not regarded as values of the <code>
-	<span class="preproc">char</span></code> data type.
+	<span class='preproc'>char</span></code> data type.
 </p>
 <p>
   ASCII (American Standard Code for Information Interchange) Table
 </p>
-<table class="bg">
+<table class='bg'>
   <tr>
-    <td class="trow1 tcol1"></td>
-    <td class="trow1">0</td>
-    <td class="trow1">1</td>
-     <td class="trow1">2</td>
-     <td class="trow1">3</td>
-     <td class="trow1">4</td>
-     <td class="trow1">5</td>
-     <td class="trow1">6</td>
-     <td class="trow1">7</td>
-     <td class="trow1">8</td>
-     <td class="trow1">9</td>
+    <td class='trow1 tcol1'></td>
+    <td class='trow1'>0</td>
+    <td class='trow1'>1</td>
+    <td class='trow1'>2</td>
+    <td class='trow1'>3</td>
+    <td class='trow1'>4</td>
+    <td class='trow1'>5</td>
+    <td class='trow1'>6</td>
+    <td class='trow1'>7</td>
+    <td class='trow1'>8</td>
+    <td class='trow1'>9</td>
   </tr>
   <tr>
-    <td class="tcol1">0</td>
+    <td class='tcol1'>0</td>
     <td>nul</td>
     <td>soh</td>
     <td>stx</td>
@@ -282,7 +282,7 @@ considered one symbol, they are not regarded as values of the <code>
     <td>ht</td>
   </tr>
   <tr>
-    <td class="tcol1">1</td>
+    <td class='tcol1'>1</td>
     <td>lf</td>
     <td>vt</td>
     <td>ff</td>
@@ -295,7 +295,7 @@ considered one symbol, they are not regarded as values of the <code>
     <td>dc3</td>
   </tr>
   <tr>
-    <td class="tcol1">2</td>
+    <td class='tcol1'>2</td>
     <td>dc4</td>
     <td>nak</td>
     <td>syn</td>
@@ -308,12 +308,12 @@ considered one symbol, they are not regarded as values of the <code>
     <td>gs</td>
   </tr>
   <tr>
-    <td class="tcol1">3</td>
+    <td class='tcol1'>3</td>
     <td>rs</td>
     <td>us</td>
     <td>space</td>
     <td>!</td>
-    <td>"</td>
+    <td>'</td>
     <td>#</td>
     <td>$</td>
     <td>%</td>
@@ -321,7 +321,7 @@ considered one symbol, they are not regarded as values of the <code>
     <td>'</td>
   </tr>
   <tr>
-    <td class="tcol1">4</td>
+    <td class='tcol1'>4</td>
     <td>(</td>
     <td>)</td>
     <td>*</td>
@@ -334,7 +334,7 @@ considered one symbol, they are not regarded as values of the <code>
     <td>1</td>
   </tr>
   <tr>
-    <td class="tcol1">5</td>
+    <td class='tcol1'>5</td>
     <td>2</td>
     <td>3</td>
     <td>4</td>
@@ -347,7 +347,7 @@ considered one symbol, they are not regarded as values of the <code>
     <td>;</td>
   </tr>
   <tr>
-    <td class="tcol1">6</td>
+    <td class='tcol1'>6</td>
     <td>&#060</td>
     <td>=</td>
     <td>&#062</td>
@@ -360,7 +360,7 @@ considered one symbol, they are not regarded as values of the <code>
     <td>E</td>
   </tr>
   <tr>
-    <td class="tcol1">7</td>
+    <td class='tcol1'>7</td>
     <td>F</td>
     <td>G</td>
     <td>H</td>
@@ -373,7 +373,7 @@ considered one symbol, they are not regarded as values of the <code>
     <td>O</td>
   </tr>
   <tr>
-    <td class="tcol1">8</td>
+    <td class='tcol1'>8</td>
     <td>P</td>
     <td>Q</td>
     <td>R</td>
@@ -386,7 +386,7 @@ considered one symbol, they are not regarded as values of the <code>
     <td>Y</td>
   </tr>
   <tr>
-    <td class="tcol1">9</td>
+    <td class='tcol1'>9</td>
     <td>Z</td>
     <td>[</td>
     <td>\</td>
@@ -399,7 +399,7 @@ considered one symbol, they are not regarded as values of the <code>
     <td>c</td>
   </tr>
   <tr>
-    <td class="tcol1">10</td>
+    <td class='tcol1'>10</td>
     <td>d</td>
     <td>e</td>
     <td>f</td>
@@ -412,7 +412,7 @@ considered one symbol, they are not regarded as values of the <code>
     <td>m</td>
   </tr>
   <tr>
-    <td class="tcol1">11</td>
+    <td class='tcol1'>11</td>
     <td>n</td>
     <td>o</td>
     <td>p</td>
@@ -425,7 +425,7 @@ considered one symbol, they are not regarded as values of the <code>
     <td>w</td>
   </tr>
   <tr>
-    <td class="tcol1">12</td>
+    <td class='tcol1'>12</td>
     <td>x</td>
     <td>y</td>
     <td>z</td>
@@ -440,11 +440,11 @@ considered one symbol, they are not regarded as values of the <code>
 <br>
 <h3>Float-Point Data Types</h3>
 <p>
-  There are three data types to manipulate decimal numbers: <span class="preproc">float</span>,
-  <span class="preproc">double</span>, and <span class="preproc">long double</span>.  <br>
+  There are three data types to manipulate decimal numbers: <span class='preproc'>float</span>,
+  <span class='preproc'>double</span>, and <span class='preproc'>long double</span>.  <br>
 </p>
 <p>
-  <span class="preproc">float</span>:
+  <span class='preproc'>float</span>:
   <ul>
     <li>used to represent any real number between -3.4e+38 and 3.4e+38.</li>
     <li>The memory allocation for a value is 4 bytes.</li>
@@ -452,7 +452,7 @@ considered one symbol, they are not regarded as values of the <code>
   </ul>
 </p>
 <p>
-  <span class="preproc">double</span>:
+  <span class='preproc'>double</span>:
   <ul>
     <li>used to represent any real number between -1.7e+308 and 1.7e+308.</li>
     <li>The memory allocation for a value is 8 byes.</li>
@@ -460,10 +460,10 @@ considered one symbol, they are not regarded as values of the <code>
   </ul>
 </p>
 <p>
-  <span class="preproc">long double</span>:
+  <span class='preproc'>long double</span>:
   <ul>
     <li>used to represent any real number between -1.18e+4932 and 1.18e+4932. </li>
-    <li>The memory allocation for a value of type <span class="preproc">long double</span> is 16
+    <li>The memory allocation for a value of type <span class='preproc'>long double</span> is 16
     byes.</li>
     <li>The number of significant digits is 18.</li>
   </ul>
@@ -494,7 +494,7 @@ considered one symbol, they are not regarded as values of the <code>
 <p>
 General Form:<br>
 <div class='code'>
-  <span class="preproc">static_cast</span>&#060dataTypeName&#062(expression)
+  <span class='preproc'>static_cast</span>&#060dataTypeName&#062(expression)
 </div>
 </p>
 <p>
@@ -503,26 +503,23 @@ General Form:<br>
 <p>
   Let's look at an example:
 </p>
-<div class="code">
+<div class='code'>
 <pre>
+  <span class='preproc'>#include</span><span class='str'>&#060iostream&#062</span>
 
-  <span class="preproc">#include</span><span class="str">&#060iostream&#062</span>
-
-  <span class="preproc">int</span> <span class="func">main</span>()
-
+  <span class='preproc'>int</span> <span class='func'>main</span>()
   {
-  std::cout &#060&#060 <span class="str">"static_cast&#060char&#062(65): "
-           </span> &#060&#060 static_cast&#060<span class="preproc">char</span>&#062(65) &#060&#060 std::endl;
+  std::cout &#060&#060 <span class='str'>'static_cast&#060char&#062(65): '
+           </span> &#060&#060 static_cast&#060<span class='preproc'>char</span>&#062(65) &#060&#060 std::endl;
 
-  std::cout &#060&#060 <span class="str"> "static_cast&#060int&#062('A'): "
-           </span> &#060&#060 static_cast&#060<span class="preproc">int</span>&#062('A') &#060&#060 std::endl;
-  <span class="preproc">return</span> <span class="num">0</span>;
-
+  std::cout &#060&#060 <span class='str'> 'static_cast&#060int&#062('A'): '
+           </span> &#060&#060 static_cast&#060<span class='preproc'>int</span>&#062('A') &#060&#060 std::endl;
+  <span class='preproc'>return</span> <span class='num'>0</span>;
   }
 </pre>
 </div>
 <h2>Output:</h2>
-<div class="code">
+<div class='code'>
 <pre>
   static_cast&#060char&#062(65): A
   static_cast&#060int&#062('A'): 65
@@ -534,11 +531,11 @@ General Form:<br>
 <p>
   A string is a sequence of zero or more characters.  Strings are enclosed in double quotation marks.  A string containing no characters is called a <strong>null</strong> or <strong>empty</strong> string.
 </p>
-<div class="code">
+<div class='code'>
 <pre>
-  string your_name = "William Jacob";
-  string his_name = "Mickey";
-  string null_string = "";
+  string your_name = 'William Jacob';
+  string his_name = 'Mickey';
+  string null_string = '';
 </pre>
 </div>
 <p>
@@ -551,18 +548,18 @@ General Form:<br>
   General form:<br>
 </p>
 <div class='code'>
-  <span class="preproc">dataType</span> identifier, identifier, . . .;
+  <span class='preproc'>dataType</span> identifier, identifier, . . .;
 </div>
 <br>
 <br>
 <p>
   Examples:
 </p>
-<div class="code">
+<div class='code'>
 <pre>
-  <span class="preproc">int</span> counter;<br>
-  <span class="preproc">double</span> amount_due;<br>
-  <span class="preproc">char</span> ch;<br>
+  <span class='preproc'>int</span> counter;<br>
+  <span class='preproc'>double</span> amount_due;<br>
+  <span class='preproc'>char</span> ch;<br>
   string name;
 </pre>
 </div>
@@ -573,19 +570,19 @@ General Form:<br>
   General form:<br>
 </p>
 <div class='code'>
-  <span class="preproc">const dataType</span> IDENTIFIER = value;
+  <span class='preproc'>const dataType</span> IDENTIFIER = value;
 </div>
 <br>
 <br>
 <p>
   Examples:
 </p>
-<div class="code">
+<div class='code'>
 <pre>
-  <span class="preproc">const int</span> MINUTE = 60; <span class="comment">// seconds</span>
-  <span class="preproc">const float</span> PI = 3.141592f;
-  <span class="preproc">const double</span> PI = 3.141592653589793;
-  <span class="preproc">const long double</span> PI = 3.141592653589793238l;
+  <span class='preproc'>const int</span> MINUTE = 60; <span class='comment'>// seconds</span>
+  <span class='preproc'>const float</span> PI = 3.141592f;
+  <span class='preproc'>const double</span> PI = 3.141592653589793;
+  <span class='preproc'>const long double</span> PI = 3.141592653589793238l;
 </pre>
 </div>
 <br><br>
@@ -599,19 +596,17 @@ General Form:<br>
   To output text to the screen, use the cout keyword along with the stream insertion operator, &#060&#060, and the string/variable you wish to print.
 </p>
 
-<div class="code">
+<div class='code'>
 <pre>
+  <span class='preproc'>#include</span> <span class='str'>&#060iostream&#062</span>
 
-  <span class="preproc">#include</span> <span class="str">&#060iostream&#062</span>
-
-  <span class="preproc">int</span> <span class="func">main</span>()
-
+  <span class='preproc'>int</span> <span class='func'>main</span>()
   {
-  <span class="preproc">int</span> age = 21;<br>
-  std::cout &#060&#060 <span class="str">"This will print to the screen."</span> &#060&#060 std::endl;
+  <span class='preproc'>int</span> age = 21;<br>
+  std::cout &#060&#060 <span class='str'>'This will print to the screen.'</span> &#060&#060 std::endl;
 
-  std::cout &#060&#060 <span class="str">"The legal age is "</span> &#060&#060 age &#060&#060 std::endl;
-  <span class="preproc">return</span> <span class="num">0</span>;
+  std::cout &#060&#060 <span class='str'>'The legal age is '</span> &#060&#060 age &#060&#060 std::endl;
+  <span class='preproc'>return</span> <span class='num'>0</span>;
   }
 </pre>
 </div>
@@ -627,7 +622,7 @@ General Form:<br>
 <p>
   This field is used to specify the which arguments to format.  This allows an argument to be output multiple times, with different formats, or output the arguments in a different order.<br>
   To select an argument, specify the number of the argument, 1, 2...n, followed by the dollar sign, $:<br>
-  <code><span class="printf">printf</span>(<span class="str">"</span><span class="num">%1$d %2$.1f %2$.2f</span><span class="printf">\n</span><span class="str">"</span>, <span class="num">21</span>, <span class="num">15.75</span>)</code><br>
+  <code><span class='printf'>printf</span>(<span class='str'>'</span><span class='num'>%1$d %2$.1f %2$.2f</span><span class='printf'>\n</span><span class='str'>'</span>, <span class='num'>21</span>, <span class='num'>15.75</span>)</code><br>
 </p>
 <p>
   The output of this statement is as follows:
@@ -642,7 +637,7 @@ General Form:<br>
   The most common used types are <code>d</code>, <code>i</code>, <code>f</code>, <code>s</code>,
    <code>u</code>, and <code>c</code>.
 </p>
-<table class="bg">
+<table class='bg'>
   <tr>
     <td>d or i</td>
     <td>integer values</td>
@@ -665,7 +660,7 @@ General Form:<br>
   </tr>
 </table>
 
-<div id="basics_input">
+<div id='basics_input'>
 </div>
 <br><br>
 
@@ -675,13 +670,13 @@ General Form:<br>
   the use of <code>cin</code> and the <code>&#062&#062</code> operator, known as the
   <strong>stream extraction operator</strong>.
 </p>
-<div class="code">
+<div class='code'>
   cin &#062&#062 variable &#062&#062 variable ...;
 </div>
 <p>
-  cin can only get one "value".  It stops reading at either a space or if the
+  cin can only get one 'value'.  It stops reading at either a space or if the
   data does not match the variable type.  For example, if you have a string
-  "Hello there", you could not read this with cin because of the space.  You
+  'Hello there', you could not read this with cin because of the space.  You
   would need two variables to store each word.
 </p>
 <p>
@@ -689,7 +684,7 @@ General Form:<br>
   the standard input device.  This method is contained in the <code>string
   header file</code>.  The function is called <code>getline()</code> and it is used like this:
 </p>
-<div class="code">
+<div class='code'>
   getline(cin, str);
 </div>
 <p>
@@ -698,7 +693,7 @@ General Form:<br>
 <br><br>
 
 <h1>Incrementing and Decrementing</h1>
-<div class="code">
+<div class='code'>
 <pre>
   ++x;                    Pre-increment
       <br>

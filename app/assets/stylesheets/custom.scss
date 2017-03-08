@@ -13,6 +13,7 @@ $num: #eb9800;
 $comment: #8c8c8c;
 $printf: #00aaff;
 $bash_var: red;
+$conditional: yellow;
 
 
 * {
@@ -63,6 +64,10 @@ body {
 	text-decoration: none;
 }
 
+.navbar-nav li a:hover {
+	color: red;
+}
+
 .navbar {
 	text-align: center;
 	padding-top: 15px;
@@ -78,15 +83,16 @@ body {
 
 .main {
 	flex: 3;
-	margin: 10px;
-	padding: 10px;
+	margin: 50px;
+	padding: 20px;
 }
 
 .nav {
-	flex: 1;
 	max-width: 200px;
 	margin: 10px;
-	margin-top: 60px;
+	margin-top: 100px;
+	padding-left: 20px;
+	padding-top: 20px;
 }
 
 ul {
@@ -155,6 +161,15 @@ p {
 	line-height: 35px;
 	margin-top: 20px;
 	margin-bottom: 35px;
+}
+
+pre { 
+	font-size: 25px;
+}
+
+blockquote {
+	font-size: 25px;
+	font-style: italic;
 }
 
 /* header */
@@ -255,6 +270,12 @@ table, tr, td {
 .type {
     font-family: serif;
     background-color: #ffffcc;
+	tr {
+		padding: 10px;
+	}
+	td {
+		padding: 10px;
+	}
 }
 
 .bg {
@@ -265,6 +286,23 @@ table, tr, td {
 	  font-size: 18px;
 	  padding: 25px;
 	  text-align: center;
+  }
+  th {
+	  font-size: 20px;
+	  text-align: center;
+	  padding: 25px;
+	  border: black 2px solid;
+  }
+}
+
+.blist {
+  background-color: #ffffcc;
+  width: 100%;
+  border-collapse: collapse;
+  td {
+	  font-size: 18px;
+	  padding: 25px;
+	  text-align: left;
   }
   th {
 	  font-size: 20px;
@@ -319,8 +357,14 @@ p {
 ol {
   li {
     font-size: 20px;
-	margin-left: 30px;
+	margin-left: 40px;
   }
+}
+
+ul {
+	li {
+		font-size: 22px;
+	}
 }
 
 .list {
@@ -388,3 +432,6 @@ ol {
 	color: $bash_var;
 }
 
+.cond {
+	color: $conditional;
+}

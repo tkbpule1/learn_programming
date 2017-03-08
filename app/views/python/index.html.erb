@@ -1,0 +1,37 @@
+<%= provide(:title, 'Python | Home') %>
+<div class="wrapper2">
+
+<nav class="nav">
+<%= render 'header' %>
+</nav>
+
+<main class='main'>
+<h1>Python3</h1>
+
+<p>To run program:</p>
+<div class="code">
+	<span class='prompt'>$</span> chmod +x test.py <span class='comment'># Add execution permission to file</span><br>
+	<span class='prompt'>$</span> ./test.py
+</div>
+
+<p>Let's make a file, test.py, and write a program:</p>
+<div class='code'>
+<pre>
+	<span class='comment'>#!/usr/bin/python3</span>
+	<span class="printf">print</span>(<span class="str">"Hello, World"</span>)
+	a = <span class="num">3</span>
+	b = <span class="num">4</span>
+	<span class="preproc">if</span> a == b:
+		<span class="printf">print</span>(<span class="str">"a equals b"</span>)
+		<span class="printf">print</span>(<span class="num">a**b</span>)
+	<span class="preproc">else</span>:
+		<span class="printf">print</span>(<span class="str">"a does not equals b"</span>)
+		<span class="printf">print</span>(<span class="num">a*b</span>)
+
+	<span class="func">return</span> <span class="num">0</span>
+</pre>
+</div>
+
+
+</main>
+</div>
